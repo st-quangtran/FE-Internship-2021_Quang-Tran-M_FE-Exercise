@@ -26,6 +26,3 @@ Cú pháp:
 # Sự khác nhau giữa lệnh `git commit -m "message"` và `git commit -am "message"`
 - `git commit -am "message"` là bao gồm cả add tất cả các thay đổi và commit.
 - `git commit -m "message"` chỉ commit.
-
-
-
