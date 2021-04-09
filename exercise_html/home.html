@@ -7,36 +7,34 @@
   <script src="https://kit.fontawesome.com/52d5d4ff54.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header class="my-header">
-    <div>
-      <div class="header-left">
-        <h1>
-          <a href="#">
-            <img src="assets/logo.png" alt="Logo">
-          </a>
-        </h1>      
+  <header class="page-header">
+    <div class="header-left">
+      <h1>
+        <a href="#" class="btn btn-logo">
+          <img src="assets/logo.png" alt="Logo">
+        </a>
+      </h1>      
+    </div>
+    <div class="header-center">
+      <button type="button" class="btn btn-menu"><i class="fas fa-bars"></i></button>
+      <div>
+        <i class="fas fa-search"></i>
+        <input type="search" placeholder="Search">
       </div>
-      <div class="header-center">
-        <button type="button" class="btn btn-bar"><i class="fas fa-bars"></i></button>
-        <div>
-          <i class="fas fa-search"></i>
-          <input type="search" placeholder="Search">
-        </div>
-      </div>
-      <div class="header-right">
-        <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        <a href="#" class="btn btn-primary">Sign in</a>
-        <a href="#" class="btn btn-secondary">Sign up</a>
-      </div>
+    </div>
+    <div class="header-right">
+      <a href="#" class="btn btn-cart"><i class="fas fa-shopping-cart"></i></a>
+      <a href="#" class="btn btn-primary">Sign in</a>
+      <a href="#" class="btn btn-secondary">Sign up</a>
     </div>
   </header>
   <main class="container">
-    <section class="section section1">
-      <img src="assets/imageheader.png" alt="image">
+    <section class="section section-panner">
+      <img src="assets/panner.png" alt="image">
     </section>
-    <section class="section section2">
-      <div class="section1">
-        <div class="select-left ">
+    <section class="section section-handle-products">
+      <div class="tool-bar">
+        <div class="select-left">
           <select class="select">
             <option>Useless firse</option>
           </select>
@@ -44,7 +42,7 @@
             <option>Condition</option>
           </select>
           <select class="select">
-              <option>Delivery Option s</option>
+            <option>Delivery Options</option>
           </select>
         </div>
         <div class="select-right">
@@ -55,9 +53,9 @@
           <button type="button" class="btn btn-elementari"><i class="fas fa-th-large"></i></button>
         </div>
       </div>
-      <div class="section2">
-        <ul class="ul ul-list-item">
-          <li class="li li-item">
+      <div class="show-products">
+        <ul class="products-list">
+          <li class="product-item">
             <a href="#">
               <div class="image-item">
                 <img src="assets/item1.png" alt="item1">
@@ -70,7 +68,7 @@
               </div>
             </a>
           </li>
-          <li class="li li-item">
+          <li class="product-item">
             <a href="#">
               <div class="image-item">
                 <img src="assets/item2.png" alt="item2">
@@ -83,7 +81,7 @@
               </div>
             </a>
           </li>
-          <li class="li li-item">
+          <li class="product-item">
             <a href="#">
               <div class="image-item">
                 <img src="assets/item3.png" alt="item3">
@@ -96,7 +94,7 @@
               </div>
             </a>
           </li>
-          <li class="li li-item">
+          <li class="product-item">
             <a href="#">
               <div class="image-item">
                 <img src="assets/item4.png" alt="item4">
@@ -110,7 +108,7 @@
               </div>   
             </a>
           </li>
-          <li class="li li-item">
+          <li class="product-item">
             <a href="#">
               <div class="image-item">
                 <img src="assets/item5.png" alt="item5">
@@ -123,7 +121,7 @@
               </div>
             </a>
           </li>
-          <li class="li li-item">
+          <li class="product-item">
             <a href="#">
               <div class="image-item">
                 <img src="assets/item6.png" alt="item6">
@@ -136,7 +134,7 @@
               </div>
             </a>
           </li>
-          <li class="li li-item">
+          <li class="product-item">
             <a href="#">
               <div class="image-item">
                 <img src="assets/item7.png" alt="item7">
@@ -149,7 +147,7 @@
               </div>
             </a>
           </li>
-          <li class="li li-item">
+          <li class="product-item">
             <a href="#">
               <div class="image-item">
                 <img src="assets/item8.png" alt="item8">
@@ -162,7 +160,7 @@
               </div>
             </a>
           </li>
-          <li class="li li-item">
+          <li class="product-item">
             <a href="#">
               <div class="image-item">
                 <img src="assets/item9.png" alt="item9">
@@ -175,7 +173,7 @@
               </div>
             </a>
           </li>
-          <li class="li li-item">
+          <li class="product-item">
             <a href="#">
               <div class="image-item">
                 <img src="assets/item10.png" alt="item10">
@@ -188,7 +186,7 @@
               </div>
             </a>
           </li>
-          <li class="li li-item">
+          <li class="product-item">
             <a href="#">
               <div class="image-item">
                 <img src="assets/item11.png" alt="item11">
@@ -201,7 +199,7 @@
               </div>
             </a>
           </li>
-          <li class="li li-item">
+          <li class="product-item">
             <a href="#">
               <div class="image-item">
                 <img src="assets/item12.png" alt="item12">
@@ -218,7 +216,7 @@
       </div>
     </section>
 	</main>
-  <footer class="my-footer">
+  <footer class="page-footer">
     <p>Are you ready?</p>
     <p>Let's get started</p>
     <p>Copyright @ 2020.Logolpsum. All rights reserved.</p>
