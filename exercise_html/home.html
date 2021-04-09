@@ -24,33 +24,40 @@
     </div>
     <div class="header-right">
       <a href="#" class="btn btn-cart"><i class="fas fa-shopping-cart"></i></a>
+      <span class="amount">1</span>
+    </div>
+    <div>
       <a href="#" class="btn btn-primary">Sign in</a>
       <a href="#" class="btn btn-secondary">Sign up</a>
     </div>
   </header>
   <main class="container">
-    <section class="section section-panner">
-      <img src="assets/panner.png" alt="image">
+    <section class="section section-banner">
+      <img src="assets/banner.png" class="banner" alt="image">
     </section>
     <section class="section section-handle-products">
-      <div class="tool-bar">
-        <div class="select-left">
+      <div class="toolbar">
+        <div class="toolbar-left">
           <select class="select">
-            <option>Useless firse</option>
+            <option class="option">Useless firse</option>
           </select>
           <select class="select">
-            <option>Condition</option>
+            <option class="option">Condition</option>
           </select>
           <select class="select">
-            <option>Delivery Options</option>
+            <option class="option">Delivery Options</option>
           </select>
         </div>
-        <div class="select-right">
-          <button type="button" class="btn btn-elementari">Show all</button>
-          <button type="button" class="btn btn-elementari">Auction</button>
-          <button type="button" class="btn btn-elementari">Buy now</button>
-          <button type="button" class="btn btn-elementari"><i class="fas fa-list"></i></button>
-          <button type="button" class="btn btn-elementari"><i class="fas fa-th-large"></i></button>
+        <div class="toolbar-right">
+          <div class="toolbar-action">
+            <button type="button" class="btn btn-elementari">Show all</button>
+            <button type="button" class="btn btn-elementari">Auction</button>
+            <button type="button" class="btn btn-elementari">Buy now</button>
+          </div>
+          <div class="toolbar-sort">
+            <button type="button" class="btn btn-elementari"><i class="fas fa-list"></i></button>
+            <button type="button" class="btn btn-elementari"><i class="fas fa-th-large"></i></button>
+          </div>
         </div>
       </div>
       <div class="show-products">
@@ -61,9 +68,9 @@
                 <img src="assets/item1.png" alt="item1">
               </div>
               <div class="description-item">
-                <h4>Vintage Typewriter to post awesome stories about UI design and webdev</h4>
+                <h4 class="product-content">Vintage Typewriter to post awesome stories about UI design and webdev</h4>
                 <span class="span span-price">$49.50</span>
-                <p>Eligible for Shipping To Mars or somewhere else</p>
+                <p class="product-more-detail">Eligible for Shipping To Mars or somewhere else</p>
                 <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
               </div>
             </a>
@@ -74,9 +81,9 @@
                 <img src="assets/item2.png" alt="item2">
               </div>
               <div class="description-item">
-                <h4>Lee Pucker design. Leather botinki for handsome designers. Free shipping.</h4>
+                <h4 class="product-content">Lee Pucker design. Leather botinki for handsome designers. Free shipping.</h4>
                 <span class="span span-price">$13.95</span>
-                <p>1258 bids, 359 watchers $5.95 for shipping</p>
+                <p class="product-more-detail">1258 bids, 359 watchers $5.95 for shipping</p>
                 <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
               </div>
             </a>
@@ -87,9 +94,9 @@
                 <img src="assets/item3.png" alt="item3">
               </div>
               <div class="description-item">
-                <h4>Timesaving kitten to save months on development. Playful, cute, cheap!</h4>
+                <h4 class="product-content">Timesaving kitten to save months on development. Playful, cute, cheap!</h4>
                 <span class="span span-price">$128.99</span>
-                <p>Eligible for nothing :(</p>
+                <p class="product-more-detail">Eligible for nothing :(</p>
                 <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
               </div>
             </a>
@@ -100,10 +107,10 @@
                 <img src="assets/item4.png" alt="item4">
               </div>
               <div class="description-item">
-                <h4>Plastic useless plugs and tubes for high-fidelity prototyping. Fit & Eat!</h4>
+                <h4 class="product-content">Plastic useless plugs and tubes for high-fidelity prototyping. Fit & Eat!</h4>
                 <span class="span span-price">$12.48</span>
                 <span class="span span-saleoff">50% off</span>
-                <p>Wordwide shitting available Buyers protection possible!</p>
+                <p class="product-more-detail">Wordwide shitting available Buyers protection possible!</p>
                 <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
               </div>   
             </a>
@@ -114,9 +121,9 @@
                 <img src="assets/item5.png" alt="item5">
               </div>
               <div class="description-item">
-                <h4>Creativity stimulating lotion. Drink every morning to generate better ideas!</h4>
+                <h4 class="product-content">Creativity stimulating lotion. Drink every morning to generate better ideas!</h4>
                 <span class="span span-price">$12.48</span>
-                <p>Wordwide shifting available Buyers protection possible!</p>
+                <p class="product-more-detail">Wordwide shifting available Buyers protection possible!</p>
                 <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
               </div>
             </a>
@@ -127,9 +134,9 @@
                 <img src="assets/item6.png" alt="item6">
               </div>
               <div class="description-item">
-                <h4>Prototyping items to create a lot if useless things...</h4>
+                <h4 class="product-content">Prototyping items to create a lot if useless things...</h4>
                 <span class="span span-price">$128.99</span>
-                <p>Showcasting onHovered state</p>
+                <p class="product-more-detail">Showcasting onHovered state</p>
                 <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
               </div>
             </a>
@@ -140,9 +147,9 @@
                 <img src="assets/item7.png" alt="item7">
               </div>
               <div class="description-item">
-                <h4>John Von Ebalkin SPRING</h4>
+                <h4 class="product-content">John Von Ebalkin SPRING</h4>
                 <span class="span span-price">$13.95</span>
-                <p>1258 bids, 359 watchers $5.95 for shipping</p>
+                <p class="product-more-detail">1258 bids, 359 watchers $5.95 for shipping</p>
                 <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
               </div>
             </a>
@@ -153,9 +160,9 @@
                 <img src="assets/item8.png" alt="item8">
               </div>
               <div class="description-item">
-                <h4>Envelope, Stripes, Pencil and etc. Purchase this kit today and feel OKAY	</h4>
+                <h4 class="product-content">Envelope, Stripes, Pencil and etc. Purchase this kit today and feel OKAY	</h4>
                 <span class="span span-price">$9.50</span>
-                <p>Eligible for Shipping To Mars or somewhere else</p>
+                <p class="product-more-detail">Eligible for Shipping To Mars or somewhere else</p>
                 <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
               </div>
             </a>
@@ -166,9 +173,9 @@
                 <img src="assets/item9.png" alt="item9">
               </div>
               <div class="description-item">
-                <h4>Professional teadrinking set for every designer and developer</h4>
+                <h4 class="product-content">Professional teadrinking set for every designer and developer</h4>
                 <span class="span span-price">$128.99</span>
-                <p>Eligible for nothing :(</p>
+                <p class="product-more-detail">Eligible for nothing :(</p>
                 <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
               </div>
             </a>
@@ -179,9 +186,9 @@
                 <img src="assets/item10.png" alt="item10">
               </div>
               <div class="description-item">
-                <h4>One string Bonsai description</h4>
+                <h4 class="product-content">One string Bonsai description</h4>
                 <span class="span span-price">$11.68</span>
-                <p>Wordwide shinefting available Buyers protection possible!</p>
+                <p class="product-more-detail">Wordwide shinefting available Buyers protection possible!</p>
                 <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
               </div>
             </a>
@@ -192,9 +199,9 @@
                 <img src="assets/item11.png" alt="item11">
               </div>
               <div class="description-item">
-                <h4>Simply best item in town to shine bright with your Nine Inch Nails</h4>
+                <h4 class="product-content">Simply best item in town to shine bright with your Nine Inch Nails</h4>
                 <span class="span span-price">$1.25</span> <span class="span span-saleoff">Cool deal!</span>
-                <p>Eligible for Shipping To Mars or somewhere else</p>
+                <p class="product-more-detail">Eligible for Shipping To Mars or somewhere else</p>
                 <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
               </div>
             </a>
@@ -205,9 +212,9 @@
                 <img src="assets/item12.png" alt="item12">
               </div>
               <div class="description-item">
-                <h4>KISTOCHKI & KRASIBO. Top cosmetics brand from Chelyabinsk is here!</h4>
+                <h4 class="product-content">KISTOCHKI & KRASIBO. Top cosmetics brand from Chelyabinsk is here!</h4>
                 <span class="span span-price">$23.25</span>
-                <p>1258 bids, 359 watchers $5.95 for shipping</p>
+                <p class="product-more-detail">1258 bids, 359 watchers $5.95 for shipping</p>
                 <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
               </div>
             </a>
