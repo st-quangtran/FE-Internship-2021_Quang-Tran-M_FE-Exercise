@@ -5,37 +5,40 @@
   <title>Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://kit.fontawesome.com/52d5d4ff54.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="page-header">
-    <div class="header-left">
-      <h1>
-        <a href="#" class="btn btn-logo">
-          <img src="assets/logo.png" alt="Logo">
-        </a>
-      </h1>      
-    </div>
-    <div class="header-center">
-      <div class="header-menu">
-        <button type="button" class="btn btn-menu"><i class="fas fa-bars"></i></button>
+    <div class="container-header">
+      <div class="header-left">
+        <h1>
+          <a href="#" class="btn btn-logo">
+            <img src="assets/logo.png" alt="Logo">
+          </a>
+        </h1>      
       </div>
-      <div class="header-search">
-        <i class="fas fa-search"></i>
-        <input type="search" class="text-search" placeholder="Search">
+      <div class="header-center">
+        <div class="header-menu">
+          <button type="button" class="btn btn-menu"><i class="fas fa-bars"></i></button>
+        </div>
+        <div class="header-search">
+          <i class="fas fa-search"></i>
+          <input type="search" class="text-search" placeholder="Search">
+        </div>
       </div>
-    </div>
-    <div class="header-right">
-      <div class="header-cart">
-        <a href="#" class="btn btn-cart"><i class="fas fa-shopping-cart"></i></a>
-        <span class="amount">1</span>
-      </div>
-      <div class="header-signin-signup">
-        <a href="#" class="btn btn-primary">Sign in</a>
-        <a href="#" class="btn btn-secondary">Sign up</a>
+      <div class="header-right">
+        <div class="header-cart">
+          <a href="#" class="btn btn-cart"><i class="fas fa-shopping-cart"></i></a>
+          <span class="amount">1</span>
+        </div>
+        <div class="header-signin-signup">
+          <a href="#" class="btn btn-primary">Sign in</a>
+          <a href="#" class="btn btn-secondary">Sign up</a>
+        </div>
       </div>
     </div>
   </header>
-  <main class="container">
+  <main class="container-main">
     <section class="section section-banner">
       <img src="assets/banner.png" class="banner" alt="image">
     </section>
@@ -226,11 +229,13 @@
         </ul>
       </div>
     </section>
-	</main>
+  </main>
   <footer class="page-footer">
-    <p>Are you ready?</p>
-    <p>Let's get started</p>
-    <p>Copyright @ 2020.Logolpsum. All rights reserved.</p>
+    <div class="container-footer">
+      <p>Are you ready?</p>
+      <p>Let's get started</p>
+      <p>Copyright @ 2020.Logolpsum. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
