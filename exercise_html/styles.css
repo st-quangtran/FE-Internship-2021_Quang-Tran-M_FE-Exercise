@@ -1,0 +1,259 @@
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.page-header {
+  border-bottom: 1px solid gray;
+}
+.container {
+  width: 1160px;
+  margin: 0px auto; 
+  align-items: center;
+}
+.container-header {
+  display: flex;
+  justify-content: space-between;
+}
+.header-left {
+
+}
+.header-center {
+  display: flex;
+  align-items: center;
+}
+.header-right {
+  display: flex;
+}
+.header-menu {
+  margin-right: 20px;
+}
+.header-search {
+  position: relative;
+}
+.header-cart {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+}
+.amount {
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 10px;
+  background-color: #EF0909;
+  border-radius: 5px;
+  color: white;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  align-items: center;
+}
+.fa-search {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #787885;
+  width: 17.5px;
+  height: 17.5px;
+}
+.text-search {
+  height: 48px;
+  width: 430px;
+  border-radius: 99px;
+  padding-left: 25px;
+  background-color: #EDEDF0;
+  border: none;
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  border: none;
+  width: 104px;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 20px;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+}
+.btn-menu {
+  font-size: 32px;
+  background-color: white;
+  color: blue;
+}
+.btn-primary {
+  color: #2264D1;
+  margin-right: 20px;
+}
+.btn-secondary {
+  background-color: #2264D1;
+  color: white;
+}
+.banner {
+  width: 100%;
+}
+.section-handle-products {
+  margin: auto 5px;
+}
+.toolbar {
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.toolbar-right {
+  display: flex;
+  justify-content: space-between;
+}
+.toolbar-action {
+  margin-right: 20px
+}
+.btn-elementari {
+  width: 85px;
+  height: 36px; 
+  background-color: #EBF2FF;
+  font-size: 14px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+}
+.select {
+  width: 142px;
+  height: 36px;
+  border-radius: 4px;
+  border: 1px solid #B4B4BB;
+}
+.show-products {
+  margin: auto 5px;
+}
+.products-list {
+  list-style-type: none;
+}
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.product-item {
+  width: 264px;
+  height: 472px;
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-item {
+  align-content: center;
+  width: 233px;
+  height: 224px;
+}
+.description-item {
+  flex-direction: column;
+  width: 233px;
+}
+.product-content {
+  margin-top: 12px;
+  height: 74px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: black;
+}
+.product-price {
+  margin-top: 8px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  color: black;
+  height: 36px;
+}
+.product-saleoff {
+  width: 70px;
+  height: 24px;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #37833B;
+  background-color: #ECF7ED;
+  border-radius: 4px;
+}
+.product-hot {
+  width: 70px;
+  height: 24px;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #C23564;
+  background-color: #FDEDF2;
+  border-radius: 4px;
+}
+.btn-addcart {
+  margin-top: 8px;
+  /* position: absolute; */
+  bottom: 16px;
+  width: 105px;
+  height: 32px; 
+  border: 1px solid #9DC2FF;
+  background-color: white;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+}
+.product-more-detail {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: gray;
+  height: 41px;
+}
+.page-footer {
+  position: relative;
+  height: 275px;
+  background-color: #2264D1;
+}
+.p-footer {
+  color: white;
+}
+.footer-top {
+  position: absolute;
+  font-size: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 64px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+}
+.footer-center {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  position: absolute;
+  font-size: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 103px;
+}
+.footer-bottom {
+  position: absolute;
+  font-size: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 191px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+}
