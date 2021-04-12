@@ -3,8 +3,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  line-height: 1;
+}
 a {
   text-decoration: none;
+}
+select {
+  height: 36px;
+  padding-left: 12px;
+  font-family: Inter;
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid #B4B4BB;
+  -webkit-appearance: none;
+  color: #787885;
+}
+select:hover {
+  border: 1px solid #5A5B6A;
+  color: #19191D;
 }
 .btn {
   border: none;
@@ -191,20 +208,8 @@ a {
   right: 15px;
   color: #787885;
 }
-select {
-  height: 36px;
-  padding-left: 12px;
-  font-family: Inter;
-  position: relative;
-  border-radius: 4px;
-  border: 1px solid #B4B4BB;
-  -webkit-appearance: none;
-  color: #787885;
-}
 .select-useless {
   width: 142px;
-  border: 1px solid #5A5B6A;
-  color: #19191D;
 }
 .select-condition {
   width: 118px;
@@ -241,7 +246,7 @@ select {
 .fa-th-large {
   font-size: 18px;
 }
-.btn-elementari:nth-child(2) {
+.btn-elementari:hover {
   background-color: white;
   color: #2264D1;
   box-shadow: 0px 1px 2px rgba(27, 78, 163, 0.24);
@@ -350,10 +355,11 @@ select {
   color: #2264D1;
   background-color: white;
 }
-.product-item:nth-child(6) {
+.product-item:hover {
   box-shadow: 0px 4px 8px rgba(90, 91, 106, 0.2);
+  transition: all 1s;
 }
-.product-item:nth-child(6) .btn-addcart {
+.product-item:hover .btn-addcart {
   color: white;
   background-color: #2264D1;
 }
