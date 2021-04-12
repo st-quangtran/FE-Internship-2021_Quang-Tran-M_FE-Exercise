@@ -31,6 +31,7 @@ main .section-handle-products select:hover {
   border-radius: 4px;
   font-style: normal;
   text-align: center;
+  cursor: pointer;
 }
 .container {
   width: 1160px;
