@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/52d5d4ff54.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="page-header">
+    <div class="container">
+      <div class="header-left">
+        <h1>
+          <a href="#" class="btn btn-logo">
+            <img src="assets/logo/logo.png" alt="Logo">
+          </a>
+        </h1>      
+      </div>
+      <div class="header-center">
+        <div class="header-menu">
+          <button type="button" class="btn btn-menu"><i class="fas fa-bars"></i></button>
+        </div>
+        <div class="header-search">
+          <i class="fas fa-search"></i>
+          <input type="search" class="text-search" placeholder="Search">
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="header-cart">
+          <a href="#" class="btn btn-cart"><i class="fas fa-shopping-cart"></i></a>
+          <span class="amount">1</span>
+        </div>
+        <div class="header-signin-signup">
+          <a href="#" class="btn btn-primary">Sign in</a>
+          <a href="#" class="btn btn-secondary">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <section class="section section-banner">
+      <img src="assets/logo/banner.png" class="banner" alt="image">
+    </section>
+    <section class="section section-handle-products">
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <select class="select-useless">
+            <option class="option-product" value="useless">Useless firse</option>
+          </select>
+          <select class="select-condition">
+            <option class="option-product" value="condition">Condition</option>
+          </select>
+          <select class="select-delivery">
+            <option class="option-product" value="delivery">Delivery Options</option>
+          </select>
+        </div>
+        <div class="toolbar-right">
+          <div class="toolbar-action">
+            <button type="button" class="btn btn-elementari">Show all</button>
+            <button type="button" class="btn btn-elementari">Auction</button>
+            <button type="button" class="btn btn-elementari">Buy now</button>
+          </div>
+          <div class="toolbar-display-way">
+            <button type="button" class="btn btn-elementari"><i class="fas fa-list"></i></button>
+            <button type="button" class="btn btn-elementari"><i class="fas fa-th-large"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="show-products">
+        <ul class="products-list">
+          <li class="product-item">
+            <a href="#">
+              <div class="image-item">
+                <img src="assets/products/item1.png" alt="item1">
+              </div>
+              <div class="description-item">
+                <h4 class="product-content">Vintage Typewriter to post awesome stories about UI design and webdev</h4>
+                <span class="product-price">$49.50</span>
+                <p class="product-more-detail">Eligible for Shipping To Mars or somewhere else</p>
+                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+              </div>
+            </a>
+          </li>
+          <li class="product-item">
+            <a href="#">
+              <div class="image-item">
+                <img src="assets/products/item2.png" alt="item2">
+              </div>
+              <div class="description-item">
+                <h4 class="product-content">Lee Pucker design. Leather botinki for handsome designers. Free shipping.</h4>
+                <span class="product-price">$13.95</span>
+                <p class="product-more-detail">1258 bids, 359 watchers $5.95 for shipping</p>
+                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+              </div>
+            </a>
+          </li>
+          <li class="product-item">
+            <a href="#">
+              <div class="image-item">
+                <img src="assets/products/item3.png" alt="item3">
+              </div>
+              <div class="description-item">
+                <h4 class="product-content">Timesaving kitten to save months on development. Playful, cute, cheap!</h4>
+                <span class="product-price">$128.99</span>
+                <p class="product-more-detail">Eligible for nothing :(</p>
+                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+              </div>
+            </a>
+          </li>
+          <li class="product-item">
+            <a href="#">
+              <div class="image-item">
+                <img src="assets/products/item4.png" alt="item4">
+              </div>
+              <div class="description-item">
+                <h4 class="product-content">Plastic useless plugs and tubes for high-fidelity prototyping. Fit & Eat!</h4>
+                <span class="product-price">$12.48</span>
+                <span class="product-saleoff">50% off</span>
+                <p class="product-more-detail">Wordwide shitting available Buyers protection possible!</p>
+                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+              </div>   
+            </a>
+          </li>
+          <li class="product-item">
+            <a href="#">
+              <div class="image-item">
+                <img src="assets/products/item5.png" alt="item5">
+              </div>
+              <div class="description-item">
+                <h4 class="product-content">Creativity stimulating lotion. Drink every morning to generate better ideas!</h4>
+                <span class="product-price">$12.48</span>
+                <p class="product-more-detail">Wordwide shifting available Buyers protection possible!</p>
+                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+              </div>
+            </a>
+          </li>
+          <li class="product-item">
+            <a href="#">
+              <div class="image-item">
+                <img src="assets/products/item6.png" alt="item6">
+              </div>
+              <div class="description-item">
+                <h4 class="product-content">Prototyping items to create a lot if useless things...</h4>
+                <span class="product-price">$128.99</span>
+                <p class="product-more-detail">Showcasting onHovered state</p>
+                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+              </div>
+            </a>
+          </li>
+          <li class="product-item">
+            <a href="#">
+              <div class="image-item">
+                <img src="assets/products/item7.png" alt="item7">
+              </div>
+              <div class="description-item">
+                <h4 class="product-content">John Von Ebalkin SPRING</h4>
+                <span class="product-price">$13.95</span>
+                <p class="product-more-detail">1258 bids, 359 watchers $5.95 for shipping</p>
+                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+              </div>
+            </a>
+          </li>
+          <li class="product-item">
+            <a href="#">
+              <div class="image-item">
+                <img src="assets/products/item8.png" alt="item8">
+              </div>
+              <div class="description-item">
+                <h4 class="product-content">Envelope, Stripes, Pencil and etc. Purchase this kit today and feel OKAY	</h4>
+                <span class="product-price">$9.50</span>
+                <p class="product-more-detail">Eligible for Shipping To Mars or somewhere else</p>
+                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+              </div>
+            </a>
+          </li>
+          <li class="product-item">
+            <a href="#">
+              <div class="image-item">
+                <img src="assets/products/item9.png" alt="item9">
+              </div>
+              <div class="description-item">
+                <h4 class="product-content">Professional teadrinking set for every designer and developer</h4>
+                <span class="product-price">$128.99</span>
+                <p class="product-more-detail">Eligible for nothing :(</p>
+                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+              </div>
+            </a>
+          </li>
+          <li class="product-item">
+            <a href="#">
+              <div class="image-item">
+                <img src="assets/products/item10.png" alt="item10">
+              </div>
+              <div class="description-item">
+                <h4 class="product-content">One string Bonsai description</h4>
+                <span class="product-price">$11.68</span>
+                <p class="product-more-detail">Wordwide shinefting available Buyers protection possible!</p>
+                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+              </div>
+            </a>
+          </li>
+          <li class="product-item">
+            <a href="#">
+              <div class="image-item">
+                <img src="assets/products/item11.png" alt="item11">
+              </div>
+              <div class="description-item">
+                <h4 class="product-content">Simply best item in town to shine bright with your Nine Inch Nails</h4>
+                <span class="product-price">$1.25</span> 
+                <span class="product-saleoff">Cool deal!</span>
+                <p class="product-more-detail">Eligible for Shipping To Mars or somewhere else</p>
+                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+              </div>
+            </a>
+          </li>
+          <li class="product-item">
+            <a href="#">
+              <div class="image-item">
+                <img src="assets/products/item12.png" alt="item12">
+              </div>
+              <div class="description-item">
+                <h4 class="product-content">KISTOCHKI & KRASIBO. Top cosmetics brand from Chelyabinsk is here!</h4>
+                <span class="product-price">$23.25</span>
+                <p class="product-more-detail">1258 bids, 359 watchers $5.95 for shipping</p>
+                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <p>Are you ready?</p>
+    <p>Let's get started</p>
+    <p>Copyright @ 2020.Logolpsum. All rights reserved.</p>
+  </footer>
+</body>
+</html>
