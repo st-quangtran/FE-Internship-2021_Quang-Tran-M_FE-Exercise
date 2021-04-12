@@ -44,6 +44,7 @@ main > .section-handle-products select:hover {
   height: 80px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .container-header > .header-left {
   height: 80px;
@@ -220,7 +221,7 @@ footer > p {
   width: 158px;
   margin-left: 10px;
 }
-.option-product {
+.select-option .option-product {
   font-size: 14px;
 }
 .toolbar-right > .toolbar-action {
@@ -239,6 +240,11 @@ footer > p {
   background-color: #EBF2FF;
   color: #5A5B6A;
 }
+.btn-elementari:hover {
+  color: #2264D1;
+  background-color: white;
+  box-shadow: 0px 1px 2px rgba(27, 78, 163, 0.24);
+}
 .toolbar-display-way > .fa-list {
   width: 17px;
   height: 14px;
@@ -246,11 +252,6 @@ footer > p {
 }
 .toolbar-display-way > .fa-th-large {
   font-size: 18px;
-}
-.btn-elementari:hover {
-  background-color: white;
-  color: #2264D1;
-  box-shadow: 0px 1px 2px rgba(27, 78, 163, 0.24);
 }
 .section-handle-products > .show-products {
   margin: auto 5px;
