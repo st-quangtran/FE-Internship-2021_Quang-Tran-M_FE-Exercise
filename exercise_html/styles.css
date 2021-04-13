@@ -58,7 +58,7 @@ main .section-handle-products select:hover {
   outline: none;
 }
 .container {
-  width: 1160px;
+  width: 1120px;
   margin: 0px auto; 
   align-items: center;
 }
@@ -241,6 +241,12 @@ footer p {
   background-color: white;
   box-shadow: 0px 1px 2px rgba(27, 78, 163, 0.24);
 }
+.radio {
+  display: none;
+}
+.radio:focus {
+
+}
 .toolbar-display-way .fa-list, .fa-th-large {
   padding: 9px 25px;
   font-size: 18px;
@@ -264,20 +270,20 @@ footer p {
   width: 233px;
   height: 224px;
 }
-.product-item .description-item {
+.product-item .body-item {
   margin-top: 12px;
 }
 .product-item a {
   width: 100%;
 }
-.description-item .product-content {
+.body-item .product-content {
   width: 233px;
   height: 74px;
   font-size: 16px;
   color: #19191D;
   line-height: 150%;
 }
-.description-item .product-price {
+.body-item .product-price {
   height: 36px;
   margin-top: 8px;
   position: relative;
@@ -286,7 +292,7 @@ footer p {
   line-height: 150%;
   color: black;
 }
-.description-item .product-price.sale-off::after,
+.body-item .product-price.sale-off::after,
 .product-price.cool-deal::after {
   padding: 4px 10px;
   margin-top: 6px;
@@ -298,17 +304,17 @@ footer p {
   line-height: 16px;
   float: right;
 }
-.description-item .product-price.sale-off::after {
+.body-item .product-price.sale-off::after {
   content: "50% OFF";
   color: #37833B;
   background-color: #ECF7ED;
 }
-.description-item .product-price.cool-deal::after {
+.body-item .product-price.cool-deal::after {
   content: "Cool deal!";
   color: #C23564;
   background-color: #FDEDF2;
 }
-.description-item .product-more-detail {
+.body-item .product-more-detail {
   width: 233px;
   height: 41px;
   margin-top: 8px;
@@ -316,10 +322,9 @@ footer p {
   color: #787885;
   line-height: 143%;
 }
-.description-item .btn-addcart {
+.body-item .btn-addcart {
   padding: 4px 12px;
   margin-top: 8px;
-  display: inline-block;
   font-weight: 500;
   font-size: 14px;
   border: 1px solid #9DC2FF;
