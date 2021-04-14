@@ -12,9 +12,6 @@ footer, header, section, summary {
 footer, header, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
 ol, ul {
 	list-style: none;
 }
@@ -32,8 +29,8 @@ a {
 ul, ol {
   list-style: none;
 }
-
 body {
+  line-height: 1;
   font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -101,9 +98,18 @@ main .section-handle-products select:hover {
   width: 430px;
   padding: 8px 8px 8px 44px;
   border-radius: 99px;
+  font-size: 20px;
+  line-height: 158%;
   background-color: #EDEDF0;
   border: none;
   outline: none;
+}
+.header-search .text-search:focus {
+  background-color: white;
+  border: 1px solid #EDEDF0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
 }
 .header-center .btn-menu {
   font-size: 32px;
@@ -185,6 +191,7 @@ footer p {
   justify-content: space-between;
 }
 .toolbar .toolbar-left {
+  margin-left: 16px;
   display: flex;
 }
 .toolbar .toolbar-right {
@@ -247,13 +254,12 @@ footer p {
 .radio {
   display: none;
 }
-.radio:checked + label {
+.radio:checked + label {          
   color: #2264D1;
   background-color: white;
   box-shadow: 0px 1px 2px rgba(27, 78, 163, 0.24);
 }
 .toolbar-display-way .fa-list, .fa-th-large {
-  padding: 9px 25px;
   font-size: 18px;
 }
 .section-handle-products .show-products {
@@ -266,6 +272,7 @@ footer p {
 }
 .products-list .product-item {
   max-width: calc(100%/4 - 10px);
+  height: 472px;
   margin: 16px 5px;
   align-items: center;
   border-radius: 4px;
