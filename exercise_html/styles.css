@@ -158,12 +158,12 @@ footer p {
   text-align: center;
 }
 .page-footer .footer-top {
-  margin-bottom: 15px;
   font-size: 16px;
   line-height: 150%;
 }
 .page-footer .footer-center {
-  margin-bottom: 16px;
+  padding-top: 15px;
+  padding-bottom: 16px;
   font-weight: bold;
   font-size: 48px;
   line-height: 150%;
@@ -281,21 +281,21 @@ footer p {
   padding: 16px 16px 12px;
 }
 .product .product-img {
-  margin-bottom: 12px;
+  padding-bottom: 12px;
 }
 .product .product-body {
-  margin-bottom: 8px;
+  padding-bottom: 8px;
 }
 .product-body .product-content {
-  height: 74px;
-  margin-bottom: 8px;
+  height: 82px;
+  padding-bottom: 8px;
   font-size: 16px;
   color: #19191D;
   line-height: 150%;
 }
 .product-body .product-price {
-  height: 36px;
-  margin-bottom: 8px;
+  height: 44px;
+  padding-bottom: 8px;
   position: relative;
   font-weight: bold;
   font-size: 24px;
@@ -312,7 +312,7 @@ footer p {
   font-weight: normal;
   line-height: 16px;
   position: absolute;
-  top: 50%;
+  top: calc(50% - 8px);
   transform: translateY(-50%);
   right: 0px;
 }
@@ -329,13 +329,15 @@ footer p {
 .product-body .product-more-detail {
   width: 233px;
   height: 41px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
   font-size: 14px;
   color: #787885;
   line-height: 143%;
 }
 .product-footer .btn-addcart {
   padding: 4px 12px;
-  margin-top: 8px;
   font-weight: 500;
   font-size: 14px;
   border: 1px solid #9DC2FF;
