@@ -1,0 +1,45 @@
+.btn {
+  border: none;
+  outline: none;
+  color: #333333;
+  cursor: pointer;
+  &.btn-primary {
+    background-color: map-get($color, wt);
+    font-weight: $font-weight-bold;
+    font-size: map-get($font-size, xs);
+    padding: 14px 20px;
+    border-radius: 33px;
+  }
+  &.btn-people {
+    margin: auto 45px;
+    font-weight: $font-weight-bold;
+    font-size: map-get($font-size, xl);
+    color: map-get($color, org);
+    line-height: 27px;
+  }
+  &.btn-users {
+    margin-left: 24px;
+    background-color: rgba(0,0,0,0);
+  }
+  &.btn-shopnow {
+    width: 195px;
+    display: flex;
+    align-items: center;
+    .txt-shopnow {
+      padding-left: 21px;
+      line-height: 36px;
+      font-weight: $font-weight-bold;
+      font-size: map-get($font-size, xxxl);
+      color: map-get($color, wt);
+    }
+  }
+  &.btn-subscribe {
+    padding: 14px 30px;
+    font-size: map-get($font-size, xs);
+    font-weight: $font-weight-bold;
+    background-color: map-get($color, org);
+    color: map-get($color, blk);
+    line-height: 19px;
+    border-radius: 56px;
+  }
+}

@@ -36,6 +36,7 @@
     <section class="banner">
       <div class="img-banner">
         <img src="assets/product/banner.png" alt="Banner">
+        <div class="bg-banner"></div>
       </div>
       <div class="banner-sale">
         <h2>Sale of the <span>summer</span> collection</h2>
@@ -47,7 +48,7 @@
         </div>
       </div>
       <div class="banner-event">
-        <ul class="list-banner-event">
+        <ul class="flex-spc-bw list-banner-event">
           <li class="item-event">
             <div class="event">
               <div class="img-event">
@@ -84,12 +85,13 @@
         </ul>
       </div>
     </section>
-    <section class="container">
-      <section class="category">
-        <ul class="list-category">
+    <section>
+      <section class="container show-category">
+        <ul class="flex-spc-bw list-category">
           <li class="item-category">
-            <div class="show-collection">
+            <div class="category">
               <img src="assets/product/collection.png" alt="Collection">
+              <div class="bg-category"></div>
               <div class="detail-category">
                 <h4 class="name-category">New arrivalsare now in!</h4>
                 <a href="#" class="btn btn-primary">SHOW COLLECTION</a>
@@ -97,8 +99,9 @@
             </div>
           </li>
           <li class="item-category">
-            <div class="more-detail">
+            <div class="category">
               <img src="assets/product/moredetail.png" alt="Detail">
+              <div class="bg-category"></div>
               <div class="detail-category">
                 <h4 class="name-category">Basic t-shirts $29,99</h4>
                 <a href="#" class="btn btn-primary">MORE DETAILS</a>
@@ -106,8 +109,9 @@
             </div>
           </li>
           <li class="item-category">
-            <div class="view-all">
+            <div class="category">
               <img src="assets/product/viewall.png" alt="View">
+              <div class="bg-category"></div>
               <div class="detail-category">
                 <p class="sale-off">-50%</p>
                 <h4 class="name-category">Sale this summer</h4>
@@ -117,11 +121,11 @@
           </li>
         </ul>
       </section>
-      <section class="offer-clothing">
-        <h3 class="offer-title">Selected just for you</h3>
+      <section class="container offer-clothing">
+        <h3 class="title-section offer-title">Selected just for you</h3>
         <a href="#" class="btn btn-primary">SHOW MORE</a>
-        <div class="product">
-          <ul class="list-products">
+        <div class="show-product">
+          <ul class="flex-spc-bw list-products">
             <li class="item-products">
               <div class="product">
                 <div class="img-product">
@@ -130,7 +134,7 @@
                 </div>
                 <div class="info-product">
                   <h5 class="name-product">T-Shirt Summer Vibes</h5>
-                  <p class="price-product">$89.99</p>
+                  <p class="price-product price-sale">$89.99</p>
                 </div>
               </div>
             </li>
@@ -170,10 +174,10 @@
           </ul>
         </div>
       </section>
-      <section class="advertisement">
-        <h3 class="title-adver">Why should you choose us?</h3>
+      <section class="container advertisement">
+        <h3 class="title-section title-adver">Why should you choose us?</h3>
         <div class="show-adver">
-          <ul class="list-adver">
+          <ul class="flex-spc-bw list-adver">
             <li class="item-adver">
               <div class="adver">
                 <img alt="Shipping">
@@ -193,7 +197,7 @@
               </div>
             </li>
             <li class="item-adver">
-              <div>
+              <div class="adver">
                 <img alt="Money">
                 <div class="info-adver">
                   <p class="name-adver">Money-Back Guarantee</p>
@@ -202,7 +206,7 @@
               </div>
             </li>
             <li class="item-adver">
-              <div>
+              <div class="adver">
                 <img alt="Finest">
                 <div class="info-adver">
                   <p class="name-adver">Finest Quality</p>
@@ -213,10 +217,10 @@
           </ul>  
         </div>
       </section>
-      <section class="product-today">
-        <h3 class="title-today">Products in today</h3>
-        <div class="product">
-          <ul class="list-products">
+      <section class="container product-today">
+        <h3 class="title-section title-today">Products in today</h3>
+        <div class="show-product">
+          <ul class="flex-spc-bw list-products">
             <li class="item-products">
               <div class="product">
                 <div class="img-product">
@@ -225,7 +229,7 @@
                 </div>
                 <div class="info-product">
                   <h5 class="name-product">T-Shirt Summer Vibes</h5>
-                  <p class="price-product">$89.99</p>
+                  <p class="price-product price-sale">$89.99</p>
                 </div>
               </div>
             </li>
@@ -266,24 +270,25 @@
         </div>
       </section>
     </section>
-    <section class="main-end">
+    <section class="main-subscribe">
       <img src="assets/product/img-footer.png" alt="Subscribe">
-      <div class="container subscribe">
+      <div class="bg-subscribe"></div>
+      <div class="container flex-spc-bw subscribe">
         <p class="txt-subscribe">Subscribe to our newsletter andreceive exclusive offers every week</p>
         <form class="form-subscribe">
-          <input type="text" class="input-subscribe">
+          <input type="text" class="input-subscribe" placeholder="Enter your email">
           <button type="button" class="btn btn-subscribe">SUBSCRIBE</button>
         </form>
       </div>
     </section>
   </main>
-  <footer class="container">
-    <div class="top-footer">
+  <footer class="page-footer">
+    <div class="container flex-spc-bw top-footer">
       <div class="info-shop">
-        <img src="assets/product/logo.png" alt="Logo">
-        <p>House My Brand designs clothing for the young, the old & everyone in between 
+        <img src="assets/logo/logo.png" alt="Logo" class="logo-footer">
+        <p class="infor-footer">House My Brand designs clothing for the young, the old & everyone in between 
           - but most importantly, for the fashionable</p>
-        <div>
+        <div class="app-contact">
           <i class="fab fa-facebook-f"></i>
           <i class="fab fa-twitter"></i>
           <i class="fab fa-invision"></i>
@@ -291,7 +296,7 @@
           <i class="fab fa-youtube"></i>
         </div>
       </div>
-      <div class="">
+      <div class="flex-spc-bw list-info">
         <ul class="online">
           <li><p class="title-footer">Shopping online</p></li>
           <li><p>Order Status</p></li>
@@ -315,7 +320,7 @@
         </ul>
       </div>    
     </div>
-    <div class="footer-bottom">
+    <div class="bottom-footer">
       <p>DESIGN BY ICEO.CO-@ 2019.ALL RIGHTS REVERSED.</p>
     </div>
   </footer>
