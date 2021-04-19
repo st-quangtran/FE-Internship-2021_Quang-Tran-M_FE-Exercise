@@ -1,0 +1,38 @@
+.show-category {
+  .list-category {
+    padding: 48px 0px 96px;
+  }
+  .item-category {
+    height: 359px;
+    position: relative;
+  }
+  .category {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      background: map-get($color, blk);
+      opacity: 0.5;
+    }
+  }
+  .detail-category {
+    position: absolute;
+    bottom: 53px;
+    left: 40px;
+    z-index: 99;
+  }
+  h4 {
+    height: 73px;
+    margin-bottom: 32px;
+    font-size: map-get($font-size, xxxl);
+    line-height: 36px;
+    color: map-get($color, wt )
+  }
+  .sale-off {
+    margin-bottom: 8px;
+  }
+}

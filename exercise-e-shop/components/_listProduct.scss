@@ -1,0 +1,42 @@
+.product {
+  position: relative;
+  .sale-off {
+    position: absolute;
+    top: 24px;
+    left: 18px;
+  }
+  .name-product {
+    margin-top: 16px;
+    font-weight: $font-weight-300;
+    font-size: map-get($font-size, l);
+    line-height: 24px;
+    color: map-get($color, blk);
+  }
+  .cart-product-discount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .price-product {
+      color: map-get($color, l-gr);
+    }
+  }
+  .price-product {
+    position: relative;
+    font-size: map-get($font-size, xxl);
+    line-height: 30px;
+    color: map-get($color, blk);
+      // &:after {
+      //   position: absolute;
+      //   right: 0px;
+      //   top: 50%;
+      //   transform: translateY(-50%);
+      //   content: "$119.99";
+      //   color: map-get($color, l-gr);
+      // }
+    }
+  }
+  .price-discount {
+    font-size: map-get($font-size, xxl);
+    line-height: 30px;
+    color: map-get($color, rd);
+}
