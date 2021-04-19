@@ -1,20 +1,16 @@
 .event {
   padding-right: 48px;
   display: flex;
+  justify-content: space-between;
   .info-event {
     padding-left: 21px;
   }
   .name-event {
     width: 184px;
     padding-bottom: 4px;
-    line-height: 21px;
-    font-weight: $font-weight-bold;
-    font-size: map-get($font-size, m);
-    color: map-get($color, blk);
+    @include font-text(map-get($font-size, m), 21px, map-get($color, blk), $font-weight-bold);
   }
   .endow {
-    font-size: map-get($font-size, s);
-    line-height: 18px;
-    color: map-get($color, d-gr);
+    @include font-text(map-get($font-size, s), 18px, map-get($color, d-gr));
   }
 }

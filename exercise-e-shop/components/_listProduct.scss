@@ -7,10 +7,7 @@
   }
   .name-product {
     margin-top: 16px;
-    font-weight: $font-weight-300;
-    font-size: map-get($font-size, l);
-    line-height: 24px;
-    color: map-get($color, blk);
+    @include font-text(map-get($font-size, l), 24px, map-get($color, blk), $font-weight-300);
   }
   .cart-product-discount {
     display: flex;
@@ -22,13 +19,9 @@
   }
   .price-product {
     position: relative;
-    font-size: map-get($font-size, xxl);
-    line-height: 30px;
-    color: map-get($color, blk);
+    @include font-text(map-get($font-size, xxl), 30px, map-get($color, blk));
     }
   }
   .price-discount {
-    font-size: map-get($font-size, xxl);
-    line-height: 30px;
-    color: map-get($color, rd);
+    @include font-text(map-get($font-size, xxl), 30px, map-get($color, rd));
 }

@@ -1,8 +1,5 @@
 .page-footer {
   background-color: map-get($color, org);
-  p {
-    color: map-get($color, wt);
-  }
   .top-footer {
     padding-top: 45px;
     padding-bottom: 51px;
@@ -17,6 +14,7 @@
   }
   .infor-footer {
     margin-bottom: 57px;
+    @include font-text(map-get($font-size, m), 21px, map-get($color, wt));
   }
   .app-contact {
     display: flex;
@@ -31,23 +29,18 @@
     align-items: center;
     justify-content: space-around;
     p {
-      font-size: map-get($font-size, s);
-      line-height: 18px;
+      @include font-text(map-get($font-size, s), 18px, map-get($color, wt));
     }
   }
   .list-info {
     align-items: baseline;
     p {
-      font-size: map-get($font-size, m);
-      line-height: 150%;
+      @include font-text(map-get($font-size, m), 150%, map-get($color, wt));
     }
   }
   .title-footer {
-    font-weight: $font-weight-bold;
-    font-size: map-get($font-size, l);
-    line-height: 24px;
     margin-bottom: 19px;
-    color: map-get($color, wt);
+    @include font-text(map-get($font-size, l), 24px, map-get($color, wt), $font-weight-bold);
   }
   .info {
     justify-content: space-between;

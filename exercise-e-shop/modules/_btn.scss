@@ -1,21 +1,17 @@
 .btn {
   border: none;
   outline: none;
-  color: #333333;
+  color: map-get($color, blk);
   cursor: pointer;
   &.btn-primary {
     background-color: map-get($color, wt);
-    font-weight: $font-weight-bold;
-    font-size: map-get($font-size, xs);
+    @include font-text(map-get($font-size, xs), 19px, map-get($color, blk), $font-weight-bold);
     padding: 14px 20px;
     border-radius: 33px;
   }
   &.btn-people {
     margin: auto 45px;
-    font-weight: $font-weight-bold;
-    font-size: map-get($font-size, xl);
-    color: map-get($color, org);
-    line-height: 27px;
+    @include font-text(map-get($font-size, xl), 27px, map-get($color, org), $font-weight-bold);
   }
   &.btn-users {
     margin-left: 24px;
@@ -27,19 +23,13 @@
     align-items: center;
     .txt-shopnow {
       padding-left: 21px;
-      line-height: 36px;
-      font-weight: $font-weight-bold;
-      font-size: map-get($font-size, xxxl);
-      color: map-get($color, wt);
+      @include font-text(map-get($font-size, xxxl), 36px, map-get($color, wt), $font-weight-bold);
     }
   }
   &.btn-subscribe {
     padding: 14px 30px;
-    font-size: map-get($font-size, xs);
-    font-weight: $font-weight-bold;
+    @include font-text(map-get($font-size, xs), 19px, map-get($color, blk), $font-weight-bold);
     background-color: map-get($color, org);
-    color: map-get($color, blk);
-    line-height: 19px;
     border-radius: 56px;
   }
 }

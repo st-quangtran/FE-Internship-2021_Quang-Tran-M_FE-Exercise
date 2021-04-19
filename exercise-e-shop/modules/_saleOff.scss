@@ -2,8 +2,5 @@
   padding: 6px 10px;
   background-color: map-get($color, rd);
   border-radius: 20px;
-  font-size: map-get($font-size, s);
-  font-weight: $font-weight-bold;
-  line-height: 18px;
-  color: map-get($color, wt);
+  @include font-text(map-get($font-size, s), 18px, map-get($color, wt), $font-weight-bold);
 }

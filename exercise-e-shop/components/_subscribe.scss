@@ -1,6 +1,7 @@
 .main-subscribe {
   width: 100%;
   position: relative;
+  line-height: 0;
   img {
     width: 100%;
   }
@@ -11,9 +12,7 @@
     z-index: 99;
     .txt-subscribe {
       width: 493px;
-      font-size: 24px;
-      line-height: 36px;
-      color: map-get($color, wt);
+      @include font-text(map-get($font-size, xxxl), 36px, map-get($color, wt));
     }
   }
   .form-subscribe {
@@ -22,9 +21,7 @@
       height: 48px;
       margin-right: 40px;
       padding: 14px 24px;
-      font-size: map-get($font-size, xs);
-      line-height: 19px;
-      color: map-get($color, l-gray);
+      @include font-text(map-get($font-size, xs), 19px, map-get($color, l-gray));
       border: none;
       border-radius: 61px;
       outline: none;
