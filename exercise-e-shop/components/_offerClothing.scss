@@ -1,14 +1,16 @@
 .offer-clothing {
   padding-bottom: 60px;
-  position: relative;
   align-items: baseline;
+  .container {
+    position: relative;
+  }
   .offer-title {
     padding-bottom: 40px;
   }
   .btn-primary {
     position: absolute;
     top: 0px;
-    right: 10%;
+    right: 0;
     border: 1px solid #C4C4C4;
   }
 }

@@ -1,3 +1,7 @@
+.item-products {
+  width: calc((100% - 60px)/4);
+  min-width: 273px;
+}
 .product {
   position: relative;
   .sale-off {

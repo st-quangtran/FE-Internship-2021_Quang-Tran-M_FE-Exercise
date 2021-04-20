@@ -66,8 +66,9 @@ a {
 }
 
 .container {
+  max-width: 1152px;
   width: 100%;
-  padding: 0px 10%;
+  margin: 0px auto;
 }
 
 .page-header {
@@ -92,6 +93,9 @@ a {
   padding-top: 45px;
   padding-bottom: 51px;
   border-bottom: 1px solid #FFFFFF;
+}
+.page-footer .top-footer .flex-spc-bw {
+  align-items: flex-start;
 }
 .page-footer .info-shop {
   max-width: 373px;
@@ -125,7 +129,9 @@ a {
   color: #FFFFFF;
 }
 .page-footer .list-info {
-  align-items: baseline;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .page-footer .list-info p {
   font-size: 14px;
@@ -139,15 +145,11 @@ a {
   color: #FFFFFF;
   font-weight: bold;
 }
-.page-footer .info {
-  justify-content: space-between;
-}
 
 .flex-spc-bw {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
 }
 
 .btn {
@@ -337,8 +339,10 @@ a {
 
 .offer-clothing {
   padding-bottom: 60px;
-  position: relative;
   align-items: baseline;
+}
+.offer-clothing .container {
+  position: relative;
 }
 .offer-clothing .offer-title {
   padding-bottom: 40px;
@@ -346,7 +350,7 @@ a {
 .offer-clothing .btn-primary {
   position: absolute;
   top: 0px;
-  right: 10%;
+  right: 0;
   border: 1px solid #C4C4C4;
 }
 
@@ -400,11 +404,16 @@ a {
   transform: translateY(-50%);
   z-index: 99;
 }
-.main-subscribe .subscribe .txt-subscribe {
-  width: 493px;
+.main-subscribe .txt-subscribe {
+  width: 50%;
   font-size: 24px;
   line-height: 36px;
   color: #FFFFFF;
+}
+.main-subscribe .form-subscribe {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
 }
 .main-subscribe .form-subscribe .input-subscribe {
   width: 351px;
@@ -436,6 +445,11 @@ a {
 .product-today .title-today {
   margin-bottom: 39px;
   text-align: center;
+}
+
+.item-products {
+  width: calc((100% - 60px)/4);
+  min-width: 273px;
 }
 
 .product {

@@ -10,12 +10,15 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 99;
-    .txt-subscribe {
-      width: 493px;
-      @include font-text(map-get($font-size, xxxl), 36px, map-get($color, wt));
-    }
+  }
+  .txt-subscribe {
+    width: 50%;
+    @include font-text(map-get($font-size, xxxl), 36px, map-get($color, wt));
   }
   .form-subscribe {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
     .input-subscribe {
       width: 351px;
       height: 48px;

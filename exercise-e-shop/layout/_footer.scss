@@ -4,6 +4,9 @@
     padding-top: 45px;
     padding-bottom: 51px;
     border-bottom: 1px solid map-get($color, wt);
+    .flex-spc-bw {
+      align-items: flex-start;
+    }
   }
   .info-shop {
     max-width: 373px;
@@ -33,7 +36,9 @@
     }
   }
   .list-info {
-    align-items: baseline;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     p {
       @include font-text(map-get($font-size, m), 150%, map-get($color, wt));
     }
@@ -41,8 +46,5 @@
   .title-footer {
     margin-bottom: 19px;
     @include font-text(map-get($font-size, l), 24px, map-get($color, wt), $font-weight-bold);
-  }
-  .info {
-    justify-content: space-between;
   }
 }
