@@ -1,0 +1,229 @@
+.banner {
+  position: relative;
+  line-height: 0;
+  .img-banner {
+    position: relative;
+    width: 100%;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
+  }
+  .banner-sale {
+    width: 403px;
+    position: absolute;
+    top: 222px;
+    left: 17%;
+    z-index: 99;
+    h2 {
+      padding-bottom: 24px;
+      span {
+        color: map-get($color, org);
+      }
+    }
+    .banner-action {
+      padding: 0px;
+    }
+  }
+  .banner-event {
+    width: 77%;
+    height: 124px;
+    padding: 37px 17% 24px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: white;
+    border-radius: 0px 100px 0px 0px;
+    z-index: 99;
+    .list-banner-event {
+      max-width: 100%;
+      height: 100%;
+    }
+  }
+}
+.event {
+  padding-right: 48px;
+  display: flex;
+  justify-content: space-between;
+  .info-event {
+    padding-left: 21px;
+  }
+  .name-event {
+    width: 184px;
+    padding-bottom: 4px;
+    @include font-text(map-get($font-size, m), 21px, map-get($color, blk), $font-weight-bold);
+  }
+  .endow {
+    @include font-text(map-get($font-size, s), 18px, map-get($color, d-gr));
+  }
+}
+.show-category {
+  .list-category {
+    padding: 48px 0px 96px;
+  }
+  .item-category {
+    position: relative;
+  }
+  .category {
+    line-height: 0;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      background: map-get($color, blk);
+      opacity: 0.5;
+    }
+  }
+  .name-category {
+    position: absolute;
+    top: 167px;
+    left: 40px;
+    right: 40px;
+    height: 73px;
+    @include font-text(map-get($font-size, xxxl), 36px,  map-get($color, wt));
+    z-index: 99;
+  }
+  .sale-off {
+    position: absolute;
+    top: 129px  ;
+    left: 40px;
+    z-index: 99;
+  }
+  .btn-category {
+    position: absolute;
+    left: 40px;
+    top: 258px;
+    z-index: 99;
+  }
+}
+.offer-clothing {
+  padding-bottom: 60px;
+  align-items: baseline;
+  .container {
+    position: relative;
+  }
+  .offer-title {
+    padding-bottom: 40px;
+  }
+  .btn-primary {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    border: 1px solid #C4C4C4;
+  }
+}
+.product-today {
+  padding-top: 48px;
+  padding-bottom: 60px;
+  .title-today {
+    margin-bottom: 39px;
+    text-align: center;
+  }
+}
+.product {
+  position: relative;
+  .sale-off {
+    position: absolute;
+    top: 24px;
+    left: 18px;
+  }
+  .name-product {
+    margin-top: 16px;
+    @include font-text(map-get($font-size, l), 24px, map-get($color, blk), $font-weight-300);
+  }
+  .cart-product-discount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .price-product {
+      color: map-get($color, l-gr);
+    }
+  }
+  .price-product {
+    position: relative;
+    @include font-text(map-get($font-size, xxl), 30px, map-get($color, blk));
+    }
+  }
+  .price-discount {
+    @include font-text(map-get($font-size, xxl), 30px, map-get($color, rd));
+}
+.advertisement {
+  padding-top: 48px;
+  padding-bottom: 54px;
+  background-color: map-get($color, w-gray);
+  .title-adver {
+    text-align: center;
+    margin: 0px auto 50px;
+  }
+}
+.adver {
+  .img-adver {
+    width: 68px;
+    height: 68px;
+    background-color: map-get($color, wt);
+    border-radius: 10px;
+    margin-bottom: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .name-adver {
+    padding-bottom: 16px;
+    @include font-text(map-get($font-size, l), 24px, map-get($color, blk), $font-weight-bold);
+  }
+  .detail-adver {
+    @include font-text(map-get($font-size, m), 21px, map-get($color, gr));
+  }
+}
+.main-subscribe {
+  width: 100%;
+  position: relative;
+  line-height: 0;
+  img {
+    width: 100%;
+  }
+  .subscribe {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+  }
+  .txt-subscribe {
+    width: 50%;
+    @include font-text(map-get($font-size, xxxl), 36px, map-get($color, wt));
+  }
+  .form-subscribe {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    .input-subscribe {
+      width: 351px;
+      height: 48px;
+      margin-right: 40px;
+      padding: 14px 24px;
+      @include font-text(map-get($font-size, xs), 19px, map-get($color, l-gray));
+      border: none;
+      border-radius: 61px;
+      outline: none;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, #000000 33.28%, rgba(0, 0, 0, 0) 94.05%);
+    opacity: 0.7; 
+  }
+}
