@@ -4,3 +4,11 @@
   border-radius: 20px;
   @include font-text(map-get($font-size, s), 18px, map-get($color, wt), $font-weight-bold);
 }
+@include mobile {
+  .sale-off {
+    padding: 2px 9px;
+    font-size: map-get($font-size, sss);
+    line-height: 12px;
+    border-radius: 9px;
+  }
+}

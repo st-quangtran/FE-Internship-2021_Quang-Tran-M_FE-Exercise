@@ -2,7 +2,7 @@
   width: 100%;
   position: fixed;
   top: 48px;
-  z-index: 2;
+  z-index: 99;
   .nav-list {
     display: flex;
     justify-content: space-between;
@@ -10,5 +10,35 @@
   .options-list {
     display: flex;
     justify-content: space-between;
+  }
+  .menu-item {
+    display: none;
+  }
+}
+@include mobile {
+  .page-header {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    top: 0;
+    background-color: white;
+    .header-logo {
+      content: url(../exercise-e-shop/assets/logo/logo-respon.png);
+    }
+    .search-item {
+      display: none;
+    }
+    .menu-item {
+      display: block;
+    }
+    .img-cart {
+      content: url(../exercise-e-shop/assets/logo/cart-respon.png);
+    }
+    .img-avatar {
+      content: url(../exercise-e-shop/assets/logo/avatar-respon.png);
+    }
+  }
+  .header-center {
+    display: none;
   }
 }

@@ -33,3 +33,16 @@
     border-radius: 56px;
   }
 }
+@include mobile {
+  .btn {
+    &.btn-primary {
+      padding: 3px 10px;
+      font-size: map-get($font-size, s);
+    }
+    &.btn-subscribe {
+      display: inline-block;
+      padding: 7px 20px;
+      font-size: map-get($font-size, xs);
+    }
+  }
+}

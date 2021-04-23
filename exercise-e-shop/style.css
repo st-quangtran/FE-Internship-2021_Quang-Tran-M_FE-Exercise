@@ -64,6 +64,10 @@ a {
   box-sizing: border-box;
 }
 
+.img {
+  width: 100%;
+}
+
 .container {
   max-width: 1152px;
   width: 100%;
@@ -71,74 +75,82 @@ a {
 }
 
 .row {
-  margin: -10px;
+  margin: -6px -10px;
+  flex-wrap: wrap;
 }
 
 .col-1 {
   width: 8.3333333333%;
-  margin: 0px 10px;
+  padding: 0px 10px;
 }
 
 .col-2 {
   width: 16.6666666667%;
-  margin: 0px 10px;
+  padding: 0px 10px;
 }
 
 .col-3 {
   width: 25%;
-  margin: 0px 10px;
+  padding: 0px 10px;
 }
 
 .col-4 {
   width: 33.3333333333%;
-  margin: 0px 10px;
+  padding: 0px 10px;
 }
 
 .col-5 {
   width: 41.6666666667%;
-  margin: 0px 10px;
+  padding: 0px 10px;
 }
 
 .col-6 {
   width: 50%;
-  margin: 0px 10px;
+  padding: 0px 10px;
 }
 
 .col-7 {
   width: 58.3333333333%;
-  margin: 0px 10px;
+  padding: 0px 10px;
 }
 
 .col-8 {
   width: 66.6666666667%;
-  margin: 0px 10px;
+  padding: 0px 10px;
 }
 
 .col-9 {
   width: 75%;
-  margin: 0px 10px;
+  padding: 0px 10px;
 }
 
 .col-10 {
   width: 83.3333333333%;
-  margin: 0px 10px;
+  padding: 0px 10px;
 }
 
 .col-11 {
   width: 91.6666666667%;
-  margin: 0px 10px;
+  padding: 0px 10px;
 }
 
 .col-12 {
   width: 100%;
-  margin: 0px 10px;
+  padding: 0px 10px;
 }
 
+@media (max-width: 576px) {
+  .container-sm {
+    width: 100%;
+    max-width: 327px;
+    margin: 0px auto;
+  }
+}
 .page-header {
   width: 100%;
   position: fixed;
   top: 48px;
-  z-index: 2;
+  z-index: 99;
 }
 .page-header .nav-list {
   display: flex;
@@ -148,13 +160,44 @@ a {
   display: flex;
   justify-content: space-between;
 }
+.page-header .menu-item {
+  display: none;
+}
 
+@media (max-width: 576px) {
+  .page-header {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    top: 0;
+    background-color: white;
+  }
+  .page-header .header-logo {
+    content: url(../exercise-e-shop/assets/logo/logo-respon.png);
+  }
+  .page-header .search-item {
+    display: none;
+  }
+  .page-header .menu-item {
+    display: block;
+  }
+  .page-header .img-cart {
+    content: url(../exercise-e-shop/assets/logo/cart-respon.png);
+  }
+  .page-header .img-avatar {
+    content: url(../exercise-e-shop/assets/logo/avatar-respon.png);
+  }
+
+  .header-center {
+    display: none;
+  }
+}
 .page-footer {
   background-color: #FBB03B;
 }
 .page-footer .top-footer {
-  padding-top: 45px;
-  padding-bottom: 51px;
+  padding-top: 40px;
+  padding-bottom: 50px;
   border-bottom: 1px solid #FFFFFF;
 }
 .page-footer .top-footer .flex-spc-bw {
@@ -164,11 +207,8 @@ a {
   max-width: 373px;
   margin-right: 170px;
 }
-.page-footer .logo-footer {
-  margin-bottom: 24px;
-}
 .page-footer .infor-footer {
-  margin-bottom: 57px;
+  padding: 24px 0px 57px;
   font-size: 14px;
   line-height: 21px;
   color: #FFFFFF;
@@ -179,6 +219,16 @@ a {
 .page-footer .app-contact i {
   color: #FFFFFF;
   margin-right: 33px;
+}
+.page-footer .list-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.page-footer .list-info p {
+  font-size: 14px;
+  line-height: 150%;
+  color: #FFFFFF;
 }
 .page-footer .bottom-footer {
   height: 66px;
@@ -191,24 +241,35 @@ a {
   line-height: 18px;
   color: #FFFFFF;
 }
-.page-footer .list-info {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.page-footer .list-info p {
-  font-size: 14px;
-  line-height: 150%;
-  color: #FFFFFF;
-}
-.page-footer .title-footer {
-  margin-bottom: 19px;
-  font-size: 16px;
-  line-height: 24px;
-  color: #FFFFFF;
-  font-weight: bold;
-}
 
+@media (max-width: 576px) {
+  .page-footer .top-footer {
+    padding-top: 24px;
+    padding-bottom: 48px;
+  }
+  .page-footer .top-footer .flex-spc-bw {
+    flex-direction: column;
+  }
+  .page-footer .info-shop {
+    width: 100%;
+    margin-right: 0;
+  }
+  .page-footer .infor-footer {
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+  }
+  .page-footer .app-contact {
+    display: none;
+  }
+  .page-footer .list-info {
+    margin: -12px 0px;
+    flex-direction: column;
+  }
+  .page-footer .item-info {
+    padding: 12px 0px;
+  }
+}
 .flex-spc-bw {
   display: flex;
   align-items: center;
@@ -263,6 +324,17 @@ a {
   border-radius: 56px;
 }
 
+@media (max-width: 576px) {
+  .btn.btn-primary {
+    padding: 3px 10px;
+    font-size: 12px;
+  }
+  .btn.btn-subscribe {
+    display: inline-block;
+    padding: 7px 20px;
+    font-size: 13px;
+  }
+}
 .sale-off {
   padding: 6px 10px;
   background-color: #FF0000;
@@ -273,8 +345,16 @@ a {
   font-weight: bold;
 }
 
+@media (max-width: 576px) {
+  .sale-off {
+    padding: 2px 9px;
+    font-size: 8px;
+    line-height: 12px;
+    border-radius: 9px;
+  }
+}
 h2 {
-  font-size: 71px;
+  font-size: 72px;
   line-height: 101.5%;
   color: #FFFFFF;
   font-weight: bold;
@@ -287,6 +367,32 @@ h3 {
   font-weight: 300;
 }
 
+h5 {
+  margin-bottom: 19px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 48px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  h5 {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+}
 .banner {
   position: relative;
   line-height: 0;
@@ -309,7 +415,7 @@ h3 {
   position: absolute;
   top: 222px;
   left: 17%;
-  z-index: 99;
+  z-index: 50;
 }
 .banner .banner-sale h2 {
   padding-bottom: 24px;
@@ -320,6 +426,13 @@ h3 {
 .banner .banner-sale .banner-action {
   padding: 0px;
 }
+.banner .banner-sale .txt-shopnow {
+  padding-left: 21px;
+  font-size: 24px;
+  line-height: 36px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
 .banner .banner-event {
   width: 77%;
   height: 124px;
@@ -329,7 +442,7 @@ h3 {
   left: 0px;
   background-color: white;
   border-radius: 0px 100px 0px 0px;
-  z-index: 99;
+  z-index: 50;
 }
 .banner .banner-event .list-banner-event {
   max-width: 100%;
@@ -359,7 +472,7 @@ h3 {
 }
 
 .show-category .list-category {
-  padding: 48px 0px 96px;
+  padding: 42px 0px 90px;
 }
 .show-category .item-category {
   position: relative;
@@ -380,37 +493,37 @@ h3 {
 }
 .show-category .name-category {
   position: absolute;
-  top: 167px;
+  bottom: 119px;
   left: 40px;
   right: 40px;
   height: 73px;
   font-size: 24px;
   line-height: 36px;
   color: #FFFFFF;
-  z-index: 99;
+  z-index: 50;
 }
 .show-category .sale-off {
   position: absolute;
-  top: 129px;
+  bottom: 200px;
   left: 40px;
-  z-index: 99;
+  z-index: 50;
 }
 .show-category .btn-category {
   position: absolute;
   left: 40px;
-  top: 258px;
-  z-index: 99;
+  bottom: 53px;
+  z-index: 50;
 }
 
 .offer-clothing {
-  padding-bottom: 60px;
+  padding-bottom: 54px;
   align-items: baseline;
 }
 .offer-clothing .container {
   position: relative;
 }
 .offer-clothing .offer-title {
-  padding-bottom: 40px;
+  padding-bottom: 33px;
 }
 .offer-clothing .btn-primary {
   position: absolute;
@@ -421,15 +534,18 @@ h3 {
 
 .product-today {
   padding-top: 48px;
-  padding-bottom: 60px;
+  padding-bottom: 54px;
 }
 .product-today .title-today {
-  margin-bottom: 39px;
+  padding-bottom: 33px;
   text-align: center;
 }
 
 .product {
   position: relative;
+}
+.product .img-product {
+  width: 100%;
 }
 .product .sale-off {
   position: absolute;
@@ -437,7 +553,7 @@ h3 {
   left: 18px;
 }
 .product .name-product {
-  margin-top: 16px;
+  padding-top: 16px;
   font-size: 16px;
   line-height: 24px;
   color: #333333;
@@ -452,13 +568,11 @@ h3 {
   color: #CECECE;
 }
 .product .price-product {
-  position: relative;
   font-size: 20px;
   line-height: 30px;
   color: #333333;
 }
-
-.price-discount {
+.product .price-discount {
   font-size: 20px;
   line-height: 30px;
   color: #FF0000;
@@ -466,12 +580,12 @@ h3 {
 
 .advertisement {
   padding-top: 48px;
-  padding-bottom: 54px;
+  padding-bottom: 48px;
   background-color: #F7F7F7;
 }
 .advertisement .title-adver {
   text-align: center;
-  margin: 0px auto 50px;
+  padding-bottom: 44px;
 }
 
 .adver .img-adver {
@@ -509,7 +623,7 @@ h3 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 99;
+  z-index: 50;
 }
 .main-subscribe .txt-subscribe {
   width: 50%;
@@ -543,6 +657,215 @@ h3 {
   right: 0;
   background: linear-gradient(90deg, #000000 33.28%, rgba(0, 0, 0, 0) 94.05%);
   opacity: 0.7;
+}
+
+@media (max-width: 576px) and (max-width: 576px) {
+  .col-sm-1 {
+    width: 8.3333333333%;
+    padding: 6px 5px;
+  }
+
+  .col-sm-2 {
+    width: 16.6666666667%;
+    padding: 6px 5px;
+  }
+
+  .col-sm-3 {
+    width: 25%;
+    padding: 6px 5px;
+  }
+
+  .col-sm-4 {
+    width: 33.3333333333%;
+    padding: 6px 5px;
+  }
+
+  .col-sm-5 {
+    width: 41.6666666667%;
+    padding: 6px 5px;
+  }
+
+  .col-sm-6 {
+    width: 50%;
+    padding: 6px 5px;
+  }
+
+  .col-sm-7 {
+    width: 58.3333333333%;
+    padding: 6px 5px;
+  }
+
+  .col-sm-8 {
+    width: 66.6666666667%;
+    padding: 6px 5px;
+  }
+
+  .col-sm-9 {
+    width: 75%;
+    padding: 6px 5px;
+  }
+
+  .col-sm-10 {
+    width: 83.3333333333%;
+    padding: 6px 5px;
+  }
+
+  .col-sm-11 {
+    width: 91.6666666667%;
+    padding: 6px 5px;
+  }
+
+  .col-sm-12 {
+    width: 100%;
+    padding: 6px 5px;
+  }
+}
+@media (max-width: 576px) {
+  .row {
+    margin: 0px -5px;
+  }
+}
+@media (max-width: 576px) {
+  .banner .img-banner {
+    content: url(../exercise-e-shop/assets/product/banner-respon.png);
+  }
+  .banner .banner-sale {
+    width: 271px;
+    left: 24px;
+  }
+  .banner .banner-sale img {
+    width: 32px;
+    height: 32px;
+  }
+  .banner .banner-sale .txt-shopnow {
+    padding-left: 16px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .banner .banner-event {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .main-subscribe .subscribe {
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .main-subscribe .txt-subscribe {
+    width: 200px;
+    padding-bottom: 24px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .main-subscribe .form-subscribe {
+    width: 100%;
+    display: block;
+  }
+  .main-subscribe .form-subscribe .input-subscribe {
+    width: 100%;
+    height: 32px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .main-subscribe .img-subscribe {
+    content: url(../exercise-e-shop/assets/product/subscribe-respon.png);
+  }
+}
+@media (max-width: 576px) {
+  .product .img-product {
+    height: 227px;
+  }
+  .product .sale-off {
+    top: 14px;
+    left: 9px;
+  }
+  .product .name-product {
+    padding: 3px 0px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .product .price-product {
+    font-size: 10px;
+    line-height: 15px;
+    color: #333333;
+  }
+  .product .price-discount {
+    font-size: 10px;
+    line-height: 15px;
+    color: #FF0000;
+  }
+}
+@media (max-width: 576px) {
+  .offer-clothing {
+    padding-bottom: 46px;
+  }
+  .offer-clothing .offer-title {
+    padding-bottom: 10px;
+  }
+  .offer-clothing .btn-primary {
+    border: none;
+  }
+}
+@media (max-width: 576px) {
+  .product-today {
+    padding-top: 42px;
+    padding-bottom: 46px;
+  }
+  .product-today .title-today {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .show-category .list-category {
+    padding: 42px 0px 90px;
+  }
+  .show-category .name-category {
+    height: 40px;
+    font-size: 14px;
+    line-height: 21px;
+    bottom: 44px;
+    left: 16px;
+  }
+  .show-category .sale-off {
+    bottom: 90px;
+    left: 16px;
+  }
+  .show-category .btn-category {
+    bottom: 16px;
+    left: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .advertisement {
+    padding-top: 38px;
+    padding-bottom: 22px;
+  }
+  .advertisement .title-adver {
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .adver {
+    display: flex;
+  }
+  .adver .info-adver {
+    flex: 1;
+    padding-left: 16px;
+  }
+  .adver .name-adver {
+    padding-bottom: 8px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #333333;
+    font-weight: bold;
+  }
+  .adver .detail-adver {
+    font-size: 10px;
+    line-height: 15px;
+    color: #808080;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

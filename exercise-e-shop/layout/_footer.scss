@@ -1,8 +1,8 @@
 .page-footer {
   background-color: map-get($color, org);
   .top-footer {
-    padding-top: 45px;
-    padding-bottom: 51px;
+    padding-top: 40px;
+    padding-bottom: 50px;
     border-bottom: 1px solid map-get($color, wt);
     .flex-spc-bw {
       align-items: flex-start;
@@ -12,11 +12,8 @@
     max-width: 373px;
     margin-right: 170px;
   }
-  .logo-footer {
-    margin-bottom: 24px;
-  }
   .infor-footer {
-    margin-bottom: 57px;
+    padding: 24px 0px 57px;
     @include font-text(map-get($font-size, m), 21px, map-get($color, wt));
   }
   .app-contact {
@@ -24,6 +21,14 @@
     i {
       color: map-get($color, wt);
       margin-right: 33px;
+    }
+  }
+  .list-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    p {
+      @include font-text(map-get($font-size, m), 150%, map-get($color, wt));
     }
   }
   .bottom-footer {
@@ -35,16 +40,32 @@
       @include font-text(map-get($font-size, s), 18px, map-get($color, wt));
     }
   }
-  .list-info {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    p {
-      @include font-text(map-get($font-size, m), 150%, map-get($color, wt));
+}
+@include mobile {
+  .page-footer {
+    .top-footer {
+      padding-top: 24px;
+      padding-bottom: 48px;
+      .flex-spc-bw {
+        flex-direction: column;
+      }
     }
-  }
-  .title-footer {
-    margin-bottom: 19px;
-    @include font-text(map-get($font-size, l), 24px, map-get($color, wt), $font-weight-bold);
+    .info-shop {
+      width: 100%;
+      margin-right: 0;
+    }
+    .infor-footer {
+      @include font-text(map-get($font-size, m), 21px, map-get($color, wt));
+    }
+    .app-contact {
+      display: none;
+    }
+    .list-info {
+      margin: -12px 0px;
+      flex-direction: column;
+    }
+    .item-info {
+      padding: 12px 0px;
+    }
   }
 }
