@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/52d5d4ff54.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Home</title>
 </head>
 <body>  
   <header class="page-header">
-    <div class="container container-sm flex-spc-bw">
+    <div class="container container-sm flex-between">
       <div class="header-left">
         <a href="#" class="btn btn-logo"><img src="assets/icons/logo.png" class="header-logo" alt="Logo"></a>
       </div>
@@ -27,24 +26,24 @@
         </nav>        
       </div>
       <div class="header-right">
-        <ul class="options-list">
-          <li class="option-item search-item">
-            <button type="button" class="btn btn-elementary">
+        <ul class="list-group">
+          <li class="list-item search-item">
+            <button type="button" class="btn btn-light">
               <img src="assets/icons/search.png" class="img-search" alt="Search">
             </button>
           </li>
-          <li class="option-item cart-item">
-            <a href="#" class="btn btn-elementary">
+          <li class="list-item cart-item">
+            <a href="#" class="btn btn-light">
               <img src="assets/icons/cart.png" class="img-cart" alt="Cart">
             </a>
           </li>
-          <li class="option-item avatar-item">
-            <button type="button" class="btn btn-elementary">
+          <li class="list-item avatar-item">
+            <button type="button" class="btn btn-light">
               <img src="assets/icons/avatar.png" class="img-avatar" alt="Avatar">
             </button>
           </li>
-          <li class="option-item menu-item">
-            <button type="button" class="btn btn-elementary">
+          <li class="list-item menu-item">
+            <button type="button" class="btn btn-light">
               <img src="assets/icons/menu-respon.png" class="img-menu" alt="Menu">
             </button>
           </li>
@@ -58,44 +57,44 @@
       <div class="banner-sale">
         <h1 class="title-banner">Sale of the <span>summer</span> collection</h1>
         <div class="banner-action">
-          <a href="#" class="btn btn-shopnow">
+          <a href="#" class="btn btn-link">
             <img src="assets/icons/select.png" alt="Select">
-            <p class="txt-shopnow"><u>SHOP NOW</u></p>
+            <p class="text-uppercase"><u>shop now</u></p>
           </a>
         </div>
       </div>
-      <div class="banner-event">
-        <ul class="flex-spc-bw list-banner-event">
-          <li class="item-event">
-            <div class="event">
-              <div class="img-event">
+      <div class="section-campaign">
+        <ul class="flex-between list-group list-campaigns">
+          <li class="list-item">
+            <div class="campaign">
+              <div class="campaign-img">
                 <img src="assets/icons/shipping.png" alt="Ship">
               </div>
-              <div class="info-event">
-                <p class="name-event">Free Shipping</p>
-                <p class="endow">On purchases over $199</p>
+              <div class="campaign-info">
+                <p class="campaign-name">Free Shipping</p>
+                <p class="campaign-detail">On purchases over $199</p>
               </div>
             </div>
           </li>
-          <li class="item-event">
-            <div class="event">
-              <div class="img-event">
+          <li class="list-item">
+            <div class="campaign">
+              <div class="campaign-img">
                 <img src="assets/icons/satisfied.png" alt="Satisfied">
               </div>
-              <div class="info-event">
-                <p class="name-event">99% Satisfied Customers</p>
-                <p class="endow">Our clients' opinions speak for themselves</p>
+              <div class="campaign-info">
+                <p class="campaign-name">99% Satisfied Customers</p>
+                <p class="campaign-detail">Our clients' opinions speak for themselves</p>
               </div>
             </div>
           </li>
-          <li class="item-event">
-            <div class="event">
-              <div class="img-event">
+          <li class="list-item">
+            <div class="campaign">
+              <div class="campaign-img">
                 <img src="assets/icons/originality.png" alt="Originality">
               </div>
-              <div class="info-event">
-                <p class="name-event">Originality Guaranteed</p>
-                <p class="endow">30 days warranty for each product from our store</p>
+              <div class="campaign-info">
+                <p class="campaign-name">Originality Guaranteed</p>
+                <p class="campaign-detail">30 days warranty for each product from our store</p>
               </div>
             </div>
           </li>
@@ -103,173 +102,173 @@
       </div>
     </section>
     <section>
-      <section class="show-category">
+      <section class="section-collection">
         <div class="container container-sm">
-          <ul class="flex-spc-bw list-category row">
-            <li class="col-6 col-sm-12 item-category">
-              <div class="category">
-                <img src="assets/images/collection.png" class="img img-category" alt="Collection">
-                <h4 class="name-category">New arrivalsare now in!</h4>
-                <a href="#" class="btn btn-primary btn-category">SHOW COLLECTION</a>
+          <ul class="flex-between list-group list-collection row">
+            <li class="col-6 col-sm-12 list-item">
+              <div class="collection">
+                <img src="assets/images/collection.png" class="img img-collection" alt="Collection">
+                <h4 class="collection-name">New arrivalsare now in!</h4>
+                <a href="#" class="btn btn-primary">show collection</a>
               </div>
             </li>
-            <li class="col-3 col-sm-6 item-category">
-              <div class="category">
-                <img src="assets/images/moredetail.png" class="img img-category" alt="Detail">
-                <h4 class="name-category">Basic t-shirts $29,99</h4>
-                <a href="#" class="btn btn-primary btn-category">MORE DETAILS</a>
+            <li class="col-3 col-sm-6 list-item">
+              <div class="collection">
+                <img src="assets/images/moredetail.png" class="img img-collection" alt="Detail">
+                <h4 class="collection-name">Basic t-shirts $29,99</h4>
+                <a href="#" class="btn btn-primary">more details</a>
               </div>
             </li>
-            <li class="col-3 col-sm-6 item-category">
-              <div class="category">
-                <img src="assets/images/viewall.png" class="img img-category" alt="View">
-                <span class="sale-off">-50%</span>
-                <h4 class="name-category">Sale this summer</h4>
-                <a href="#" class="btn btn-primary btn-category">VIEW ALL</a>
+            <li class="col-3 col-sm-6 list-item">
+              <div class="collection">
+                <img src="assets/images/viewall.png" class="img img-collection" alt="View">
+                <span class="badge">-50%</span>
+                <h4 class="name-collection">Sale this summer</h4>
+                <a href="#" class="btn btn-primary">view all</a>
               </div>
             </li>
           </ul>
         </div>
       </section>
-      <section class="offer-clothing">
+      <section class="section-offer">
         <div class="container container-sm">
-          <h3 class="title-section offer-title">Selected just for you</h3>
-          <a href="#" class="btn btn-primary">SHOW MORE</a>
-          <ul class="flex-spc-bw list-products row">
-            <li class="col-3 col-sm-6 item-products">
+          <h3 class="section-title">Selected just for you</h3>
+          <a href="#" class="btn btn-outline-default text-uppercase">show more</a>
+          <ul class="flex-between list-group list-products row">
+            <li class="col-3 col-sm-6 list-item product-item">
               <div class="product">
                 <img src="assets/images/item1.png" class="img img-product" alt="item1">
-                <h4 class="name-product">T-Shirt Summer Vibes</h4>
+                <h4 class="product-name">T-Shirt Summer Vibes</h4>
                 <div class="cart-product-discount">
-                  <span class="price-discount">$89.99</span>
-                  <span class="price-product">$119.99</span>
+                  <span class="discount-price">$89.99</span>
+                  <span class="product-price">$119.99</span>
                 </div>
-                <span class="sale-off">-30%</span>
+                <span class="badge">-30%</span>
               </div>
             </li>
-            <li class="col-3 col-sm-6 item-products">
+            <li class="col-3 col-sm-6 list-item product-item">
               <div class="product">
                 <img src="assets/images/item2.png" class="img img-product" alt="item2">
-                <h4 class="name-product">Loose Knit 3/4 Sleeve</h4>
-                <span class="price-product">$119.99</span>
+                <h4 class="product-name">Loose Knit 3/4 Sleeve</h4>
+                <span class="product-price">$119.99</span>
               </div>
             </li>
-            <li class="col-3 col-sm-6 item-products">
+            <li class="col-3 col-sm-6 list-item product-item">
               <div class="product">
                 <img src="assets/images/item3.png" class="img img-product" alt="item3">
-                <h4 class="name-product">Basic Slim Fit T-Shirt</h4>
-                <span class="price-product">$79.99</span>          
+                <h4 class="product-name">Basic Slim Fit T-Shirt</h4>
+                <span class="product-price">$79.99</span>          
               </div>
             </li>
-            <li class="col-3 col-sm-6 item-products">
+            <li class="col-3 col-sm-6 list-item product-item">
               <div class="product">
                 <img src="assets/images/item4.png" class="img img-product" alt="item4">
-                <h4 class="name-product">Loose Textured T-Shirt</h4>
-                <span class="price-product">$119.99</span> 
+                <h4 class="product-name">Loose Textured T-Shirt</h4>
+                <span class="product-price">$119.99</span> 
               </div>
             </li>
           </ul>
         </div>
       </section>
-      <section class="advertisement">
+      <section class="section-benefits">
         <div class="container container-sm">
-          <h3 class="title-section title-adver">Why should you choose us?</h3>
-          <ul class="flex-spc-bw list-adver row">
-            <li class="col-3 col-sm-12 item-adver">
-              <div class="adver">
-                <div class="img-adver">
+          <h3 class="section-title text-center">Why should you choose us?</h3>
+          <ul class="flex-between list-group list-benefits row">
+            <li class="col-3 col-sm-12 list-item benefit-item">
+              <div class="benefit">
+                <div class="benefit-img">
                   <img src="assets/icons/freeshipping.png" alt="Shipping">
                 </div>
-                <div class="info-adver">
-                  <p class="name-adver">Free Shipping</p>
-                  <p class="detail-adver">All purchases over $199 are eligible forfree shipping via USPS First Class Mail.</p>
+                <div class="benefit-info">
+                  <p class="benefit-title">Free Shipping</p>
+                  <p class="benefit-detail">All purchases over $199 are eligible forfree shipping via USPS First Class Mail.</p>
                 </div>
               </div>
             </li>
-            <li class="col-3 col-sm-12 item-adver">
-              <div class="adver">
-                <div class="img-adver">
+            <li class="col-3 col-sm-12 list-item benefit-item">
+              <div class="benefit">
+                <div class="benefit-img">
                   <img src="assets/icons/payment.png"  alt="Payment">
                 </div>
-                <div class="info-adver">
-                  <p class="name-adver">Easy Payments</p>
-                  <p class="detail-adver">All payments are processed instantlyover a secure payment protocol.</p>
+                <div class="benefit-info">
+                  <p class="benefit-title">Easy Payments</p>
+                  <p class="benefit-detail-">All payments are processed instantlyover a secure payment protocol.</p>
                 </div>
               </div>
             </li>
-            <li class="col-3 col-sm-12 item-adver">
-              <div class="adver">
-                <div class="img-adver">
+            <li class="col-3 col-sm-12 list-item benefit-item">
+              <div class="benefit">
+                <div class="benefit-img">
                   <img src="assets/icons/guarantee.png" alt="Money">
                 </div>
-                <div class="info-adver">
-                  <p class="name-adver">Money-Back Guarantee</p>
-                  <p class="detail-adver">If an item arrived damaged or you'vechanged your mind, you can send itback for a full refund.</p>
+                <div class="benefit-info">
+                  <p class="benefit-title">Money-Back Guarantee</p>
+                  <p class="benefit-detail">If an item arrived damaged or you'vechanged your mind, you can send itback for a full refund.</p>
                 </div>
               </div>
             </li>
-            <li class="col-3 col-sm-12 item-adver">
-              <div class="adver">
-                <div class="img-adver">
+            <li class="col-3 col-sm-12 list-item benefit-item">
+              <div class="benefit">
+                <div class="benefit-img">
                   <img src="assets/icons/finest.png" alt="Finest">
                 </div>
-                <div class="info-adver">
-                  <p class="name-adver">Finest Quality</p>
-                  <p class="detail-adver">Designed to last, each of our products hasbeen crafted with the finest materials</p>
+                <div class="benefit-info">
+                  <p class="benefit-title">Finest Quality</p>
+                  <p class="benefit-detail">Designed to last, each of our products hasbeen crafted with the finest materials</p>
                 </div>
               </div>
             </li>
           </ul> 
         </div>      
       </section>
-      <section class="product-today">
+      <section class="section-today">
         <div class="container container-sm">
-          <h3 class="title-section title-today">Products in today</h3>
-          <ul class="flex-spc-bw list-products row">
-            <li class="col-3 col-sm-6 item-products">
+          <h3 class="section-title text-center">Products in today</h3>
+          <ul class="flex-between list-group list-products row">
+            <li class="col-3 col-sm-6 list-item product-item">
               <div class="product">
                 <img src="assets/images/item1.png" class="img img-product" alt="item1">
-                <h4 class="name-product">T-Shirt Summer Vibes</h4>
+                <h4 class="product-name">T-Shirt Summer Vibes</h4>
                 <div class="cart-product-discount">
-                  <span class="price-discount">$89.99</span>
-                  <span class="price-product">$119.99</span>
+                  <span class="discount-price">$89.99</span>
+                  <span class="product-price">$119.99</span>
                 </div>
-                <span class="sale-off">-30%</span>
+                <span class="badge">-30%</span>
               </div>
             </li>
-            <li class="col-3 col-sm-6 item-products">
+            <li class="col-3 col-sm-6 list-item product-item">
               <div class="product">
                 <img src="assets/images/item2.png" class="img img-product" alt="item2">
-                <h4 class="name-product">Loose Knit 3/4 Sleeve</h4>
-                <span class="price-product">$119.99</span>
+                <h4 class="product-name">Loose Knit 3/4 Sleeve</h4>
+                <span class="product-price">$119.99</span>
               </div>
             </li>
-            <li class="col-3 col-sm-6 item-products">
+            <li class="col-3 col-sm-6 list-item product-item">
               <div class="product">
                 <img src="assets/images/item3.png" class="img img-product" alt="item3">
-                <h4 class="name-product">Basic Slim Fit T-Shirt</h4>
-                <span class="price-product">$79.99</span>
+                <h4 class="product-name">Basic Slim Fit T-Shirt</h4>
+                <span class="product-price">$79.99</span>          
               </div>
             </li>
-            <li class="col-3 col-sm-6 item-products">
+            <li class="col-3 col-sm-6 list-item product-item">
               <div class="product">
                 <img src="assets/images/item4.png" class="img img-product" alt="item4">
-                <h4 class="name-product">Loose Textured T-Shirt</h4>
-                <span class="price-product">$119.99</span>
+                <h4 class="product-name">Loose Textured T-Shirt</h4>
+                <span class="product-price">$119.99</span> 
               </div>
             </li>
           </ul>
         </div>
       </section>
     </section>
-    <section class="main-subscribe">
+    <section class="section-subscribe">
       <img src="assets/images/img-footer.png" class="img-subscribe" alt="Subscribe">
       <div class="container container-sm">
-        <div class="flex-spc-bw subscribe container container-sm">
-          <p class="txt-subscribe">Subscribe to our newsletter andreceive exclusive offers every week</p>
+        <div class="flex-between subscribe container container-sm">
+          <p class="title-subscribe">Subscribe to our newsletter andreceive exclusive offers every week</p>
           <form class="form-subscribe">
             <input type="text" class="input-subscribe" placeholder="Enter your email">
-            <button type="submit" class="btn btn-subscribe">SUBSCRIBE</button>
+            <button type="submit" class="btn btn-orange text-uppercase">subscribe</button>
           </form>
         </div>
       </div>
@@ -277,10 +276,10 @@
   </main>
   <footer class="page-footer">
     <div class="top-footer">
-      <div class="container container-sm flex-spc-bw">
-        <div class="info-shop">
+      <div class="container container-sm flex-between">
+        <div class="description-shop">
           <a href="#"><img src="assets/icons/logo.png" alt="Logo" class="logo-footer"></a>
-          <p class="infor-footer">House My Brand designs clothing for the young, the old & everyone in between 
+          <p class="description-footer">House My Brand designs clothing for the young, the old & everyone in between 
             - but most importantly, for the fashionable</p>
           <ul class="app-contact">
             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -290,8 +289,8 @@
             <li><a href="#"><i class="fab fa-youtube"></i></a></li> 
           </ul>
         </div>
-        <ul class="list-info">
-          <li class="item-info">
+        <ul class="list-group list-info">
+          <li class="list-item info-item">
             <ul class="info">
               <li><h5 class="title-footer">Shopping online</h5></li>
               <li><p>Order Status</p></li>
@@ -322,7 +321,7 @@
       </div>
     </div>
     <div class="bottom-footer">
-      <p>design by iceo.co-@ 2019.all rights reversed.</p>
+      <p class="text-uppercase">design by iceo.co-@ 2019.all rights reversed.</p>
     </div>
   </footer>
 </body>
