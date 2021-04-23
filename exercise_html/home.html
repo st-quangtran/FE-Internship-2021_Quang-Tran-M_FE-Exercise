@@ -5,6 +5,7 @@
   <title>Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://kit.fontawesome.com/52d5d4ff54.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="page-header">
@@ -19,16 +20,18 @@
       <div class="header-center">
         <button type="button" class="btn btn-menu"><i class="fas fa-bars"></i></button>
         <div class="header-search">
-          <i class="fas fa-search"></i>
-          <input type="search" class="text-search" placeholder="Search">
+          <form>
+            <i class="fas fa-search"></i>
+            <input type="search" class="text-search" placeholder="Search">
+          </form>
         </div>
       </div>
       <div class="header-right">
         <div class="header-cart">
-          <a href="#"><i class="fas fa-shopping-cart" alt="cart"></i></a>
+          <a href="#"><img src="assets/logo/cart.png" class="image-cart" alt="cart"></a>
           <span class="amount">1</span>
         </div>
-        <div class="header-signin-signup">
+        <div>
           <a href="#" class="btn btn-secondary">Sign in</a>
           <a href="#" class="btn btn-primary">Sign up</a>
         </div>
@@ -65,27 +68,17 @@
         <div class="toolbar-right">
           <div class="toolbar-action">
             <input type="radio" id="show" name="action" value="show-all" class="radio">
-            <label for="show">
-              <button type="button" class="btn btn-elementari">Show all</button>
-            </label>
+            <label for="show" class="btn btn-elementari label-radio">Show All</label>
             <input type="radio" id="auction" name="action" value="auction" class="radio">
-            <label for="auction">
-              <button type="button" class="btn btn-elementari">Auction</button>
-            </label>
+            <label for="auction" class="btn btn-elementari label-radio">Auction</label>
             <input type="radio" id="buy" name="action" value="buy-now" class="radio">
-            <label for="buy">
-              <button type="button" class="btn btn-elementari">Buy now</button>
-            </label>
+            <label for="buy" class="btn btn-elementari label-radio">Buy now</label>
           </div>
           <div class="toolbar-display-way">
-            <input type="radio" id="list-view" name="action" value="list-view" class="radio">
-            <label for="list-view">
-              <button type="button" class="btn btn-elementari"><i class="fas fa-list"></i></button>
-            </label>
-            <input type="radio" id="grid-view" name="action" value="grid-view" class="radio">
-            <label for="grid-view">
-              <button type="button" class="btn btn-elementari"><i class="fas fa-th-large"></i></button>
-            </label>
+            <input type="radio" id="list-view" name="display" value="list-view" class="radio">
+            <label for="list-view" class="btn btn-elementari label-radio"><i class="fas fa-list"></i></label>
+            <input type="radio" id="grid-view" name="display" value="grid-view" class="radio">
+            <label for="grid-view" class="btn btn-elementari label-radio"><i class="fas fa-th-large"></i></label>
           </div>
         </div>
       </div>
@@ -160,11 +153,11 @@
                   <h4 class="product-content">Plastic useless plugs and tubes for high-fidelity prototyping. Fit & Eat!</h4>
                   <p class="product-price sale-off">$12.48</p>
                   <p class="product-more-detail">Wordwide shitting available Buyers protection possible!</p>
-                </a>
+                </a>  
               </div>
               <div class="product-footer">
                 <button type="button" class="btn btn-addcart" onclick="myFunction()">Add to Cart</button>
-              </div>   
+              </div>
             </div>
           </li>
           <li class="product-item">
@@ -182,7 +175,7 @@
                 </a>
               </div>
               <div class="product-footer">
-                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+                <button type="button" class="btn btn-addcart" onclick="myFunction()">Add to Cart</button>
               </div>
             </div>
           </li>
@@ -201,7 +194,7 @@
                 </a>
               </div>
               <div class="product-footer">
-                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+                <button type="button" class="btn btn-addcart" onclick="myFunction()">Add to Cart</button>
               </div>
             </div>
           </li>
@@ -220,7 +213,7 @@
                 </a>
               </div>
               <div class="product-footer">
-                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+                <button type="button" class="btn btn-addcart" onclick="myFunction()">Add to Cart</button>
               </div>
             </div>
           </li>
@@ -239,7 +232,7 @@
                 </a>
               </div>
               <div class="product-footer">
-                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+                <button type="button" class="btn btn-addcart" onclick="myFunction()">Add to Cart</button>
               </div>
             </div>
           </li>
@@ -258,7 +251,7 @@
                 </a>
               </div>
               <div class="product-footer">
-                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+                <button type="button" class="btn btn-addcart" onclick="myFunction()">Add to Cart</button>
               </div>
             </div>
           </li>
@@ -277,7 +270,7 @@
                 </a>
               </div>
               <div class="product-footer">
-                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+                <button type="button" class="btn btn-addcart" onclick="myFunction()">Add to Cart</button>
               </div>
             </div>
           </li>
@@ -291,12 +284,12 @@
               <div class="product-body">
                 <a href="#">
                   <h4 class="product-content">Simply best item in town to shine bright with your Nine Inch Nails</h4>
-                  <p class="product-price">$1.25</p> 
+                  <p class="product-price cool-deal">$1.25</p> 
                   <p class="product-more-detail">Eligible for Shipping To Mars or somewhere else</p>
                 </a>
               </div>
               <div class="product-footer">
-                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+                <button type="button" class="btn btn-addcart" onclick="myFunction()">Add to Cart</button>
               </div>
             </div>
           </li>
@@ -315,7 +308,7 @@
                 </a>
               </div>
               <div class="product-footer">
-                <button type="button" class="btn btn-secondary" onclick="myFunction()">Add to Cart</button>
+                <button type="button" class="btn btn-addcart" onclick="myFunction()">Add to Cart</button>
               </div>
             </div>
           </li>
@@ -324,9 +317,9 @@
     </section>
   </main>
   <footer class="page-footer">
-    <p>Are you ready?</p>
-    <p>Let's get started</p>
-    <p>Copyright @ 2020.Logolpsum. All rights reserved.</p>
+    <p class="footer-top">Are you ready?</p>
+    <p class="footer-center">Let's get started</p>
+    <p class="footer-bottom">Copyright @ 2020.Logolpsum. All rights reserved.</p>
   </footer>
 </body>
 </html>
