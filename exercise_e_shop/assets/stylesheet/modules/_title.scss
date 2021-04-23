@@ -1,0 +1,27 @@
+h1 {
+	@include font-text(map-get($font-size, xxxxxxl),  101.5%, $font-weight-bold);
+  color: map-get($color, wt);    
+}
+.section-title {
+  @include font-text(map-get($font-size, xxxxl), 48px, $font-weight-300);
+  color: map-get($color, blk);
+}
+h5 {
+  @include font-text(map-get($font-size, l), 24px, $font-weight-bold);
+  margin-bottom: 19px;
+  color: map-get($color, wt);
+}
+@include mobile {
+  h1 {
+    font-size: map-get($font-size, xxxxxl);
+  }
+  .section-title {
+    font-size: map-get($font-size, xl);
+    line-height: 27px;
+  }
+  h5 {
+    @include font-text(map-get($font-size, l), 24px, $font-weight-bold);
+    margin-bottom: 16px;
+    color: map-get($color, wt);
+  }
+}

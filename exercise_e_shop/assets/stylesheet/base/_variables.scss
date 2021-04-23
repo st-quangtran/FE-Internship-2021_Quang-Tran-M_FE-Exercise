@@ -1,0 +1,36 @@
+$color: (
+  rd: #FF0000,
+  org: #FBB03B,
+  wt: #FFFFFF,
+  blk: #333333,
+  gr: #808080,
+  d-gr: #A8A8A8,
+  l-gr: #CECECE,
+  l-gray: #ABABAB,
+  w-gray: #F7F7F7,
+);
+$font-weight-bold: bold;
+$font-weight-300: 300;
+$font-size: (
+  sss: 8px,
+  ss: 10px,
+  s: 12px,
+  xs: 13px,
+  m: 14px,
+  l: 16px,
+  xl: 18px,
+  xxl: 20px,
+  xxxl: 24px,
+  xxxxl: 32px, 
+  xxxxxl: 48px,
+  xxxxxxl: 72px,
+);
+$colMax: 12;
+$screen-width: (
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+);
+$sm: 576px;
+$md: 768px;
+$lg: 1024px;
