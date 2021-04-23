@@ -1,15 +1,18 @@
-h2 {
-	@include font-text(map-get($font-size, xxxxxxl),  101.5%, map-get($color, wt), $font-weight-bold);   
+h1 {
+	@include font-text(map-get($font-size, xxxxxxl),  101.5%, $font-weight-bold);
+  color: map-get($color, wt);    
 }
 h3 {
-  @include font-text(map-get($font-size, xxxxl), 48px, map-get($color, blk),$font-weight-300);
+  @include font-text(map-get($font-size, xxxxl), 48px, $font-weight-300);
+  color: map-get($color, blk);
 }
 h5 {
+  @include font-text(map-get($font-size, l), 24px, $font-weight-bold);
   margin-bottom: 19px;
-  @include font-text(map-get($font-size, l), 24px, map-get($color, wt), $font-weight-bold);
+  color: map-get($color, wt);
 }
 @include mobile {
-  h2 {
+  h1 {
     font-size: map-get($font-size, xxxxxl);
   }
   h3 {
@@ -17,7 +20,8 @@ h5 {
     line-height: 27px;
   }
   h5 {
+    @include font-text(map-get($font-size, l), 24px, $font-weight-bold);
     margin-bottom: 16px;
-    @include font-text(map-get($font-size, l), 24px, map-get($color, wt), $font-weight-bold);
+    color: map-get($color, wt);
   }
 }

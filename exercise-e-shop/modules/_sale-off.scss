@@ -1,8 +1,9 @@
 .sale-off {
+  @include font-text(map-get($font-size, s), 18px, $font-weight-bold);
   padding: 6px 10px;
   background-color: map-get($color, rd);
   border-radius: 20px;
-  @include font-text(map-get($font-size, s), 18px, map-get($color, wt), $font-weight-bold);
+  color: map-get($color, wt);
 }
 @include mobile {
   .sale-off {

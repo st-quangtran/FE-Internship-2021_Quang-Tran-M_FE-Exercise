@@ -208,9 +208,9 @@ a {
   margin-right: 170px;
 }
 .page-footer .infor-footer {
-  padding: 24px 0px 57px;
   font-size: 14px;
   line-height: 21px;
+  padding: 24px 0px 57px;
   color: #FFFFFF;
 }
 .page-footer .app-contact {
@@ -266,8 +266,16 @@ a {
     margin: -12px 0px;
     flex-direction: column;
   }
+  .page-footer .list-info p {
+    font-size: 12px;
+    line-height: 18px;
+  }
   .page-footer .item-info {
     padding: 12px 0px;
+  }
+  .page-footer .bottom-footer p {
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 .flex-spc-bw {
@@ -283,22 +291,22 @@ a {
   cursor: pointer;
 }
 .btn.btn-primary {
-  background-color: #FFFFFF;
   font-size: 13px;
   line-height: 19px;
-  color: #333333;
   font-weight: bold;
+  background-color: #FFFFFF;
+  color: #333333;
   padding: 14px 20px;
   border-radius: 33px;
 }
-.btn.btn-people {
-  margin: auto 45px;
+.btn.btn-secondary {
   font-size: 18px;
   line-height: 27px;
-  color: #FBB03B;
   font-weight: bold;
+  margin: auto 45px;
+  color: #FBB03B;
 }
-.btn.btn-users {
+.btn.btn-elementary {
   margin-left: 24px;
   background-color: rgba(0, 0, 0, 0);
 }
@@ -308,18 +316,18 @@ a {
   align-items: center;
 }
 .btn.btn-shopnow .txt-shopnow {
-  padding-left: 21px;
   font-size: 24px;
   line-height: 36px;
-  color: #FFFFFF;
   font-weight: bold;
+  padding-left: 21px;
+  color: #FFFFFF;
 }
 .btn.btn-subscribe {
-  padding: 14px 30px;
   font-size: 13px;
   line-height: 19px;
-  color: #333333;
   font-weight: bold;
+  padding: 14px 30px;
+  color: #333333;
   background-color: #FBB03B;
   border-radius: 56px;
 }
@@ -336,13 +344,13 @@ a {
   }
 }
 .sale-off {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: bold;
   padding: 6px 10px;
   background-color: #FF0000;
   border-radius: 20px;
-  font-size: 12px;
-  line-height: 18px;
   color: #FFFFFF;
-  font-weight: bold;
 }
 
 @media (max-width: 576px) {
@@ -353,30 +361,30 @@ a {
     border-radius: 9px;
   }
 }
-h2 {
+h1 {
   font-size: 72px;
   line-height: 101.5%;
-  color: #FFFFFF;
   font-weight: bold;
+  color: #FFFFFF;
 }
 
 h3 {
   font-size: 32px;
   line-height: 48px;
-  color: #333333;
   font-weight: 300;
+  color: #333333;
 }
 
 h5 {
-  margin-bottom: 19px;
   font-size: 16px;
   line-height: 24px;
-  color: #FFFFFF;
   font-weight: bold;
+  margin-bottom: 19px;
+  color: #FFFFFF;
 }
 
 @media (max-width: 576px) {
-  h2 {
+  h1 {
     font-size: 48px;
   }
 
@@ -386,11 +394,11 @@ h5 {
   }
 
   h5 {
-    margin-bottom: 16px;
     font-size: 16px;
     line-height: 24px;
-    color: #FFFFFF;
     font-weight: bold;
+    margin-bottom: 16px;
+    color: #FFFFFF;
   }
 }
 .banner {
@@ -427,11 +435,11 @@ h5 {
   padding: 0px;
 }
 .banner .banner-sale .txt-shopnow {
-  padding-left: 21px;
   font-size: 24px;
   line-height: 36px;
-  color: #FFFFFF;
   font-weight: bold;
+  padding-left: 21px;
+  color: #FFFFFF;
 }
 .banner .banner-event {
   width: 77%;
@@ -458,12 +466,12 @@ h5 {
   padding-left: 21px;
 }
 .event .name-event {
-  width: 184px;
-  padding-bottom: 4px;
   font-size: 14px;
   line-height: 21px;
-  color: #333333;
   font-weight: bold;
+  width: 184px;
+  padding-bottom: 4px;
+  color: #333333;
 }
 .event .endow {
   font-size: 12px;
@@ -492,14 +500,14 @@ h5 {
   opacity: 0.5;
 }
 .show-category .name-category {
+  font-size: 24px;
+  line-height: 36px;
+  color: #FFFFFF;
   position: absolute;
   bottom: 119px;
   left: 40px;
   right: 40px;
   height: 73px;
-  font-size: 24px;
-  line-height: 36px;
-  color: #FFFFFF;
   z-index: 50;
 }
 .show-category .sale-off {
@@ -553,11 +561,11 @@ h5 {
   left: 18px;
 }
 .product .name-product {
-  padding-top: 16px;
   font-size: 16px;
   line-height: 24px;
-  color: #333333;
   font-weight: 300;
+  padding-top: 16px;
+  color: #333333;
 }
 .product .cart-product-discount {
   display: flex;
@@ -599,11 +607,11 @@ h5 {
   justify-content: center;
 }
 .adver .name-adver {
-  padding-bottom: 16px;
   font-size: 16px;
   line-height: 24px;
-  color: #333333;
   font-weight: bold;
+  padding-bottom: 16px;
+  color: #333333;
 }
 .adver .detail-adver {
   font-size: 14px;
@@ -626,9 +634,9 @@ h5 {
   z-index: 50;
 }
 .main-subscribe .txt-subscribe {
-  width: 50%;
   font-size: 24px;
   line-height: 36px;
+  width: 50%;
   color: #FFFFFF;
 }
 .main-subscribe .form-subscribe {
@@ -637,12 +645,12 @@ h5 {
   justify-content: space-between;
 }
 .main-subscribe .form-subscribe .input-subscribe {
+  font-size: 13px;
+  line-height: 19px;
   width: 351px;
   height: 48px;
   margin-right: 40px;
   padding: 14px 24px;
-  font-size: 13px;
-  line-height: 19px;
   color: #ABABAB;
   border: none;
   border-radius: 61px;
@@ -788,12 +796,10 @@ h5 {
   .product .price-product {
     font-size: 10px;
     line-height: 15px;
-    color: #333333;
   }
   .product .price-discount {
     font-size: 10px;
     line-height: 15px;
-    color: #FF0000;
   }
 }
 @media (max-width: 576px) {
@@ -858,13 +864,10 @@ h5 {
     padding-bottom: 8px;
     font-size: 12px;
     line-height: 18px;
-    color: #333333;
-    font-weight: bold;
   }
   .adver .detail-adver {
     font-size: 10px;
     line-height: 15px;
-    color: #808080;
   }
 }
 

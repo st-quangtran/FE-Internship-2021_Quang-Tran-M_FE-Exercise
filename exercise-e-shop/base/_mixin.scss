@@ -1,7 +1,6 @@
-@mixin font-text($size, $line-height, $color, $weight: normal) {
+@mixin font-text($size, $line-height, $weight: normal) {
   font-size: $size;
   line-height: $line-height;
-  color: $color;
   @if ($weight != normal) {
     font-weight: $weight;
   }

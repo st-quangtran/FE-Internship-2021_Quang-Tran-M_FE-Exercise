@@ -30,8 +30,9 @@
       padding: 0px;
     }
     .txt-shopnow {
+      @include font-text(map-get($font-size, xxxl), 36px, $font-weight-bold);
       padding-left: 21px;
-      @include font-text(map-get($font-size, xxxl), 36px, map-get($color, wt), $font-weight-bold);
+      color: map-get($color, wt);
     }
   }
   .banner-event {
@@ -58,12 +59,14 @@
     padding-left: 21px;
   }
   .name-event {
+    @include font-text(map-get($font-size, m), 21px, $font-weight-bold);
     width: 184px;
     padding-bottom: 4px;
-    @include font-text(map-get($font-size, m), 21px, map-get($color, blk), $font-weight-bold);
+    color: map-get($color, blk);
   }
   .endow {
-    @include font-text(map-get($font-size, s), 18px, map-get($color, d-gr));
+    @include font-text(map-get($font-size, s), 18px);
+    color:  map-get($color, d-gr);
   }
 }
 .show-category {
@@ -88,12 +91,13 @@
     }
   }
   .name-category {
+    @include font-text(map-get($font-size, xxxl), 36px);
+    color: map-get($color, wt);
     position: absolute;
     bottom: 119px;
     left: 40px;
     right: 40px;
     height: 73px;
-    @include font-text(map-get($font-size, xxxl), 36px,  map-get($color, wt));
     z-index: 50;
   }
   .sale-off {
@@ -144,8 +148,9 @@
     left: 18px;
   }
   .name-product {
+    @include font-text(map-get($font-size, l), 24px, $font-weight-300);
     padding-top: 16px;
-    @include font-text(map-get($font-size, l), 24px, map-get($color, blk), $font-weight-300);
+    color: map-get($color, blk);
   }
   .cart-product-discount {
     display: flex;
@@ -156,10 +161,12 @@
     }
   }
   .price-product {
-    @include font-text(map-get($font-size, xxl), 30px, map-get($color, blk));
+    @include font-text(map-get($font-size, xxl), 30px);
+    color: map-get($color, blk);
   }
   .price-discount {
-    @include font-text(map-get($font-size, xxl), 30px, map-get($color, rd));
+    @include font-text(map-get($font-size, xxl), 30px);
+    color: map-get($color, rd);
   }
 }
 .advertisement {
@@ -183,11 +190,13 @@
     justify-content: center;
   }
   .name-adver {
+    @include font-text(map-get($font-size, l), 24px, $font-weight-bold);
     padding-bottom: 16px;
-    @include font-text(map-get($font-size, l), 24px, map-get($color, blk), $font-weight-bold);
+    color: map-get($color, blk);
   }
   .detail-adver {
-    @include font-text(map-get($font-size, m), 21px, map-get($color, gr));
+    @include font-text(map-get($font-size, m), 21px);
+    color: map-get($color, gr);
   }
 }
 .main-subscribe {
@@ -204,19 +213,21 @@
     z-index: 50;
   }
   .txt-subscribe {
+    @include font-text(map-get($font-size, xxxl), 36px);
     width: 50%;
-    @include font-text(map-get($font-size, xxxl), 36px, map-get($color, wt));
+    color: map-get($color, wt);
   }
   .form-subscribe {
     width: 50%;
     display: flex;
     justify-content: space-between;
     .input-subscribe {
+      @include font-text(map-get($font-size, xs), 19px);
       width: 351px;
       height: 48px;
       margin-right: 40px;
       padding: 14px 24px;
-      @include font-text(map-get($font-size, xs), 19px, map-get($color, l-gray));
+      color: map-get($color, l-gray);
       border: none;
       border-radius: 61px;
       outline: none;
@@ -299,10 +310,12 @@
       line-height: 18px;
     }
     .price-product {
-      @include font-text(map-get($font-size, ss), 15px, map-get($color, blk));
+      font-size: map-get($font-size, ss);
+      line-height: 15px;
     }
     .price-discount {
-      @include font-text(map-get($font-size, ss), 15px, map-get($color, rd));
+      font-size: map-get($font-size, ss);
+      line-height: 15px;
     }
   }
   .offer-clothing {
@@ -357,10 +370,12 @@
     }
     .name-adver {
       padding-bottom: 8px;
-      @include font-text(map-get($font-size, s), 18px, map-get($color, blk), $font-weight-bold);
+      font-size: map-get($font-size, s);
+      line-height: 18px;
     }
     .detail-adver {
-      @include font-text(map-get($font-size, ss), 15px, map-get($color, gr));
+      font-size: map-get($font-size, ss);
+      line-height: 15px;
     }
   }
 }
