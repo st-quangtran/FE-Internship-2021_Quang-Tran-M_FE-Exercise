@@ -1,0 +1,15 @@
+.sale-off {
+  @include font-text(map-get($font-size, s), 18px, $font-weight-bold);
+  padding: 6px 10px;
+  background-color: map-get($color, rd);
+  border-radius: 20px;
+  color: map-get($color, wt);
+}
+@include mobile {
+  .sale-off {
+    padding: 2px 9px;
+    font-size: map-get($font-size, sss);
+    line-height: 12px;
+    border-radius: 9px;
+  }
+}

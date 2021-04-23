@@ -1,0 +1,52 @@
+.btn {
+  border: none;
+  outline: none;
+  color: map-get($color, blk);
+  cursor: pointer;
+  &.btn-primary {
+    @include font-text(map-get($font-size, xs), 19px, $font-weight-bold);
+    background-color: map-get($color, wt);
+    color: map-get($color, blk);
+    padding: 14px 20px;
+    border-radius: 33px;
+  }
+  &.btn-secondary {
+    @include font-text(map-get($font-size, xl), 27px, $font-weight-bold);
+    margin: auto 45px;
+    color: map-get($color, org)
+  }
+  &.btn-elementary {
+    margin-left: 24px;
+    background-color: rgba(0,0,0,0);
+  }
+  &.btn-shopnow {
+    width: 195px;
+    display: flex;
+    align-items: center;
+    .txt-shopnow {
+      @include font-text(map-get($font-size, xxxl), 36px, $font-weight-bold);
+      padding-left: 21px;
+      color: map-get($color, wt);
+    }
+  }
+  &.btn-subscribe {
+    @include font-text(map-get($font-size, xs), 19px, $font-weight-bold);
+    padding: 14px 30px;
+    color: map-get($color, blk);
+    background-color: map-get($color, org);
+    border-radius: 56px;
+  }
+}
+@include mobile {
+  .btn {
+    &.btn-primary {
+      padding: 3px 10px;
+      font-size: map-get($font-size, s);
+    }
+    &.btn-subscribe {
+      display: inline-block;
+      padding: 7px 20px;
+      font-size: map-get($font-size, xs);
+    }
+  }
+}
