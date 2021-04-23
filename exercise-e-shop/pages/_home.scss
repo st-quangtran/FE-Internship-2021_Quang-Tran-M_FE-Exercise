@@ -19,7 +19,7 @@
     position: absolute;
     top: 222px;
     left: 17%;
-    z-index: 99;
+    z-index: 50;
     h2 {
       padding-bottom: 24px;
       span {
@@ -28,6 +28,10 @@
     }
     .banner-action {
       padding: 0px;
+    }
+    .txt-shopnow {
+      padding-left: 21px;
+      @include font-text(map-get($font-size, xxxl), 36px, map-get($color, wt), $font-weight-bold);
     }
   }
   .banner-event {
@@ -39,7 +43,7 @@
     left: 0px;
     background-color: white;
     border-radius: 0px 100px 0px 0px;
-    z-index: 99;
+    z-index: 50;
     .list-banner-event {
       max-width: 100%;
       height: 100%;
@@ -64,7 +68,7 @@
 }
 .show-category {
   .list-category {
-    padding: 48px 0px 96px;
+    padding: 42px 0px 90px;
   }
   .item-category {
     position: relative;
@@ -85,34 +89,34 @@
   }
   .name-category {
     position: absolute;
-    top: 167px;
+    bottom: 119px;
     left: 40px;
     right: 40px;
     height: 73px;
     @include font-text(map-get($font-size, xxxl), 36px,  map-get($color, wt));
-    z-index: 99;
+    z-index: 50;
   }
   .sale-off {
     position: absolute;
-    top: 129px  ;
+    bottom: 200px;
     left: 40px;
-    z-index: 99;
+    z-index: 50;
   }
   .btn-category {
     position: absolute;
     left: 40px;
-    top: 258px;
-    z-index: 99;
+    bottom: 53px;
+    z-index: 50;
   }
 }
 .offer-clothing {
-  padding-bottom: 60px;
+  padding-bottom: 54px;
   align-items: baseline;
   .container {
     position: relative;
   }
   .offer-title {
-    padding-bottom: 40px;
+    padding-bottom: 33px;
   }
   .btn-primary {
     position: absolute;
@@ -123,21 +127,24 @@
 }
 .product-today {
   padding-top: 48px;
-  padding-bottom: 60px;
+  padding-bottom: 54px;
   .title-today {
-    margin-bottom: 39px;
+    padding-bottom: 33px;
     text-align: center;
   }
 }
 .product {
   position: relative;
+  .img-product {
+    width: 100%;
+  }
   .sale-off {
     position: absolute;
     top: 24px;
     left: 18px;
   }
   .name-product {
-    margin-top: 16px;
+    padding-top: 16px;
     @include font-text(map-get($font-size, l), 24px, map-get($color, blk), $font-weight-300);
   }
   .cart-product-discount {
@@ -149,20 +156,19 @@
     }
   }
   .price-product {
-    position: relative;
     @include font-text(map-get($font-size, xxl), 30px, map-get($color, blk));
-    }
   }
   .price-discount {
     @include font-text(map-get($font-size, xxl), 30px, map-get($color, rd));
+  }
 }
 .advertisement {
   padding-top: 48px;
-  padding-bottom: 54px;
+  padding-bottom: 48px;
   background-color: map-get($color, w-gray);
   .title-adver {
     text-align: center;
-    margin: 0px auto 50px;
+    padding-bottom: 44px;
   }
 }
 .adver {
@@ -195,7 +201,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 99;
+    z-index: 50;
   }
   .txt-subscribe {
     width: 50%;
@@ -225,5 +231,136 @@
     right: 0;
     background: linear-gradient(90deg, #000000 33.28%, rgba(0, 0, 0, 0) 94.05%);
     opacity: 0.7; 
+  }
+}
+@include mobile {
+  @include columns-responsive($colMax, sm, map-get($screen-width, sm), 5px, 6px);
+  .row {
+    margin: 0px -5px;
+  }
+  .banner {
+    .img-banner {
+      content: url(../exercise-e-shop/assets/product/banner-respon.png);
+    }
+    .banner-sale {
+      width: 271px;
+      left: 24px;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+      .txt-shopnow {
+        padding-left: 16px;
+        font-size: map-get($font-size, m);
+        line-height: 21px;
+      }
+    }
+    .banner-event {
+      display: none;
+    }
+  }
+  .main-subscribe {
+    .subscribe {
+      flex-direction: column;
+      align-items: baseline;
+    }
+    .txt-subscribe {
+      width: 200px;
+      padding-bottom: 24px;
+      font-size: map-get($font-size, m);
+      line-height: 21px;
+    }
+    .form-subscribe {
+      width: 100%;
+      display: block;
+      .input-subscribe {
+        width: 100%;
+        height: 32px;
+        margin-bottom: 16px;
+        font-size: map-get($font-size, s);
+        line-height: 18px;
+      }
+    }
+    .img-subscribe {
+      content: url(../exercise-e-shop/assets/product/subscribe-respon.png);
+    }
+  }
+  .product {
+    .img-product {
+      height: 227px;
+    }
+    .sale-off {
+      top: 14px;
+      left: 9px;
+    }
+    .name-product {
+      padding: 3px 0px;
+      font-size: map-get($font-size, s);
+      line-height: 18px;
+    }
+    .price-product {
+      @include font-text(map-get($font-size, ss), 15px, map-get($color, blk));
+    }
+    .price-discount {
+      @include font-text(map-get($font-size, ss), 15px, map-get($color, rd));
+    }
+  }
+  .offer-clothing {
+    padding-bottom: 46px;
+    .offer-title {
+      padding-bottom: 10px;
+    }
+    .btn-primary {
+      border: none;
+    }
+  }
+  .product-today {
+    padding-top: 42px;
+    padding-bottom: 46px;
+    .title-today {
+      padding-bottom: 10px;
+      text-align: center;
+    }
+  }
+  .show-category {
+    .list-category {
+      padding: 42px 0px 90px;
+    }
+    .name-category {
+      height: 40px;
+      font-size: map-get($font-size, m);
+      line-height: 21px;
+      bottom: 44px;
+      left: 16px;
+    }
+    .sale-off {
+      bottom: 90px;
+      left: 16px;
+    }
+    .btn-category {
+      bottom: 16px;
+      left: 16px;
+    }
+  }
+  .advertisement {
+    padding-top: 38px;
+    padding-bottom: 22px;
+    .title-adver {
+      padding-bottom: 30px;
+    }
+  }
+  .adver {
+    display: flex;
+    .info-adver {
+      flex: 1;
+      padding-left: 16px;
+    }
+    .name-adver {
+      padding-bottom: 8px;
+      @include font-text(map-get($font-size, s), 18px, map-get($color, blk), $font-weight-bold);
+    }
+    .detail-adver {
+      @include font-text(map-get($font-size, ss), 15px, map-get($color, gr));
+    }
   }
 }
