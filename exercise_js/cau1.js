@@ -1,13 +1,9 @@
 function cau1(a, b) {
-	if (!isNaN(a) && !isNaN(b)) {
-		if (a === b) {
-			return a * 2 * 3;
-		}
-		else {
-			return a + b;
-		}
-	}else {
-		return "a hoac b khong phai la so";
+	if (a === b) {
+		return a * 2 * 3;
+	}
+	else {
+		return a + b;
 	}
 }
 var a = 5;

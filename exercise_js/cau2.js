@@ -1,14 +1,9 @@
 function cau2(a) {
-  if (!isNaN(a)) {
-		if (a <= 19) {
-			return 19-a;
-		}
-		else {
-			return (a-19)*3;
-		}
+	if (a <= 19) {
+		return 19-a;
 	}
 	else {
-		return "a khong phai la so";
+		return (a-19)*3;
 	}
 }
-console.log(cau2("ab"));
+console.log(cau2(20));
