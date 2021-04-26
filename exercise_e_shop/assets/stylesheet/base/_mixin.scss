@@ -1,0 +1,41 @@
+@mixin font-text($size, $line-height, $weight: normal) {
+  font-size: $size;
+  line-height: $line-height;
+  @if ($weight != normal) {
+    font-weight: $weight;
+  }
+}
+@mixin respon($break-point) {
+  @if ($break-point == "") {
+    @content;
+  }
+  @else {
+    @media (max-width: $break-point) {
+      @content;
+    }
+  }
+}
+@mixin columns-responsive($colMax, $type-device, $break-point, $gutter-x, $gutter-y) {
+  @include respon ($break-point) {
+    @for $i from 1 through $colMax {
+      @if ($break-point == "") {
+        .col-#{$i} {
+          width: percentage($i/$colMax);
+          padding: $gutter-y $gutter-x;
+        }
+      }
+      @else {
+        .col-#{$type-device}-#{$i} {
+          width: percentage($i/$colMax);
+          padding: $gutter-y $gutter-x;
+        }
+      }
+    } 
+  }
+}
+@mixin tablet {@media (max-width: $md) {
+  @content;
+}}
+@mixin mobile {@media (max-width: $sm) {
+  @content;
+}}
