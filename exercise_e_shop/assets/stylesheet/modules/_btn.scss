@@ -2,18 +2,18 @@
   text-transform: uppercase;
   border: none;
   outline: none;
-  color: map-get($color, blk);
+  color: map-get($color, black);
   cursor: pointer;
   &.btn-primary {
-    @include font-text(map-get($font-size, xs), 19px, $font-weight-bold);
-    background-color: map-get($color, wt);
-    color: map-get($color, blk);
+    @include font-text(map-get($font-size, s), 19px, $font-weight-bold);
+    background-color: map-get($color, white);
+    color: map-get($color, black);
     padding: 14px 20px;
     border-radius: 33px;
   }
   &.btn-outline-default {
-    @include font-text(map-get($font-size, xs), 19px, $font-weight-bold);
-    color: map-get($color, blk);
+    @include font-text(map-get($font-size, s), 19px, $font-weight-bold);
+    color: map-get($color, black);
     padding: 14px 20px;
     border-radius: 33px;
     border: 1px solid #C4C4C4;
@@ -21,7 +21,7 @@
   &.btn-secondary {
     @include font-text(map-get($font-size, xl), 27px, $font-weight-bold);
     margin: auto 45px;
-    color: map-get($color, org);
+    color: map-get($color, orange);
     text-transform: none;
   }
   &.btn-light {
@@ -34,10 +34,10 @@
     align-items: center;
   }
   &.btn-orange {
-    @include font-text(map-get($font-size, xs), 19px, $font-weight-bold);
+    @include font-text(map-get($font-size, s), 19px, $font-weight-bold);
     padding: 14px 30px;
-    color: map-get($color, blk);
-    background-color: map-get($color, org);
+    color: map-get($color, black);
+    background-color: map-get($color, orange);
     border-radius: 56px;
   }
 }
@@ -45,16 +45,16 @@
   .btn {
     &.btn-primary {
       padding: 3px 10px;
-      font-size: map-get($font-size, s);
+      font-size: map-get($font-size, xs);
     }
     &.btn-outline-default {
       padding: 3px 10px;
-      font-size: map-get($font-size, s);
+      font-size: map-get($font-size, xs);
     }
     &.btn-orange {
       display: inline-block;
       padding: 7px 20px;
-      font-size: map-get($font-size, xs);
+      font-size: map-get($font-size, s);
     }
   }
 }

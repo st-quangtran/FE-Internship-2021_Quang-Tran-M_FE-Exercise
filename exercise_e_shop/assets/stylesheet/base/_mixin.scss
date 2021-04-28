@@ -33,9 +33,9 @@
     } 
   }
 }
-@mixin tablet {@media (max-width: $md) {
+@mixin tablet {@media (max-width: map-get($screen-width, md)) {
   @content;
 }}
-@mixin mobile {@media (max-width: $sm) {
+@mixin mobile {@media (max-width: map-get($screen-width, sm)) {
   @content;
 }}
