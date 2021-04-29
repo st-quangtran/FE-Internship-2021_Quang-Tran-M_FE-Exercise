@@ -139,8 +139,10 @@
 }
 .product {
   position: relative;
-  .product-img {
-    width: 100%;
+  .img-product {
+    &:hover ~ .btn-orange{
+      display: block;
+    }
   }
   .badge {
     position: absolute;
@@ -167,6 +169,17 @@
   .discount-price {
     @include font-text(map-get($font-size, 2xl), 30px);
     color: map-get($color, red);
+  }
+  .btn-orange {
+    color:map-get($color, white);
+    display: none;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    &:hover {
+      display: block;
+    }
   }
 }
 .section-benefits {

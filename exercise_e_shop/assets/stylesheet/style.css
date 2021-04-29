@@ -336,6 +336,12 @@ a {
   background-color: #FBB03B;
   border-radius: 56px;
 }
+.btn.btn-dark {
+  border-radius: 13px;
+  padding: 8px 14px;
+  background-color: #FBB03B;
+  color: #FFFFFF;
+}
 
 @media (max-width: 576px) {
   .btn.btn-primary {
@@ -568,8 +574,8 @@ h5 {
 .product {
   position: relative;
 }
-.product .product-img {
-  width: 100%;
+.product .img-product:hover ~ .btn-orange {
+  display: block;
 }
 .product .badge {
   position: absolute;
@@ -600,6 +606,17 @@ h5 {
   font-size: 20px;
   line-height: 30px;
   color: #FF0000;
+}
+.product .btn-orange {
+  color: #FFFFFF;
+  display: none;
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.product .btn-orange:hover {
+  display: block;
 }
 
 .section-benefits {
