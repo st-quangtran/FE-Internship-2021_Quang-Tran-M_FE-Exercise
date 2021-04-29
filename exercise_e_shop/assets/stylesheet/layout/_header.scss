@@ -1,0 +1,44 @@
+.page-header {
+  width: 100%;
+  position: fixed;
+  top: 48px;
+  z-index: 99;
+  .nav-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .options-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu-item {
+    display: none;
+  }
+}
+@include mobile {
+  .page-header {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    top: 0;
+    background-color: map-get($color, white);
+    .header-logo {
+      content: url(../icons/logo-respon.png);
+    }
+    .search-item {
+      display: none;
+    }
+    .menu-item {
+      display: block;
+    }
+    .img-cart {
+      content: url(../icons/cart-respon.png);
+    }
+    .img-avatar {
+      content: url(../icons/avatar-respon.png);
+    }
+  }
+  .header-center {
+    display: none;
+  }
+}

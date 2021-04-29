@@ -1,0 +1,86 @@
+.page-footer {
+  background-color: map-get($color, orange);
+  .top-footer {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid map-get($color, white);
+    .flex-between {
+      align-items: flex-start;
+    }
+  }
+  .description-shop {
+    max-width: 373px;
+    margin-right: 170px;
+  }
+  .description-footer {
+    @include font-text(map-get($font-size, m), 21px);
+    padding: 24px 0px 57px;
+    color: map-get($color, white);
+  }
+  .app-contact {
+    display: flex;
+    i {
+      color: map-get($color, white);
+      margin-right: 33px;
+    }
+  }
+  .list-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    p {
+      @include font-text(map-get($font-size, m), 150%);
+      color: map-get($color, white);
+    }
+  }
+  .bottom-footer {
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    p {
+      @include font-text(map-get($font-size, xs), 18px);
+      text-transform: uppercase;
+      color: map-get($color, white);
+    }
+  }
+}
+@include mobile {
+  .page-footer {
+    .top-footer {
+      padding-top: 24px;
+      padding-bottom: 48px;
+      .flex-between {
+        flex-direction: column;
+      }
+    }
+    .description-shop {
+      width: 100%;
+      margin-right: 0;
+    }
+    .description-footer {
+      @include font-text(map-get($font-size, m), 21px);
+      color: map-get($color, white);
+    }
+    .app-contact {
+      display: none;
+    }
+    .list-info {
+      margin: -12px 0px;
+      flex-direction: column;
+      p {
+        font-size: map-get($font-size, xs);
+        line-height: 18px;
+      }
+    }
+    .item-info {
+      padding: 12px 0px;
+    }
+    .bottom-footer {
+      .text-uppercase {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+}

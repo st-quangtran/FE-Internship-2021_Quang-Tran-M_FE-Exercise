@@ -1,0 +1,15 @@
+.badge {
+  @include font-text(map-get($font-size, xs), 18px, $font-weight-bold);
+  padding: 6px 10px;
+  background-color: map-get($color, red);
+  border-radius: 20px;
+  color: map-get($color, white);
+}
+@include mobile {
+  .badge {
+    padding: 2px 9px;
+    font-size: map-get($font-size, 3xs);
+    line-height: 12px;
+    border-radius: 9px;
+  }
+}
