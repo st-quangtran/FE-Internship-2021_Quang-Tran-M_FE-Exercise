@@ -154,7 +154,6 @@
   }
   .cart-product-discount {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     .product-price {
       color: map-get($color, gray-1);

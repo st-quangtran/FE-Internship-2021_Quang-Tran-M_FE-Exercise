@@ -1,0 +1,106 @@
+.section-cart {
+  display: flex;
+  align-items: baseline;
+  padding: 20px 0px;
+  background-color: rgb(239, 239, 239);
+  .title-cart {
+    width: 100%;
+    padding: 10px 0px;
+    p {
+      @include font-text(map-get($font-size, 2xl), 150%);
+    }
+  }
+  .flex-between {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .left-cart {
+    width: 70%;
+  }
+  .right-cart {
+    align-items: flex-start;
+    flex: 1;
+    margin-left: 20px;
+    .address, .total-price {
+      padding: 10px 5px;
+      border: 1px solid #D3D3D3;
+      background-color: map-get($color, white);
+      display: flex;
+      justify-content: space-between;
+    }
+    .total-price {
+      margin-top: 20px;
+    }
+    .price-pay {
+      color: map-get($color, red);
+      font-size: map-get($font-size, 2xl);
+    }
+    .btn-orange {
+      width: 100%;
+      border-radius: 5px;
+      color: map-get($color, white);
+      margin-top: 20px;
+    }
+  }
+  .cart-item + .cart-item {
+    margin-top: 10px;
+  }
+}
+.product {
+  padding: 5px;
+  border: 1px solid #D3D3D3;
+  display: flex;
+  background-color: map-get($color, white);
+  .img-product {
+    width: 100px;
+    flex: 1;
+  }
+  .product-info {
+    width: 50%;
+    flex: 5;
+    padding: 0px 10px;
+    display: flex;
+    .product-desc {
+      width: 80%;
+    }
+    .btn-light {
+      text-transform: none;
+      margin-left: 0px;
+      margin-top: 20px;
+      color: rgb(13, 92, 182);
+    }
+    .cart-product-discount {
+      padding-top: 16px;
+      display: block;
+      .product-price {
+        text-decoration: line-through;
+      }
+    }
+    .product-price {
+      padding-top: 16px;
+    }
+    .badge {
+      font-size: map-get($font-size, 2xs);
+      line-height: 15px;
+      padding: 3px 5px;
+    }
+  }
+  .numbers {
+    flex: 1;
+    padding-top: 16px;
+    .btn-operation {
+      width: 30px;
+      height: 30px;
+    }
+    .input-number {
+      width: 30px;
+      height: 30px;
+      outline: none;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        appearance: none;
+        margin: 0;
+    }
+  }
+}
