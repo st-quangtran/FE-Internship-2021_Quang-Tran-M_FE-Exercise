@@ -163,6 +163,25 @@ a {
 .page-header .menu-item {
   display: none;
 }
+.page-header .cart-item {
+  position: relative;
+}
+.page-header .count-cart {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #FF0000;
+  color: #FFFFFF;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
 
 @media (max-width: 576px) {
   .page-header {
@@ -568,8 +587,8 @@ h5 {
 .product {
   position: relative;
 }
-.product .product-img {
-  width: 100%;
+.product .img-product:hover ~ .btn-orange {
+  display: block;
 }
 .product .badge {
   position: absolute;
@@ -600,6 +619,17 @@ h5 {
   font-size: 20px;
   line-height: 30px;
   color: #FF0000;
+}
+.product .btn-orange {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #FFFFFF;
+  display: none;
+}
+.product .btn-orange:hover {
+  display: block;
 }
 
 .section-benefits {
