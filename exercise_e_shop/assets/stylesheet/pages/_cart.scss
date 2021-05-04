@@ -15,16 +15,12 @@
       @include font-text(map-get($font-size, 4xl), 150%);
     }
   }
-  .flex-between {
-    align-items: flex-start;  
-  }
   .left-cart {
     width: 70%;
+    align-items: flex-start;
   }
   .right-cart {
-    align-items: flex-start;
     width: 30%;
-    margin-left: 20px;
     .address, .total-price {
       padding: 10px 5px;
       border: 1px solid #D3D3D3;
@@ -48,15 +44,19 @@
       word-wrap: break-word;
     }
   }
+  .view-carts {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .text-center {
+      width: 100%;
+    }
+  }
   .btn-orange {
     width: 100%;
     border-radius: 5px;
     color: map-get($color, white);
     margin-top: 20px;
-  }
-  .view-carts {
-    width: 100%;
-    flex-wrap: wrap;
   }
   .cart-item + .cart-item {
     margin-top: 10px;
