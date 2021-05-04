@@ -46,7 +46,7 @@
     margin-top: 10px;
   }
 }
-.product {
+.product-cart {
   padding: 5px;
   border: 1px solid #D3D3D3;
   display: flex;
@@ -83,6 +83,11 @@
       font-size: map-get($font-size, 2xs);
       line-height: 15px;
       padding: 3px 5px;
+    }
+    .price {
+      &::before {
+        content: "$";
+      }
     }
   }
   .numbers {
