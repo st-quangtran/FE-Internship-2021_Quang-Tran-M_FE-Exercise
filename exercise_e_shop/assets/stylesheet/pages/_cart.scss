@@ -103,6 +103,11 @@
       line-height: 15px;
       padding: 3px 5px;
     }
+    .price {
+      &::before {
+        content: "$";
+      }
+    }
   }
   .numbers {
     flex: 1;

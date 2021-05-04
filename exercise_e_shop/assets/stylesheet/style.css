@@ -1027,6 +1027,9 @@ h5 {
   line-height: 15px;
   padding: 3px 5px;
 }
+.product-cart .product-info .price::before {
+  content: "$";
+}
 .product-cart .numbers {
   flex: 1;
   padding-top: 16px;
