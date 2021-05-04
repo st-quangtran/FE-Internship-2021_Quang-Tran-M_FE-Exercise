@@ -626,20 +626,12 @@ h5 {
   color: #FF0000;
 }
 .product .btn-orange {
-<<<<<<< HEAD
-=======
-  color: #FFFFFF;
-  display: none;
->>>>>>> feature/20210429-st-quangtran_btn_add_to_cart
   position: absolute;
   top: 300px;
   left: 50%;
   transform: translateX(-50%);
-<<<<<<< HEAD
   color: #FFFFFF;
   display: none;
-=======
->>>>>>> feature/20210429-st-quangtran_btn_add_to_cart
 }
 .product .btn-orange:hover {
   display: block;
@@ -932,6 +924,12 @@ h5 {
     line-height: 15px;
   }
 }
+.cart-header {
+  padding: 50px 0px;
+  position: static;
+  background-color: #333333;
+}
+
 .section-cart {
   display: flex;
   align-items: baseline;
@@ -942,7 +940,7 @@ h5 {
   width: 100%;
   padding: 10px 0px;
 }
-.section-cart .title-cart p {
+.section-cart .title-cart .text-uppercase {
   font-size: 32px;
   line-height: 150%;
 }
@@ -1005,20 +1003,21 @@ h5 {
   padding: 5px;
   border: 1px solid #D3D3D3;
   display: flex;
+  justify-content: space-between;
   background-color: #FFFFFF;
 }
 .product-cart .img-product {
   width: 100px;
-  flex: 1;
 }
 .product-cart .product-info {
-  width: 50%;
-  flex: 5;
+  width: 70%;
   padding: 0px 10px;
   display: flex;
+  justify-content: space-between;
 }
 .product-cart .product-info .product-desc {
   width: 80%;
+  padding-right: 50px;
 }
 .product-cart .product-info .btn-light {
   text-transform: none;
@@ -1041,11 +1040,7 @@ h5 {
   line-height: 15px;
   padding: 3px 5px;
 }
-.product-cart .product-info .price::before {
-  content: "$";
-}
 .product-cart .numbers {
-  flex: 1;
   padding-top: 16px;
 }
 .product-cart .numbers .btn-operation {
@@ -1061,6 +1056,10 @@ h5 {
 .product-cart .numbers input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.price::before {
+  content: "$";
 }
 
 /*# sourceMappingURL=style.css.map */

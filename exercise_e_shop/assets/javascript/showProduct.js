@@ -33,7 +33,7 @@ var listProduct = document.getElementById("list");
 var viewCountCart = document.getElementsByClassName("count-cart");
 
 if (listProduct) {
-  listItems.forEach((item, index) => {
+  listItems.forEach((item) => {
     const li = document.createElement("li");
     const classLi = document.createAttribute("class");
     classLi.value = "col-3 col-sm-6 list-item product-item";
@@ -66,7 +66,7 @@ if (listProduct) {
     className.value = "product-name";
     nameProduct.setAttributeNode(className);
     nameProduct.innerHTML = item["name"];
-    
+
     const cartProduct = document.createElement("div");
     const discountProduct = document.createElement("span");
     const priceProduct = document.createElement("span");
@@ -75,18 +75,18 @@ if (listProduct) {
       const classCart = document.createAttribute("class");
       classCart.value = "cart-product-discount";
       cartProduct.setAttributeNode(classCart);
-      
+
       var discountPrice = (item.price - item.price * 70 / 100).toFixed(2);
       const classDiscount = document.createAttribute("class");
       classDiscount.value = "discount-price";
       discountProduct.setAttributeNode(classDiscount);
-      discountProduct.innerHTML = setPrice(discountPrice);
-  
+      discountProduct.innerHTML = "$" + discountPrice;
+
       const classPrice = document.createAttribute("class");
       classPrice.value = "product-price";
       priceProduct.setAttributeNode(classPrice);
-      priceProduct.innerHTML = setPrice(item.price);
-  
+      priceProduct.innerHTML = "$" + item.price;
+
       cartProduct.appendChild(discountProduct);
       cartProduct.appendChild(priceProduct);
 
@@ -99,7 +99,7 @@ if (listProduct) {
       const classPrice = document.createAttribute("class");
       classPrice.value = "product-price";
       priceProduct.setAttributeNode(classPrice);
-      priceProduct.innerHTML = setPrice(item.price);
+      priceProduct.innerHTML = "$" + item.price;
     }
 
     const btnAdd = document.createElement("button");
@@ -109,7 +109,7 @@ if (listProduct) {
     btnAdd.classList.add("btn-orange");
     btnAdd.setAttributeNode(idBtn);
     btnAdd.innerHTML = "Add to cart";
-    
+
     linkImg.appendChild(imgProduct);
 
     product.appendChild(linkImg);
@@ -143,27 +143,23 @@ function setCountCart() {
     }
     else {
       viewCountCart[0].style.display = "none";
-    } 
+    }
   }
   else {
     viewCountCart[0].style.display = "none";
-  } 
-}
-
-function setPrice(price) {
-  return new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'USD' }).format(price);
+  }
 }
 
 function addToCart(id) {
   var cart = localStorage.getItem('cart');
+  var i = listItems.findIndex(item => item.id === id);
   var listCarts;
   if (cart) {
     listCarts = JSON.parse(cart);
     var index = listCarts.findIndex(item => item.id === id);
     if (index === -1) {
-      var i = listItems.findIndex(item => item.id === id);
       listCarts.push(listItems[i]);
-      listCarts[listCarts.length-1].number = 1;
+      listCarts[listCarts.length - 1].number = 1;
     }
     else {
       listCarts[index].number++;
@@ -172,7 +168,7 @@ function addToCart(id) {
   else {
     listCarts = [];
     listCarts.push(listItems[i]);
-    listCarts[listCarts.length-1].number = 1;
+    listCarts[listCarts.length - 1].number = 1;
   }
   localStorage.setItem('cart', JSON.stringify(listCarts));
   setCountCart();

@@ -11,7 +11,7 @@
   <script src="https://kit.fontawesome.com/52d5d4ff54.js" crossorigin="anonymous"></script>
 </head>
 <body>  
-  <header class="page-header">
+  <header class="page-header cart-header">
     <div class="container container-sm flex-between">
       <div class="header-left">
         <a href="#" class="btn btn-logo"><img src="assets/icons/logo.png" class="header-logo" alt="Logo"></a>
@@ -53,59 +53,10 @@
     </div>
   </header>
   <main>
-    <section class="banner">
-      <img src="assets/images/banner.png" class="img-banner" alt="Banner">
-      <div class="banner-sale">
-        <h1 class="title-banner">Sale of the <span>summer</span> collection</h1>
-        <div class="banner-action">
-          <a href="#" class="btn btn-link">
-            <img src="assets/icons/select.png" alt="Select">
-            <p class="text-uppercase"><u>shop now</u></p>
-          </a>
-        </div>
-      </div>
-      <div class="section-campaign">
-        <ul class="flex-between list-group list-campaigns">
-          <li class="list-item">
-            <div class="campaign">
-              <div class="campaign-img">
-                <img src="assets/icons/shipping.png" alt="Ship">
-              </div>
-              <div class="campaign-info">
-                <p class="campaign-name">Free Shipping</p>
-                <p class="campaign-detail">On purchases over $199</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-item">
-            <div class="campaign">
-              <div class="campaign-img">
-                <img src="assets/icons/satisfied.png" alt="Satisfied">
-              </div>
-              <div class="campaign-info">
-                <p class="campaign-name">99% Satisfied Customers</p>
-                <p class="campaign-detail">Our clients' opinions speak for themselves</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-item">
-            <div class="campaign">
-              <div class="campaign-img">
-                <img src="assets/icons/originality.png" alt="Originality">
-              </div>
-              <div class="campaign-info">
-                <p class="campaign-name">Originality Guaranteed</p>
-                <p class="campaign-detail">30 days warranty for each product from our store</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
     <section class="section-cart">
       <div class="container container-sm">
         <div class="title-cart">
-          <p>GIỎ HÀNG</p>
+          <p class="text-uppercase">cart</p><span id="count-product"></span>
         </div>
         <div class="flex-between view-carts" id="view-carts"></div>
       </div>
