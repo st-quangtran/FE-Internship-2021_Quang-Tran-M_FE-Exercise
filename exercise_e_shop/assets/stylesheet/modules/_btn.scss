@@ -40,6 +40,12 @@
     background-color: map-get($color, orange);
     border-radius: 56px;
   }
+  &.btn-dark {
+    border-radius: 13px;
+    padding: 8px 14px;
+    background-color: map-get($color, orange);
+    color: map-get($color, white);
+  }
 }
 @include mobile {
   .btn {
