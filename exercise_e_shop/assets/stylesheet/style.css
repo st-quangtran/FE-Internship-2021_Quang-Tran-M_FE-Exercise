@@ -336,6 +336,12 @@ a {
   background-color: #FBB03B;
   border-radius: 56px;
 }
+.btn.btn-dark {
+  border-radius: 13px;
+  padding: 8px 14px;
+  background-color: #FBB03B;
+  color: #FFFFFF;
+}
 
 @media (max-width: 576px) {
   .btn.btn-primary {
@@ -568,8 +574,8 @@ h5 {
 .product {
   position: relative;
 }
-.product .product-img {
-  width: 100%;
+.product .img-product:hover ~ .btn-orange {
+  display: block;
 }
 .product .badge {
   position: absolute;
@@ -599,6 +605,17 @@ h5 {
   font-size: 20px;
   line-height: 30px;
   color: #FF0000;
+}
+.product .btn-orange {
+  color: #FFFFFF;
+  display: none;
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.product .btn-orange:hover {
+  display: block;
 }
 
 .section-benefits {
@@ -913,13 +930,17 @@ h5 {
   align-items: flex-start;
   flex: 1;
   margin-left: 20px;
+  padding: 5px;
+  border: 1px solid #D3D3D3;
+  background-color: #FFFFFF;
 }
 .section-cart .right-cart .address, .section-cart .right-cart .total-price {
   padding: 10px 5px;
-  border: 1px solid #D3D3D3;
-  background-color: #FFFFFF;
   display: flex;
   justify-content: space-between;
+}
+.section-cart .right-cart .address {
+  border-bottom: 1px solid #D3D3D3;
 }
 .section-cart .right-cart .total-price {
   margin-top: 20px;
