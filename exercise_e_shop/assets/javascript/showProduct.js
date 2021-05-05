@@ -5,6 +5,7 @@ var listItems = [
     "price": 119.99,
     "discount": 30,
     "avatar": "assets/images/item1.png",
+    "number": 20,
   },
   {
     "id": 2,
@@ -12,6 +13,7 @@ var listItems = [
     "price": 119.99,
     "discount": 30,
     "avatar": "assets/images/item2.png",
+    "number": 25,
   },
   {
     "id": 3,
@@ -19,6 +21,7 @@ var listItems = [
     "price": 79.99,
     "discount": 30,
     "avatar": "assets/images/item3.png",
+    "number": 10,
   },
   {
     "id": 4,
@@ -26,9 +29,11 @@ var listItems = [
     "price": 119.99,
     "discount": 0,
     "avatar": "assets/images/item4.png",
+    "number": 8,
   },
 ]
 
+localStorage.setItem('product', JSON.stringify(listItems));
 var listProduct = document.getElementById("list-products");
 var viewCountCart = document.getElementsByClassName("count-cart");
 
