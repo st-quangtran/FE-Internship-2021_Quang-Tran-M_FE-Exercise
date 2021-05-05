@@ -951,13 +951,19 @@ h5 {
 }
 .section-cart .right-cart {
   width: 30%;
+  padding: 5px;
+  height: 240px;
+  border: 1px solid #D3D3D3;
+  background-color: #FFFFFF;
 }
 .section-cart .right-cart .address, .section-cart .right-cart .total-price {
   padding: 10px 5px;
-  border: 1px solid #D3D3D3;
-  background-color: #FFFFFF;
   display: flex;
   justify-content: space-between;
+}
+.section-cart .right-cart .address {
+  height: 100px;
+  border-bottom: 1px solid #D3D3D3;
 }
 .section-cart .right-cart .total-price {
   margin-top: 20px;
