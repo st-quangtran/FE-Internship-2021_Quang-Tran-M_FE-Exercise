@@ -166,7 +166,7 @@ a {
 .page-header .cart-item {
   position: relative;
 }
-.page-header .count-cart {
+.page-header .quantity-cart {
   width: 12px;
   height: 12px;
   position: absolute;
