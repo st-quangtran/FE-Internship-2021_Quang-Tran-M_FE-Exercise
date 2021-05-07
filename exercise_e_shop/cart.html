@@ -11,7 +11,7 @@
   <script src="https://kit.fontawesome.com/52d5d4ff54.js" crossorigin="anonymous"></script>
 </head>
 <body>  
-  <header class="page-header">
+  <header class="page-header cart-header">
     <div class="container container-sm flex-between">
       <div class="header-left">
         <a href="#" class="btn btn-logo"><img src="assets/icons/logo.png" class="header-logo" alt="Logo"></a>
@@ -36,6 +36,7 @@
             <a href="#" class="btn btn-light">
               <img src="assets/icons/cart.png" class="img-cart" alt="Cart">
             </a>
+            <span class="quantity-cart" id="quantity-cart"></span>
           </li>
           <li class="list-item avatar-item">
             <button type="button" class="btn btn-light">
@@ -52,147 +53,12 @@
     </div>
   </header>
   <main>
-    <section class="banner">
-      <img src="assets/images/banner.png" class="img-banner" alt="Banner">
-      <div class="banner-sale">
-        <h1 class="title-banner">Sale of the <span>summer</span> collection</h1>
-        <div class="banner-action">
-          <a href="#" class="btn btn-link">
-            <img src="assets/icons/select.png" alt="Select">
-            <p class="text-uppercase"><u>shop now</u></p>
-          </a>
-        </div>
-      </div>
-      <div class="section-campaign">
-        <ul class="flex-between list-group list-campaigns">
-          <li class="list-item">
-            <div class="campaign">
-              <div class="campaign-img">
-                <img src="assets/icons/shipping.png" alt="Ship">
-              </div>
-              <div class="campaign-info">
-                <p class="campaign-name">Free Shipping</p>
-                <p class="campaign-detail">On purchases over $199</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-item">
-            <div class="campaign">
-              <div class="campaign-img">
-                <img src="assets/icons/satisfied.png" alt="Satisfied">
-              </div>
-              <div class="campaign-info">
-                <p class="campaign-name">99% Satisfied Customers</p>
-                <p class="campaign-detail">Our clients' opinions speak for themselves</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-item">
-            <div class="campaign">
-              <div class="campaign-img">
-                <img src="assets/icons/originality.png" alt="Originality">
-              </div>
-              <div class="campaign-info">
-                <p class="campaign-name">Originality Guaranteed</p>
-                <p class="campaign-detail">30 days warranty for each product from our store</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
     <section class="section-cart">
-      <div class="container container-sm flex-between">
+      <div class="container container-sm">
         <div class="title-cart">
-          <p>GIỎ HÀNG</p>
+          <p class="text-uppercase">cart</p><span id="count-product"></span>
         </div>
-        <ul class="flex-between list-group list-carts row left-cart">
-          <li class="col-12 col-sm-6 list-item cart-item">
-            <div class="product product-cart">
-              <img src="assets/images/item1.png" class="img img-product" alt="item1">
-              <div class="product-info">
-                <div class="product-desc">
-                  <h4 class="product-name">T-Shirt Summer Vibes</h4>
-                  <button class="btn btn-light">Delete</button>
-                </div>
-                <div class="cart-product-discount">
-                  <p class="discount-price price">89.99</p>
-                  <p class="product-price price">119.99</p>
-                </div>
-                <span class="badge">-30%</span>
-              </div>
-              <div class="numbers">
-                <button class="btn btn-operation">-</button>
-                <input type="number" class="input-number text-center" value="1">
-                <button class="btn btn-operation">+</button>
-              </div>
-            </div>
-          </li>
-          <li class="col-12 col-sm-6 list-item cart-item">
-            <div class="product product-cart">
-              <img src="assets/images/item2.png" class="img img-product" alt="item2">
-              <div class="product-info">
-                <div class="product-desc">
-                  <h4 class="product-name">Loose Knit 3/4 Sleeve</h4>
-                  <button class="btn btn-light">Delete</button>
-                </div>
-                <p class="product-price price">119.99</p>
-              </div>
-              <div class="numbers">
-                <button class="btn btn-operation">-</button>
-                <input type="number" class="input-number text-center" value="1">
-                <button class="btn btn-operation">+</button>
-              </div>
-            </div>
-          </li>
-          <li class="col-12 col-sm-6 list-item cart-item">
-            <div class="product product-cart">
-              <img src="assets/images/item3.png" class="img img-product" alt="item3">
-              <div class="product-info">
-                <div class="product-desc">
-                  <h4 class="product-name">Basic Slim Fit T-Shirt</h4>
-                  <button class="btn btn-light">Delete</button>
-                </div>
-                <p class="product-price price">79.99</p> 
-              </div>
-              <div class="numbers">
-                <button class="btn btn-operation">-</button>
-                <input type="number" class="input-number text-center" value="1">
-                <button class="btn btn-operation">+</button>
-              </div>       
-            </div>
-          </li>
-          <li class="col-12 col-sm-6 list-item cart-item">
-            <div class="product product-cart">
-              <img src="assets/images/item4.png" class="img img-product" alt="item4">
-              <div class="product-info">
-                <div class="product-desc">
-                  <h4 class="product-name">Loose Textured T-Shirt</h4>
-                  <button class="btn btn-light">Delete</button>
-                </div>
-                <p class="product-price price">119.99</p> 
-              </div>
-              <div class="numbers">
-                <button class="btn btn-operation">-</button>
-                <input type="number" class="input-number text-center" value="1">
-                <button class="btn btn-operation">+</button>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <div class="right-cart">
-          <div class="address">
-            <span class="text-pay">Address</span>
-            <span class="value-pay">Da Nang</span>
-          </div>
-          <div class="total-price">
-            <span class="text-pay">Total</span>
-            <span class="value-pay price-pay">$1000.00</span>
-          </div>
-          <div class="text-center">
-            <button class="btn btn-orange">Pay</button>
-          </div>
-        </div>
+        <div class="view-carts" id="view-carts"></div>
       </div>
     </section>
   </main>
@@ -246,5 +112,6 @@
       <p class="text-uppercase">design by iceo.co-&#64; 2019.all rights reversed.</p>
     </div>
   </footer>
+  <script src="assets/javascript/showCart.js"></script>
 </body>
 </html>
