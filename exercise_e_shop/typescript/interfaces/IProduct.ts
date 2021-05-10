@@ -6,8 +6,4 @@ interface IProduct {
   avatar: string;
 }
 
-type IProductInCart = IProduct & {
-  number: number;
-}
-
-export { IProduct, IProductInCart };
+export { IProduct };

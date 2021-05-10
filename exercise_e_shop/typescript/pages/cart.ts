@@ -1,13 +1,13 @@
-import { ProductInCart } from './class';
-import { updateIconCart, updateItem } from './modules';
+import { IProductInCart } from '../interfaces/index.js';
+import { updateIconCart, updateItem } from '../common/modules.js';
 
 //fetch data cart
-function fetchData(): ProductInCart[]{
+function fetchData(): IProductInCart[]{
   return localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
 }
 
 //render view cart
-function render(cart: ProductInCart[]) {
+function render(cart: IProductInCart[]) {
   let viewCart: Element = document.getElementById('view-carts');
   let titleQuantity: Element = document.getElementById("count-product");
   //variable quantity of product in cart
@@ -20,11 +20,11 @@ function render(cart: ProductInCart[]) {
     //create ul and view pay
     viewCart.innerHTML = viewCart.innerHTML + `<ul class="flex-between list-group list-carts row left-cart" id="list-carts"></ul>
       <div id="pay" class="right-cart"></div>`;
-    cart.forEach(item => {
+    for (let item of cart) {
       //calculator discount price of product
       let discountPrice: number = parseFloat((item.price - item.price * item.discount / 100).toFixed(2));
       //get tag ul of list cart in html
-      let viewListCart = document.getElementById("list-carts");
+      let viewListCart: any = document.getElementById("list-carts");
       //view product of cart
       viewListCart.innerHTML = viewListCart.innerHTML + `<li class="col-12 list-item cart-item">
           <div class="product product-cart">
@@ -36,7 +36,7 @@ function render(cart: ProductInCart[]) {
       totalPrice += item.discount > 0 ? discountPrice * item.number : item.price * item.number;
       //calculator quantity product of cart
       quantityCart += item.number;
-    });
+    }
     //create view payment
     viewPayment(totalPrice);
   }
@@ -53,7 +53,7 @@ function render(cart: ProductInCart[]) {
 }
 
 //function create view name, des, price of product
-function viewInfoProduct(item: ProductInCart, discountPrice: number): string {
+function viewInfoProduct(item: IProductInCart, discountPrice: number): string {
   return `<img src="${item.avatar}" class="img img-product" alt="${item.name}">
     <div class="product-info">
       <div class="product-desc">
@@ -65,7 +65,7 @@ function viewInfoProduct(item: ProductInCart, discountPrice: number): string {
 }
 
 //function create view price product
-function viewPriceProduct(item: ProductInCart, discountPrice: number): string {
+function viewPriceProduct(item: IProductInCart, discountPrice: number): string {
   let viewPrice: string = item.discount > 0 ? `<div class="cart-product-discount">
       <p class="discount-price price">${discountPrice}</p>
       <p class="product-price price">${item.price}</p>
@@ -75,7 +75,7 @@ function viewPriceProduct(item: ProductInCart, discountPrice: number): string {
 }
 
 //function create view quantity of product in cart
-function viewNumberProduct(item: ProductInCart): string {
+function viewNumberProduct(item: IProductInCart): string {
   return `<div class="numbers">
     <button class="btn btn-operation" data-id="${item.id}" data-new-quantity="${item.number - 1}">-</button>
     <input type="number" class="input-number text-center" id="numberItem${item.id}" data-new-quantity="${item.number}" data-id="${item.id}" value="${item.number}">
@@ -119,10 +119,10 @@ function deleteItem() {
 
 //function pay when click button "PAY"
 function pay() {
-  let totalPrice = document.getElementsByClassName("price-pay")[0].innerHTML
+  let totalPrice: any = document.getElementsByClassName("price-pay")[0].innerHTML
   //add list products in cart and total price to new object
   let pay:  {
-    products: ProductInCart[];
+    products: IProductInCart[];
     price: number
   };
   pay.products = cart;
@@ -138,7 +138,7 @@ function pay() {
 //function add event 
 function addEventListener() {
   //add event for button "+", "-"
-  let operation = document.getElementsByClassName("btn-operation");
+  let operation: any = document.getElementsByClassName("btn-operation");
   for (let o of operation) {
     let id: number = +o.getAttribute('data-id');
     let quantity: number = +o.getAttribute('data-new-quantity');
@@ -148,21 +148,21 @@ function addEventListener() {
     });
   }
   //add event for input number of product
-  let input = document.getElementsByClassName("input-number");
+  let input: any = document.getElementsByClassName("input-number");
   for (let i of input) {
     i.addEventListener('change', () => {
       let id: number = +i.getAttribute('data-id');
       let quantity: number = +i.getAttribute('data-new-quantity');
-      let newQuantity: number = +i.getAttribute('value') || quantity;
+      let newQuantity: number = +i.value || quantity;
       updateItem(cart, id, newQuantity);
       render(cart);
     });
   }
   //add event for button "Delete"
-  cart.forEach(item => {
+  for (let item of cart) {
     document.getElementById("deleteItem" + item.id).addEventListener('click', deleteItem);
-  })
+  }
 }
 
-let cart: ProductInCart[] = fetchData();
+let cart: IProductInCart[] = fetchData();
 render(cart);

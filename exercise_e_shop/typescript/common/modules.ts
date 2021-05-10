@@ -1,27 +1,29 @@
+import { IProductInCart } from '../interfaces/index.js'; 
+
 //function update icon cart
-var updateIconCart = function (): void {
-  var viewIconCart = document.getElementsByClassName("quantity-cart");
-  var cart = JSON.parse(localStorage.getItem('cart'));
+let updateIconCart = function (): void {
+  let viewIconCart: any = document.getElementsByClassName("quantity-cart");
+  let cart = JSON.parse(localStorage.getItem('cart'));
   if (cart) {
     if (cart.length > 0) {
-      var quantityCart = 0;
-      cart.forEach(function (item) {
+      let quantityCart = 0;
+      for (let item of cart) {
         quantityCart += item.number;
-      })
+      }
       viewIconCart[0].innerHTML = quantityCart.toString();
-      viewIconCart[0].setAttribute('style', 'display: flex');
+      viewIconCart[0].style.display = 'flex';
     }
     else {
-      viewIconCart[0].setAttribute('style', 'display: none');
+      viewIconCart[0].style.display = 'none';
     }
   }
   else {
-    viewIconCart[0].setAttribute('style', 'display: none');
+    viewIconCart[0].style.display = 'none';
   }
 };
 
 //function update item in cart
-var updateItem = function (cart: IProductInCart[], id: number, quantity: number) {
+let updateItem = function (cart: IProductInCart[], id: number, quantity: number) {
   if (quantity > 0) {
     let item: IProductInCart = cart.find(item => item.id === id);
     item.number = quantity;

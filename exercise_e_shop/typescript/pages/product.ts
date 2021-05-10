@@ -1,10 +1,9 @@
-import { IProduct, IProductInCart } from './interfaces';
-import { Product, ProductInCart} from './class';
-import { updateIconCart, updateItem } from './modules';
+import { IProduct, IProductInCart } from '../interfaces/index.js';
+import { updateIconCart, updateItem } from '../common/modules.js';
 
 //fetch data
-function fetchData(): Product[] {
-  let listProducts: Product[] = [
+function fetchData(): IProduct[] {
+  let listProducts: IProduct[] = [
     {
       "id": 1,
       "name": "T-Shirt Summer Vibes",
@@ -39,15 +38,14 @@ function fetchData(): Product[] {
 }
 
 //render view
-function render(listProducts: Product[]): void {
+function render(listProducts: IProduct[]): void {
   //get view list product
-  console.log("a");
-  let viewListProduct = document.getElementById("list-products");
-  listProducts.forEach(item => {
+  let viewListProduct: any = document.getElementById("list-products");
+  for (let item of listProducts) {
     //calculator price discount
     let discountPrice: number = parseFloat((item.price - item.price * item.discount / 100).toFixed(2));
     //view price product if discount > 0 or discount = 0
-    let viewPrice = item.discount > 0 ? `<div class="cart-product-discount">
+    let viewPrice: string = item.discount > 0 ? `<div class="cart-product-discount">
         <p class="discount-price price">${discountPrice}</p>
         <p class="product-price price">${item.price}</p>
       </div>
@@ -63,19 +61,18 @@ function render(listProducts: Product[]): void {
       `<button class="btn btn-orange" id="addItem${item.id}">Add to cart</button>
         </div>
       </li>`;
-  });
+  }
   //update number in icon cart
   updateIconCart();
 }
 
 //function add product to cart
 function addToCart(): void {
-  // let cart = localStorage.getItem('cart');
-  let cart: ProductInCart[] = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+  let cart: IProductInCart[] = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
   //get product in list product
-  let product: Product = listProducts.find(item => "addItem" + item.id === this.id);
+  let product: IProduct = listProducts.find(item => "addItem" + item.id === this.id);
   if (cart.length !== 0) {
-    let productInCart = cart.find(item => "addItem" + item.id === this.id);
+    let productInCart: IProductInCart = cart.find(item => "addItem" + item.id === this.id);
     // if cart don't have product 
     if (productInCart) {
       updateItem(cart, +productInCart.id, productInCart.number + 1);
@@ -94,8 +91,8 @@ function addToCart(): void {
 }
 
 //add new product to cart
-function addItem(cart: ProductInCart[], product: Product): void {
-  let productAdd: ProductInCart = {...product, number: 1};
+function addItem(cart: IProductInCart[], product: IProduct): void {
+  let productAdd: IProductInCart = {...product, number: 1};
   cart.push(productAdd);
   // cart[cart.length - 1].number = 1;
   localStorage.setItem('cart', JSON.stringify(cart));
@@ -104,11 +101,11 @@ function addItem(cart: ProductInCart[], product: Product): void {
 //add event
 function addEventListener(): void {
   //add event for button add to cart
-  listProducts.forEach(item => {
+  for (let item of listProducts) {
     document.getElementById("addItem" + item.id).addEventListener('click', addToCart);
-  })
+  }
 }
 
-let listProducts: Product[] = fetchData();
+let listProducts: IProduct[] = fetchData();
 render(listProducts);
 addEventListener();
