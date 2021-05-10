@@ -40,7 +40,7 @@ function fetchData() {
 function render(listProducts) {
   //get view list product
   let viewListProduct = document.getElementById("list-products");
-  listProducts.forEach(function (item) {
+  for (let item of listProducts) {
     //calculator price discount
     let discountPrice = (item.price - item.price * item.discount / 100).toFixed(2);
     //view price product if discount > 0 or discount = 0
@@ -60,7 +60,7 @@ function render(listProducts) {
       `<button class="btn btn-orange" id="addItem${item.id}">Add to cart</button>
         </div>
       </li>`;
-  });
+  }
   //update number in icon cart
   updateIconCart();
 }
@@ -100,9 +100,9 @@ function addItem(cart, product) {
 //add event
 function addEventListener() {
   //add event for button add to cart
-  listProducts.forEach(item => {
+  for (let item of listProducts) {
     document.getElementById("addItem" + item.id).addEventListener('click', addToCart);
-  })
+  }
 }
 
 let listProducts = fetchData();

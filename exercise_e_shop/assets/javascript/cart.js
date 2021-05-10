@@ -19,7 +19,7 @@ function render(cart) {
     //create ul and view pay
     viewCart.innerHTML = viewCart.innerHTML + `<ul class="flex-between list-group list-carts row left-cart" id="list-carts"></ul>
       <div id="pay" class="right-cart"></div>`;
-    cart.forEach(item => {
+    for (let item of cart) {
       //calculator discount price of product
       let discountPrice = (item.price - item.price * item.discount / 100).toFixed(2);
       //get tag ul of list cart in html
@@ -35,7 +35,7 @@ function render(cart) {
       totalPrice += item.discount > 0 ? discountPrice * item.number : item.price * item.number;
       //calculator quantity product of cart
       quantityCart += item.number;
-    });
+    }
     //create view payment
     viewPayment(totalPrice);
   }
@@ -155,9 +155,9 @@ function addEventListener() {
     });
   }
   //add event for button "Delete"
-  cart.forEach(item => {
+  for (let item of cart) {
     document.getElementById("deleteItem" + item.id).addEventListener('click', deleteItem);
-  })
+  }
 }
 
 let cart = fetchData();
