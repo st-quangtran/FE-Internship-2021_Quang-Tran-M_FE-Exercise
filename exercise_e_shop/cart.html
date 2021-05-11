@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/stylesheet/style.css">
+  <title>Cart</title>
+  <script src="https://kit.fontawesome.com/52d5d4ff54.js" crossorigin="anonymous"></script>
+</head>
+<body>  
+  <header class="page-header cart-header">
+    <div class="container container-sm flex-between">
+      <div class="header-left">
+        <a href="#" class="btn btn-logo"><img src="assets/icons/logo.png" class="header-logo" alt="Logo"></a>
+      </div>
+      <div class="header-center">
+        <nav class="nav-main">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#" class="btn btn-secondary">Men</a></li>
+            <li class="nav-item"><a href="#" class="btn btn-secondary">Women</a></li>
+            <li class="nav-item"><a href="#" class="btn btn-secondary">Kids</a></li>
+          </ul>
+        </nav>        
+      </div>
+      <div class="header-right">
+        <ul class="list-group flex-between">
+          <li class="list-item search-item">
+            <button type="button" class="btn btn-light">
+              <img src="assets/icons/search.png" class="img-search" alt="Search">
+            </button>
+          </li>
+          <li class="list-item cart-item">
+            <a href="#" class="btn btn-light">
+              <img src="assets/icons/cart.png" class="img-cart" alt="Cart">
+            </a>
+            <span class="quantity-cart" id="quantity-cart"></span>
+          </li>
+          <li class="list-item avatar-item">
+            <button type="button" class="btn btn-light">
+              <img src="assets/icons/avatar.png" class="img-avatar" alt="Avatar">
+            </button>
+          </li>
+          <li class="list-item menu-item">
+            <button type="button" class="btn btn-light">
+              <img src="assets/icons/menu-respon.png" class="img-menu" alt="Menu">
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="section-cart">
+      <div class="container container-sm">
+        <div class="title-cart">
+          <p class="text-uppercase">cart</p><span id="count-product"></span>
+        </div>
+        <div class="view-carts" id="view-carts"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="top-footer">
+      <div class="container container-sm flex-between">
+        <div class="description-shop">
+          <a href="#"><img src="assets/icons/logo.png" alt="Logo" class="logo-footer"></a>
+          <p class="description-footer">House My Brand designs clothing for the young, the old & everyone in between 
+            - but most importantly, for the fashionable</p>
+          <ul class="app-contact">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li> 
+          </ul>
+        </div>
+        <ul class="list-group list-info">
+          <li class="list-item info-item">
+            <ul class="info">
+              <li><h5 class="title-footer">Shopping online</h5></li>
+              <li><p>Order Status</p></li>
+              <li><p>Shipping and Delivery</p></li>
+              <li><p>Returns</p></li>
+              <li><p>Payment Options</p></li>
+              <li><p>Contact Us</p></li>
+            </ul>
+          </li>
+          <li class="item-info">
+            <ul class="infor">
+              <li><h5 class="title-footer">Information</h5></li>
+              <li><p>Gift Cards</p></li>
+              <li><p>Find a store</p></li>
+              <li><p>Newsletter</p></li>
+              <li><p>Become a member</p></li>
+              <li><p>Site feedback</p></li>
+            </ul>
+          </li>
+          <li class="item-info">
+            <ul class="info">
+              <li><h5 class="title-footer">Contact</h5></li>
+              <li><p>store@uikit.com</p></li>
+              <li><p>Hotline: +1131 138 138</p></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-footer">
+      <p class="text-uppercase">design by iceo.co-&#64; 2019.all rights reversed.</p>
+    </div>
+  </footer>
+  <script type="module" src="assets/javascript/cart.js"></script>
+</body>
+</html>
