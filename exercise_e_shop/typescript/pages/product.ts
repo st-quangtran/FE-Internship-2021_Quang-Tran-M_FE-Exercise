@@ -40,7 +40,7 @@ function fetchData(): IProduct[] {
 //render view
 function render(listProducts: IProduct[]): void {
   //get view list product
-  let viewListProduct: any = document.getElementById("list-products");
+  let viewListProduct: any = document.getElementById('list-products');
   for (let item of listProducts) {
     //calculator price discount
     let discountPrice: number = parseFloat((item.price - item.price * item.discount / 100).toFixed(2));
@@ -70,20 +70,12 @@ function render(listProducts: IProduct[]): void {
 function addToCart(): void {
   let cart: IProductInCart[] = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
   //get product in list product
-  let product: IProduct = listProducts.find(item => "addItem" + item.id === this.id);
-  if (cart.length !== 0) {
-    let productInCart: IProductInCart = cart.find(item => "addItem" + item.id === this.id);
-    // if cart don't have product 
-    if (productInCart) {
-      updateItem(cart, +productInCart.id, productInCart.number + 1);
-    }
-    //if cart have product
-    else {
-      addItem(cart, product);
-    }
-  }
-  //if cart is empty
-  else {
+  let product: IProduct = listProducts.find(item => 'addItem' + item.id === this.id);
+  let productInCart: IProductInCart = cart.find(item => 'addItem' + item.id === this.id);
+  // if cart don't have product 
+  if (productInCart) {
+    updateItem(cart, +productInCart.id, productInCart.number + 1);
+  } else {
     addItem(cart, product);
   }
   //update number in icon cart
@@ -102,7 +94,7 @@ function addItem(cart: IProductInCart[], product: IProduct): void {
 function addEventListener(): void {
   //add event for button add to cart
   for (let item of listProducts) {
-    document.getElementById("addItem" + item.id).addEventListener('click', addToCart);
+    document.getElementById('addItem' + item.id).addEventListener('click', addToCart);
   }
 }
 

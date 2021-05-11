@@ -8,11 +8,11 @@ function fetchData(): IProductInCart[]{
 
 //render view cart
 function render(cart: IProductInCart[]) {
-  let viewCart: Element = document.getElementById('view-carts');
-  let titleQuantity: Element = document.getElementById("count-product");
+  let viewCart: any = document.getElementById('view-carts');
+  let titleQuantity: any = document.getElementById("count-product");
   //variable quantity of product in cart
   let quantityCart: number = 0;
-  viewCart.innerHTML = "";
+  viewCart.innerHTML = '';
   //if cart isn't empty
   if (cart.length) {
     //variable total price of cart
@@ -39,13 +39,11 @@ function render(cart: IProductInCart[]) {
     }
     //create view payment
     viewPayment(totalPrice);
-  }
-  //if cart is empty
-  else {
+  } else {
     setEmptyCart(viewCart);
   }
   //show quantity product in title cart
-  titleQuantity.innerHTML = quantityCart > 1 ? "(" + quantityCart + " products)" : "(" + quantityCart + " product)";
+  titleQuantity.innerHTML = quantityCart > 1 ? '(' + quantityCart + ' products)' : '(' + quantityCart + ' product)';
   //update number in icon cart
   updateIconCart();
   //set event
@@ -85,7 +83,7 @@ function viewNumberProduct(item: IProductInCart): string {
 
 //function create view payment
 function viewPayment(totalPrice: number) {
-  let viewPay = document.getElementById('pay');
+  let viewPay: any = document.getElementById('pay');
   viewPay.innerHTML = `<div class="address">
       <p class="text-pay">Address</p>
       <p class="value-pay">Da Nang</p>
@@ -102,7 +100,7 @@ function viewPayment(totalPrice: number) {
 }
 
 //function create view cart if cart empty
-function setEmptyCart(viewCart: Element) {
+function setEmptyCart(viewCart: any) {
   viewCart.innerHTML = `<div class="text-center">
       <img src="https://salt.tikicdn.com/desktop/img/mascot@2x.png" class="img img-empty">
       <p class="title-empty">Your cart is empty!</p>
@@ -112,7 +110,7 @@ function setEmptyCart(viewCart: Element) {
 
 //function delete product in cart
 function deleteItem() {
-  cart = cart.filter(item => "deleteItem" + item.id !== this.id);
+  cart = cart.filter(item => 'deleteItem' + item.id !== this.id);
   localStorage.setItem('cart', JSON.stringify(cart));
   render(cart);
 }
@@ -131,14 +129,14 @@ function pay() {
   //clean list products in cart
   cart = [];
   localStorage.setItem('cart', JSON.stringify(cart));
-  alert("Pay success!");
+  alert('Pay success!');
   render(cart);
 }
 
 //function add event 
 function addEventListener() {
   //add event for button "+", "-"
-  let operation: any = document.getElementsByClassName("btn-operation");
+  let operation: any = document.getElementsByClassName('btn-operation');
   for (let o of operation) {
     let id: number = +o.getAttribute('data-id');
     let quantity: number = +o.getAttribute('data-new-quantity');
@@ -148,7 +146,7 @@ function addEventListener() {
     });
   }
   //add event for input number of product
-  let input: any = document.getElementsByClassName("input-number");
+  let input: any = document.getElementsByClassName('input-number');
   for (let i of input) {
     i.addEventListener('change', () => {
       let id: number = +i.getAttribute('data-id');
@@ -160,7 +158,7 @@ function addEventListener() {
   }
   //add event for button "Delete"
   for (let item of cart) {
-    document.getElementById("deleteItem" + item.id).addEventListener('click', deleteItem);
+    document.getElementById('deleteItem' + item.id).addEventListener('click', deleteItem);
   }
 }
 

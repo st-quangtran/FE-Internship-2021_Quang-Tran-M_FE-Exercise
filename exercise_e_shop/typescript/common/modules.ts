@@ -2,22 +2,20 @@ import { IProductInCart } from '../interfaces/index.js';
 
 //function update icon cart
 let updateIconCart = function (): void {
-  let viewIconCart: any = document.getElementsByClassName("quantity-cart");
-  let cart = JSON.parse(localStorage.getItem('cart'));
+  let viewIconCart: any = document.getElementsByClassName('quantity-cart');
+  let cart: IProductInCart[] = JSON.parse(localStorage.getItem('cart'));
   if (cart) {
     if (cart.length > 0) {
-      let quantityCart = 0;
+      let quantityCart: number = 0;
       for (let item of cart) {
         quantityCart += item.number;
       }
       viewIconCart[0].innerHTML = quantityCart.toString();
       viewIconCart[0].style.display = 'flex';
-    }
-    else {
+    } else {
       viewIconCart[0].style.display = 'none';
     }
-  }
-  else {
+  } else {
     viewIconCart[0].style.display = 'none';
   }
 };
@@ -28,10 +26,8 @@ let updateItem = function (cart: IProductInCart[], id: number, quantity: number)
     let item: IProductInCart = cart.find(item => item.id === id);
     item.number = quantity;
     localStorage.setItem('cart', JSON.stringify(cart));
-  }
-  //if quantity <= 0, warning to user
-  else {
-    alert("The number of product can not less 1");
+  } else {
+    alert('The number of product can not less 1');
   }
 }
 
