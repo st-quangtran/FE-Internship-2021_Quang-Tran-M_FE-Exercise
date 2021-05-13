@@ -1,17 +1,20 @@
+import { Cart, ListCart } from '../class/index.js';
 import { updateIconCart, updateItem } from '../common/modules.js';
 function fetchData() {
-  return localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+  let dataCart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+  let listCarts = new ListCart(dataCart.length, dataCart.map(item => new Cart(item)));
+  return listCarts;
 }
-function render(cart) {
+function render(listCarts) {
   let viewCart = document.getElementById('view-carts');
   let titleQuantity = document.getElementById("count-product");
   let quantityCart = 0;
   viewCart.innerHTML = '';
-  if (cart.length) {
+  if (listCarts.getLength()) {
     let totalPrice = 0;
     viewCart.innerHTML = viewCart.innerHTML + `<ul class="flex-between list-group list-carts row left-cart" id="list-carts"></ul>
       <div id="pay" class="right-cart"></div>`;
-    for (let item of cart) {
+    for (let item of listCarts.getList()) {
       let discountPrice = parseFloat((item.price - item.price * item.discount / 100).toFixed(2));
       let viewListCart = document.getElementById("list-carts");
       viewListCart.innerHTML = viewListCart.innerHTML + `<li class="col-12 list-item cart-item">
@@ -80,20 +83,21 @@ function setEmptyCart(viewCart) {
     </div>`;
 }
 function deleteItem() {
-  cart = cart.filter(item => 'deleteItem' + item.id !== this.id);
-  localStorage.setItem('cart', JSON.stringify(cart));
-  render(cart);
+  listCarts.deleteProduct(this.id);
+  localStorage.setItem('cart', JSON.stringify(listCarts.getList()));
+  render(listCarts);
 }
 function pay() {
   let totalPrice = document.getElementsByClassName("price-pay")[0].innerHTML;
-  let pay;
-  pay.products = cart;
-  pay.price = +totalPrice;
-  localStorage.setItem('pay', JSON.stringify(pay));
-  cart = [];
-  localStorage.setItem('cart', JSON.stringify(cart));
+  let productPay = {
+    products: listCarts.getList(),
+    price: +totalPrice
+  };
+  localStorage.setItem('pay', JSON.stringify(productPay));
+  listCarts.setList([]);
+  localStorage.setItem('cart', JSON.stringify(listCarts.getList()));
   alert('Pay success!');
-  render(cart);
+  render(listCarts);
 }
 function addEventListener() {
   let operation = document.getElementsByClassName('btn-operation');
@@ -101,8 +105,8 @@ function addEventListener() {
     let id = +o.getAttribute('data-id');
     let quantity = +o.getAttribute('data-new-quantity');
     o.addEventListener('click', () => {
-      updateItem(cart, id, quantity);
-      render(cart);
+      updateItem(listCarts, id, quantity);
+      render(listCarts);
     });
   }
   let input = document.getElementsByClassName('input-number');
@@ -111,13 +115,13 @@ function addEventListener() {
       let id = +i.getAttribute('data-id');
       let quantity = +i.getAttribute('data-new-quantity');
       let newQuantity = +i.value || quantity;
-      updateItem(cart, id, newQuantity);
-      render(cart);
+      updateItem(listCarts, id, newQuantity);
+      render(listCarts);
     });
   }
-  for (let item of cart) {
+  for (let item of listCarts.getList()) {
     document.getElementById('deleteItem' + item.id).addEventListener('click', deleteItem);
   }
 }
-let cart = fetchData();
-render(cart);
+let listCarts = fetchData();
+render(listCarts);

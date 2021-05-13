@@ -18,11 +18,11 @@ let updateIconCart = function () {
     viewIconCart[0].style.display = 'none';
   }
 };
-let updateItem = function (cart, id, quantity) {
+let updateItem = function (listCart, id, quantity) {
   if (quantity > 0) {
-    let item = cart.find(item => item.id === id);
+    let item = listCart.getList().find(item => item.id === id);
     item.number = quantity;
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('cart', JSON.stringify(listCart.getList()));
   }
   else {
     alert('The number of product can not less 1');

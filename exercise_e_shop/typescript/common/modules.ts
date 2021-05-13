@@ -1,4 +1,5 @@
 import { IProductInCart } from '../interfaces/index.js'; 
+import { Cart, ListCart } from '../class/index.js';
 
 //function update icon cart
 let updateIconCart = function (): void {
@@ -21,11 +22,11 @@ let updateIconCart = function (): void {
 };
 
 //function update item in cart
-let updateItem = function (cart: IProductInCart[], id: number, quantity: number) {
+let updateItem = function (listCart: ListCart, id: number, quantity: number) {
   if (quantity > 0) {
-    let item: IProductInCart = cart.find(item => item.id === id);
+    let item: Cart = listCart.getList().find(item => item.id === id);
     item.number = quantity;
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('cart', JSON.stringify(listCart.getList()));
   } else {
     alert('The number of product can not less 1');
   }

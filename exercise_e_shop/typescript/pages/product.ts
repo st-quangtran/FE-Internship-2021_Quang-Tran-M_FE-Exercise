@@ -1,9 +1,9 @@
-import { IProduct, IProductInCart } from '../interfaces/index.js';
+import { Product, Cart, ListProduct, ListCart } from '../class/index.js';
 import { updateIconCart, updateItem } from '../common/modules.js';
 
 //fetch data
-function fetchData(): IProduct[] {
-  let listProducts: IProduct[] = [
+function fetchData(): ListProduct {
+  let data: Product[] = [
     {
       "id": 1,
       "name": "T-Shirt Summer Vibes",
@@ -33,15 +33,16 @@ function fetchData(): IProduct[] {
       "avatar": "assets/images/item4.png",
     },
   ];
-  localStorage.setItem('products', JSON.stringify(listProducts));
+  let listProducts = new ListProduct(data.length, data.map(item => new Product(item)));
+  localStorage.setItem('products', JSON.stringify(listProducts.getList()));
   return listProducts;
 }
 
 //render view
-function render(listProducts: IProduct[]): void {
+function render(listProducts: ListProduct): void {
   //get view list product
   let viewListProduct: any = document.getElementById('list-products');
-  for (let item of listProducts) {
+  for (let item of listProducts.getList()) {
     //calculator price discount
     let discountPrice: number = parseFloat((item.price - item.price * item.discount / 100).toFixed(2));
     //view price product if discount > 0 or discount = 0
@@ -68,36 +69,37 @@ function render(listProducts: IProduct[]): void {
 
 //function add product to cart
 function addToCart(): void {
-  let cart: IProductInCart[] = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+  let dataCart: Cart[] = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+  let listCarts = new ListCart(dataCart.length, dataCart.map(item => new Cart(item)));
   //get product in list product
-  let product: IProduct = listProducts.find(item => 'addItem' + item.id === this.id);
-  let productInCart: IProductInCart = cart.find(item => 'addItem' + item.id === this.id);
+  let product: Product = listProducts.getList().find(item => 'addItem' + item.id === this.id);
+  let productInCart: Cart = listCarts.getList().find(item => 'addItem' + item.id === this.id);
   // if cart don't have product 
   if (productInCart) {
-    updateItem(cart, +productInCart.id, productInCart.number + 1);
+    updateItem(listCarts, +productInCart.id, productInCart.number + 1);
   } else {
-    addItem(cart, product);
+    addItem(listCarts, product);
   }
   //update number in icon cart
   updateIconCart();
 }
 
 //add new product to cart
-function addItem(cart: IProductInCart[], product: IProduct): void {
-  let productAdd: IProductInCart = {...product, number: 1};
-  cart.push(productAdd);
+function addItem(listCarts: ListCart, product: Product): void {
+  let productAdd: Cart = new Cart({...product, number: 1});
+  listCarts.addProductToCart(productAdd);
   // cart[cart.length - 1].number = 1;
-  localStorage.setItem('cart', JSON.stringify(cart));
+  localStorage.setItem('cart', JSON.stringify(listCarts.getList()));
 }
 
 //add event
 function addEventListener(): void {
   //add event for button add to cart
-  for (let item of listProducts) {
+  for (let item of listProducts.getList()) {
     document.getElementById('addItem' + item.id).addEventListener('click', addToCart);
   }
 }
 
-let listProducts: IProduct[] = fetchData();
+let listProducts: ListProduct = fetchData();
 render(listProducts);
 addEventListener();

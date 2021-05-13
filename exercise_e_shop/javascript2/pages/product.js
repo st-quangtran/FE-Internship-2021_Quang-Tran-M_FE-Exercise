@@ -1,6 +1,7 @@
+import { Product, Cart, ListProduct, ListCart } from '../class/index.js';
 import { updateIconCart, updateItem } from '../common/modules.js';
 function fetchData() {
-  let listProducts = [
+  let data = [
     {
       "id": 1,
       "name": "T-Shirt Summer Vibes",
@@ -30,12 +31,13 @@ function fetchData() {
       "avatar": "assets/images/item4.png",
     },
   ];
-  localStorage.setItem('products', JSON.stringify(listProducts));
+  let listProducts = new ListProduct(data.length, data.map(item => new Product(item)));
+  localStorage.setItem('products', JSON.stringify(listProducts.getList()));
   return listProducts;
 }
 function render(listProducts) {
   let viewListProduct = document.getElementById('list-products');
-  for (let item of listProducts) {
+  for (let item of listProducts.getList()) {
     let discountPrice = parseFloat((item.price - item.price * item.discount / 100).toFixed(2));
     let viewPrice = item.discount > 0 ? `<div class="cart-product-discount">
         <p class="discount-price price">${discountPrice}</p>
@@ -56,24 +58,25 @@ function render(listProducts) {
   updateIconCart();
 }
 function addToCart() {
-  let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
-  let product = listProducts.find(item => 'addItem' + item.id === this.id);
-  let productInCart = cart.find(item => 'addItem' + item.id === this.id);
+  let dataCart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+  let listCarts = new ListCart(dataCart.length, dataCart.map(item => new Cart(item)));
+  let product = listProducts.getList().find(item => 'addItem' + item.id === this.id);
+  let productInCart = listCarts.getList().find(item => 'addItem' + item.id === this.id);
   if (productInCart) {
-    updateItem(cart, +productInCart.id, productInCart.number + 1);
+    updateItem(listCarts, +productInCart.id, productInCart.number + 1);
   }
   else {
-    addItem(cart, product);
+    addItem(listCarts, product);
   }
   updateIconCart();
 }
-function addItem(cart, product) {
-  let productAdd = Object.assign(Object.assign({}, product), { number: 1 });
-  cart.push(productAdd);
-  localStorage.setItem('cart', JSON.stringify(cart));
+function addItem(listCarts, product) {
+  let productAdd = new Cart(Object.assign(Object.assign({}, product), { number: 1 }));
+  listCarts.addProductToCart(productAdd);
+  localStorage.setItem('cart', JSON.stringify(listCarts.getList()));
 }
 function addEventListener() {
-  for (let item of listProducts) {
+  for (let item of listProducts.getList()) {
     document.getElementById('addItem' + item.id).addEventListener('click', addToCart);
   }
 }
