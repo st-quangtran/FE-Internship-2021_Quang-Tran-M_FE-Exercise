@@ -1,4 +1,5 @@
 import { updateIconCart, updateItem } from './modules.js';
+import "../stylesheet/style.scss";
 
 //fetch data cart
 function fetchData() {
@@ -105,7 +106,7 @@ function setEmptyCart(viewCart) {
   viewCart.innerHTML = `<div class="text-center">
       <img src="https://salt.tikicdn.com/desktop/img/mascot@2x.png" class="img img-empty">
       <p class="title-empty">Your cart is empty!</p>
-      <a href="home.html#list-products" class="text-uppercase btn btn-orange">buy now</a>
+      <a href="index.html#list-products" class="text-uppercase btn btn-orange">buy now</a>
     </div>`;
 }
 

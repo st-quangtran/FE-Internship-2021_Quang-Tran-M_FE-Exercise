@@ -2,3 +2,5 @@
 /exercise_e_shop/package.json
 /exercise_e_shop/package-lock.json
 /.vscode
+/exercise_e_shop/dist
+node_modules

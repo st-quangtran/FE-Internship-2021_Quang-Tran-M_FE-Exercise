@@ -1,4 +1,5 @@
 import { updateIconCart, updateItem } from './modules.js';
+import "../stylesheet/style.scss";
 
 //fetch data
 function fetchData() {
@@ -8,28 +9,28 @@ function fetchData() {
       "name": "T-Shirt Summer Vibes",
       "price": 119.99,
       "discount": 30,
-      "avatar": "assets/images/item1.png",
+      "avatar": "../assets/images/item1.png",
     },
     {
       "id": 2,
       "name": "Loose Knit 3/4 Sleeve",
       "price": 119.99,
       "discount": 30,
-      "avatar": "assets/images/item2.png",
+      "avatar": "../assets/images/item2.png",
     },
     {
       "id": 3,
       "name": "Basic Slim Fit T-Shirt",
       "price": 79.99,
       "discount": 30,
-      "avatar": "assets/images/item3.png",
+      "avatar": "../assets/images/item3.png",
     },
     {
       "id": 4,
       "name": "Loose Textured T-Shirt",
       "price": 119.99,
       "discount": 0,
-      "avatar": "assets/images/item4.png",
+      "avatar": "../assets/images/item4.png",
     },
   ];
   localStorage.setItem('products', JSON.stringify(listProducts));
@@ -93,6 +94,7 @@ function addToCart() {
 //add new product to cart
 function addItem(cart, product) {
   cart.push(product);
+  console.log(product);
   cart[cart.length - 1].number = 1;
   localStorage.setItem('cart', JSON.stringify(cart));
 }
