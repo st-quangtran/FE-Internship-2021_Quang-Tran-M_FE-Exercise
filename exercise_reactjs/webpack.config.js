@@ -5,7 +5,8 @@ module.exports = {
   entry: './index.tsx',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -13,7 +14,6 @@ module.exports = {
         test: /\.([tj]s(x?))$/,
         exclude: /node_modules/,
         use: [
-          'babel-loader',
           'ts-loader'
         ]
       },
@@ -57,6 +57,7 @@ module.exports = {
     contentBase: path.join(__dirname),
     compress: true,
     port: 9009,
+    historyApiFallback: true,
   },
   mode: 'development',
   devtool: 'eval',

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
-import Post from './src/components/Post';
+import { Post, DetailPost } from './src/components/index';
 import './src/assets/stylesheet/style.scss';
 import axios from 'axios';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -13,21 +14,20 @@ const App = () => {
       })
       .catch(function (error) {
         console.log(error);
-      })
+      });
   }, []);
   function showListPosts() {
     let listPosts: any[] = [];
     if (data.length) {
-      for (let i = 0; i < data.length; i++) {
-        listPosts.push(<li className="list-item" key={(i+1).toString()}><Post {...data[i]}/></li>)
-      }
-      return listPosts;
+      listPosts = data.map((item, index) => <li className="list-item" key={(index+1).toString()}><Link to={'/articles/' + item.id}> <Post {...item}/> </Link></li>);
     }
+    return listPosts;
   }
   return (
     <>
       {
-        data.length && <>
+        data.length && 
+        <>
           <ul className="list-group">
             {showListPosts()}
           </ul>
@@ -36,4 +36,17 @@ const App = () => {
     </>
   )
 }
-ReactDOM.render(<App />, document.getElementById('app'))
+
+ReactDOM.render(
+  <Router>
+    <Switch>
+      <Route exact path='/'>
+        <App />
+      </Route>
+      <Route exact path='/articles/:id'>
+        <DetailPost/>
+      </Route>
+    </Switch>
+  </Router>
+  , document.getElementById('app')
+)
