@@ -16,5 +16,5 @@ ReactDOM.render(
       </Route>
     </Switch>
   </Router>
-  , document.getElementById('app')
+  , document.getElementById('app-root')
 )
