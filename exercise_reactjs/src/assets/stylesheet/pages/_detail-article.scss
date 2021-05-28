@@ -16,3 +16,13 @@
     }
   }
 }
+@include tablet {
+  .form-detail {
+    padding: 10px;
+  }
+}
+@include mobile {
+  .form-detail {
+    padding: 10px;
+  }
+}
