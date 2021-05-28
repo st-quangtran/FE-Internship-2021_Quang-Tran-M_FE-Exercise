@@ -1,5 +1,6 @@
 import React from 'react';
 import { INews } from '../interface/INews';
+import {convertDate} from '../utils/utils';
 
 const Article = ({title, author, createdAt, category, minsRead, desc, image} : INews) => {
   const showCreatedAt = () => {
@@ -17,7 +18,7 @@ const Article = ({title, author, createdAt, category, minsRead, desc, image} : I
         <p className="desc-article">{desc}</p>
         <div className="status-article">
           <h4 className="author-article">{author}</h4>
-          <span className="created-article">{showCreatedAt()}</span>
+          <span className="created-article">{convertDate(createdAt)}</span>
           <span className="read-article">{minsRead}</span>
         </div>
       </div>
