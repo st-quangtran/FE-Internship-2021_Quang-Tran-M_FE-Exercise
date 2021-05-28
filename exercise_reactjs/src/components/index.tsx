@@ -1,4 +1,4 @@
-import Post from './Post';
-import DetailPost from './DetailPost';
+import Article from './Article';
+import DetailArticle from './DetailArticle';
 
-export { Post, DetailPost };
+export { Article, DetailArticle };

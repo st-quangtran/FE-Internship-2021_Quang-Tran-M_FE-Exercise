@@ -6,7 +6,7 @@ import API_URL from '../constance/api';
 
 const { GET_DETAIL_ARTICLE_URL } = API_URL;
 
-const DetailPost = () => {
+const DetailArticle = () => {
   const { id } = useParams<IParam>();
   const [detailPost, setDetailPost] = useState(null);
   useEffect(() => {
@@ -47,4 +47,4 @@ const DetailPost = () => {
   )
 }
 
-export default DetailPost;
+export default DetailArticle;

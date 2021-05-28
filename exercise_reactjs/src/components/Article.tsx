@@ -1,7 +1,7 @@
 import React from 'react';
 import { INews } from '../interface/INews';
 
-const Post = ({title, author, createdAt, category, minsRead, desc, image} : INews) => {
+const Article = ({title, author, createdAt, category, minsRead, desc, image} : INews) => {
   let date: string = createdAt.split('T')[0];
   let time: string = createdAt.split('T')[1].split('.')[0];
   const showCreatedAt = () => {
@@ -25,4 +25,4 @@ const Post = ({title, author, createdAt, category, minsRead, desc, image} : INew
   )
 }
 
-export default Post;
+export default Article;

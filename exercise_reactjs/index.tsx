@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import axios from 'axios';
-import { Post, DetailPost } from './src/components/index';
+import { Article, DetailArticle } from './src/components/index';
 import './src/assets/stylesheet/style.scss';
 import API_URL from './src/constance/api';
 
@@ -22,7 +22,7 @@ const App = () => {
   function showListPosts() {
     let listPosts: any[] = [];
     if (data.length) {
-      listPosts = data.map((item) => <li className="list-item" key={item.id}><Link to={'/articles/' + item.id}> <Post {...item}/> </Link></li>);
+      listPosts = data.map((item) => <li className="list-item" key={item.id}><Link to={'/articles/' + item.id}> <Article {...item}/> </Link></li>);
     }
     return listPosts;
   }
@@ -47,7 +47,7 @@ ReactDOM.render(
         <App />
       </Route>
       <Route exact path='/articles/:id'>
-        <DetailPost/>
+        <DetailArticle/>
       </Route>
     </Switch>
   </Router>
