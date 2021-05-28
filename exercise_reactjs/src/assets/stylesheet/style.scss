@@ -41,18 +41,35 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+html {
+	font-family: "Poppins", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+$color: (
+  red: #FF0000,
+  white: white,
+  gray: #808080,
+  light-gray: #d3d3d3,
+);
+$text-size: (
+  s: 10px,
+  m: 12px,
+  l: 14px,
+  xl: 20px,
+);
 .list-group {
   width: 1000px;
   margin-left: 100px;
   display: flex;
   flex-direction: column;
-  background-color: #d3d3d3;
+  background-color: map-get($color, light-gray);
 }
 .list-item {
   padding: 5px;
   margin: 10px;
   border-radius: 5px;
-  background-color: white;
+  background-color: map-get($color, white);
 }
 .post {
   display: flex;
@@ -64,19 +81,19 @@ table {
   }
   .category-post {
     padding-bottom: 20px;
-    color: red;
+    color: map-get($color, red);
     font-weight: bold;
-    font-size: 10px;
+    font-size: map-get($text-size, s);
   }
   .title-post {
     padding-bottom: 20px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: map-get($text-size, xl);
   }
   .desc-post {
     padding-bottom: 20px;
-    font-size: 14px;
-    color: gray;
+    font-size: map-get($text-size, l);
+    color: map-get($color, gray);
   }
   .status-post {
     display: flex;
@@ -84,21 +101,25 @@ table {
   .author-post {
     font-weight: bold;
     padding-right: 15px;
-    font-size: 12px;
+    font-size: map-get($text-size, m);
     &::before {
       content: "by ";
       text-transform: uppercase;
-      color: gray;
+      color: map-get($color, gray);
     }
   }
   .created-post {
     padding-right: 15px;
-    font-size: 12px;
-    color: gray;
+    font-size: map-get($text-size, m);
+    color: map-get($color, gray);
+    &::after {
+      content: " est";
+      text-transform: uppercase;
+    }
   }
   .read-post {
-    font-size: 12px;
-    color: gray;
+    font-size: map-get($text-size, m);
+    color: map-get($color, gray);
     &::after {
       content: " mins read";
       text-transform: uppercase;
