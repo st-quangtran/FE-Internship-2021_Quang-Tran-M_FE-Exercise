@@ -1,4 +1,5 @@
 interface INews {
+  id: number,
   title: string,
   author: string,
   createdAt: string,

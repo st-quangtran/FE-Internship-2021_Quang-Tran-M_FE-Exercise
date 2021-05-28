@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import ReactDOM from 'react-dom'
-import Post from './src/components/Post';
-import './src/assets/stylesheet/style.scss';
+import React, { useEffect, useState } from 'react';
+import ReactDOM from 'react-dom';
 import axios from 'axios';
+import Article from './src/components/Article';
+import './src/assets/stylesheet/style.scss';
+import API_URL from './src/constance/api';
+
+const { GET_LIST_ARTICLE_URL } = API_URL;
 
 const App = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get('https://6088e20da6f4a300174271e7.mockapi.io/articles')
+    axios.get(GET_LIST_ARTICLE_URL)
       .then(function (response) {
         setData(response.data);
       })
@@ -18,11 +21,9 @@ const App = () => {
   function showListPosts() {
     let listPosts: any[] = [];
     if (data.length) {
-      for (let i = 0; i < data.length; i++) {
-        listPosts.push(<li className="list-item" key={(i+1).toString()}><Post {...data[i]}/></li>)
-      }
-      return listPosts;
+      listPosts = data.map((item) => <li className="list-item" key={item.id}><Article {...item}/></li>);
     }
+    return listPosts;
   }
   return (
     <>
