@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { IParam } from '../interface/index';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { IParam } from '../interface/index';
+import API_URL from '../constance/api';
+
+const { GET_DETAIL_ARTICLE_URL } = API_URL;
 
 const DetailPost = () => {
   const { id } = useParams<IParam>();
   const [detailPost, setDetailPost] = useState(null);
   useEffect(() => {
-    axios.get('https://6088e20da6f4a300174271e7.mockapi.io/articles/' + id)
+    axios.get(GET_DETAIL_ARTICLE_URL + id)
       .then((response) => {
         setDetailPost(response.data);
       })

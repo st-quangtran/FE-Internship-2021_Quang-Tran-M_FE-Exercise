@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import axios from 'axios';
 import { Post, DetailPost } from './src/components/index';
 import './src/assets/stylesheet/style.scss';
-import axios from 'axios';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import API_URL from './src/constance/api';
+
+const { GET_LIST_ARTICLE_URL } = API_URL;
 
 const App = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get('https://6088e20da6f4a300174271e7.mockapi.io/articles')
+    axios.get(GET_LIST_ARTICLE_URL)
       .then(function (response) {
         setData(response.data);
       })
@@ -19,7 +22,7 @@ const App = () => {
   function showListPosts() {
     let listPosts: any[] = [];
     if (data.length) {
-      listPosts = data.map((item, index) => <li className="list-item" key={(index+1).toString()}><Link to={'/articles/' + item.id}> <Post {...item}/> </Link></li>);
+      listPosts = data.map((item) => <li className="list-item" key={item.id}><Link to={'/articles/' + item.id}> <Post {...item}/> </Link></li>);
     }
     return listPosts;
   }
