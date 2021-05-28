@@ -3,16 +3,17 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { IParam } from '../interface/index';
 import API_URL from '../constance/api';
+import {convertDate} from '../utils/utils';
 
 const { GET_DETAIL_ARTICLE_URL } = API_URL;
 
 const DetailArticle = () => {
   const { id } = useParams<IParam>();
-  const [detailPost, setDetailPost] = useState(null);
+  const [detailArticle, setDetailArticle] = useState(null);
   useEffect(() => {
     axios.get(GET_DETAIL_ARTICLE_URL + id)
       .then((response) => {
-        setDetailPost(response.data);
+        setDetailArticle(response.data);
       })
       .catch((error) => {
         console.error(error);
@@ -21,29 +22,28 @@ const DetailArticle = () => {
   return (
     <>
       {
-        detailPost &&
-        <div className="form-detail">
+        detailArticle &&
+        <div className="form-detail container">
           <p className="title-detail">
-            detail post
+            detail article
           </p>
-          <div className="post post-show-detail">
-            <img src={detailPost.image} className="img-post" alt="image"/>
-            <div className="detail-post">
-              <p className="category-post">{detailPost.category}</p>
-              <h3 className="title-post">{detailPost.title}</h3>
-              <p className="desc-post">{detailPost.desc}</p>
-              <p className="content-post">{detailPost.content}</p>
-              <div className="status-post">
-                <h4 className="author-post">{detailPost.author}</h4>
-                <span className="created-post">{detailPost.createdAt}</span>
-                <span className="read-post">{detailPost.minsRead}</span>
+          <div className="article article-show-detail">
+            <div className="detail-article">
+              <p className="category-article">{detailArticle.category}</p>
+              <h3 className="title-article">{detailArticle.title}</h3>
+              <img src={detailArticle.image} className="img-article" alt="image"/>
+              <p className="desc-article">{detailArticle.desc}</p>
+              <p className="content-article">{detailArticle.content}</p>
+              <div className="status-article">
+                <h4 className="author-article">{detailArticle.author}</h4>
+                <span className="created-article">{convertDate(detailArticle.createdAt)}</span>
+                <span className="read-article">{detailArticle.minsRead}</span>
               </div>
             </div>
           </div>
         </div>
       }
     </>
-    
   )
 }
 
