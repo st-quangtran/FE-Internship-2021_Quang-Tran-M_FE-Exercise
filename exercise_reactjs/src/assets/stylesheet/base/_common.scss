@@ -1,0 +1,19 @@
+a {
+  text-decoration: none;
+}
+html {
+	font-family: "Poppins", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+*, *::before, *::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  max-width: 1500px;
+  width: 100%;
+  margin: 0px auto;
+}
