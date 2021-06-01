@@ -1,14 +1,8 @@
 import React from 'react';
-import { INews } from '../interface/INews';
-import {convertDate} from '../utils/utils';
+import { IArticle } from '../interface/IArticle';
+import {convertDate} from '../utils/convertDate';
 
-const Article = ({title, author, createdAt, category, minsRead, desc, image} : INews) => {
-  const showCreatedAt = () => {
-    let date: string = createdAt.split('T')[0];
-    let time: string = createdAt.split('T')[1].split('.')[0];
-    let temp: string[] = date.split('-').reverse();
-    return temp.join('-') + ' ' + time;
-  }
+const Article = ({title, author, createdAt, category, minsRead, desc, image} : IArticle) => {
   return (
     <div className="article">
       <img src={image} className="img-article" alt="image"/>

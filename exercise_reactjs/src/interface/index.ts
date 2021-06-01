@@ -1,4 +1,5 @@
-import { INews } from './INews';
+import { IArticle, IDetailArticle, IPropsDetailArticle } from './IArticle';
 import { IParam } from './IParam';
+import { IListArticles } from './IListArticles';
 
-export { INews, IParam };
+export { IArticle, IParam, IListArticles, IDetailArticle, IPropsDetailArticle };
