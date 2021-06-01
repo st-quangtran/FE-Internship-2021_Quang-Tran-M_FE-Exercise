@@ -73,3 +73,11 @@
     }
   }
 }
+@include mobile {
+  .article {
+    flex-direction: column;
+    .img-article {
+      width: 100%;
+    }
+  }
+}
