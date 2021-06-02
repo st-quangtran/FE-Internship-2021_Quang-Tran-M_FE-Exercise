@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import { useDispatch, useSelector, RootStateOrAny } from 'react-redux';
 import { Article, Error } from '../components';
 import { pageRenderer } from '../utils/pageRenderer';
-import API_URL from '../constance/api';
-import { IArticle, IListArticles } from '../interface';
-
-const { GET_LIST_ARTICLE_URL } = API_URL;
+import { IListArticles } from '../interface';
+import { getListArticles } from '../store/articles/action';
 
 const PageListArticle = (props: IListArticles) => {
   const { data } = props;
@@ -27,17 +25,11 @@ const PageListArticle = (props: IListArticles) => {
 const PageListArticleTp = pageRenderer(PageListArticle);
 
 const ListArticle = () => {
-  const [data, setData] = useState<IArticle[]>(null);
-  const [error, setError] = useState(false);
+  const dispatch = useDispatch();
+  const data = useSelector((state: RootStateOrAny) => state.listArticles.data);
+  const error = useSelector((state: RootStateOrAny) => state.listArticles.error);
   useEffect(() => {
-    axios.get(GET_LIST_ARTICLE_URL)
-      .then(function (response) {
-        setData(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-        setError(true);
-      });
+    dispatch(getListArticles());
   }, []);
   return (
     <>

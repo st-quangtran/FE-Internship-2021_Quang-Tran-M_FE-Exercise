@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import { useDispatch, useSelector, RootStateOrAny } from 'react-redux';
 import { Error } from './index';
 import { pageRenderer } from '../utils/pageRenderer';
-import { IDetailArticle, IParam, IPropsDetailArticle } from '../interface';
-import API_URL from '../constance/api';
+import { IParam, IPropsDetailArticle } from '../interface';
 import { convertDate } from '../utils/convertDate';
-
-const { GET_DETAIL_ARTICLE_URL } = API_URL;
+import { getDetailArticle } from '../store/articles/action';
 
 const PageDetailArticle = (props: IPropsDetailArticle) => {
   const { data } = props;
@@ -40,17 +38,12 @@ const PageDetailArticleTp = pageRenderer(PageDetailArticle);
 
 const DetailArticle = () => {
   const { id } = useParams<IParam>();
-  const [data, setData] = useState<IDetailArticle>(null);
-  const [error, setError] = useState(false);
+  const dispatch = useDispatch();
+  const data = useSelector((state: RootStateOrAny) => state.detailArticle.data);
+  const error = useSelector((state: RootStateOrAny) => state.detailArticle.error);
+
   useEffect(() => {
-    axios.get(GET_DETAIL_ARTICLE_URL + id)
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-        setError(true);
-      })
+    dispatch(getDetailArticle(id));
   }, [id]);
   return (
     <>
